@@ -24,7 +24,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
     position: absolute;
     top: 0%;
     box-shadow: -2px 15px 10px -12px rgb(81 102 131 / 85%);
@@ -44,23 +44,29 @@ form{
     width: 30%;
     margin-top: 850px;
     margin-right: 500px;
-    box-shadow: 2px 2px 10px 4px black;
-    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+     outline: none;
     /* background-color: rgb(128, 164, 198); */
-     background-image: linear-gradient(rgb(92, 92, 92,0.2),rgb(92, 92, 92,0.2)), url('../images/backgorund\ img\ for\ signup.avif');
+     background-image: linear-gradient(rgb(92, 92, 92,0.3),rgb(92, 92, 92,0.3)), url('../images/backgorund\ img\ for\ signup.avif');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 30px; 
-    border-radius: 30px;
+    border-radius: 20px;
+}
+::placeholder{
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 100;
 }
 fieldset{
     padding: 60px;
     border: none;
+    border-radius: 15px;
 }
 input{
    width: 300px;
    height: 45px;
-   border-radius: 20px;
+   border-radius: 10px;
    outline: none;
    border: none;
    padding-left: 1em;
@@ -71,12 +77,16 @@ input{
 .login h1{
     text-align: center;
     color: white;
+    font-size: 40px;
     margin-bottom: 40px;
 }
 #email{
     margin-bottom: 20px;
+    font-size: 20px;
 }
-
+#lab{
+    font-size: 20px;
+}
 .btn-login {
     margin-bottom: 3em;
 }
