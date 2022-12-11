@@ -1,0 +1,497 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #b9b9b9; */
+    scroll-behavior: smooth;
+    font-family: 'Montserrat';
+}
+
+/* -----------Create the navigation-------------- */
+.nav{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    position: absolute;
+    top: 0%;
+    box-shadow: -2px 15px 10px -12px rgb(81 102 131 / 85%);
+    width: 100%;
+    padding: 35px;
+    background-color: #aeb08d;
+    z-index: 1;
+}
+
+.nav-logo img {
+    margin-top: 3px;
+    padding: 11px;
+
+}
+
+/* -----------END OF THE NAVIGATION----------- */
+
+/* ------------start the header content------ */
+.navi2 ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 5px;
+
+}
+
+.navi2 ul li {
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 30px;
+    background-color: rgb(183, 168, 240);
+    color: black;
+    padding: 9px;
+    width: 160px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navi2 ul a {
+    text-decoration: none;
+
+}
+
+.navi2 ul li:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 11px 7px 13px -1px rgba(0, 0, 0, 0.75);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    position: absolute;
+    top: 40px;
+    left: 10%;
+
+}
+
+.navi1 ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    color: white;
+    margin: 10px 0px 0px 30px;
+    font-size: 18px;
+}
+
+.navi1 ul li {
+    margin-left: 90px;
+
+}
+
+.navi1 ul a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navi1 img {
+    margin-left: 80px;
+    width: 42px;
+    color: white;
+    background-color: rgb(46, 46, 46);
+    border-radius: 20%;
+    padding: 7px;
+
+}
+.main{
+    margin-top: 45px;
+}
+.main h1 {
+    margin-left: 120px;
+    margin-top: 50px;
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 80px;
+}
+
+.main h3 {
+    font-size: 30px;
+    margin-top: 30px;
+    color: rgb(254, 144, 124);
+}
+
+.main p {
+    margin-left: 130px;
+    margin-top: 30px;
+    font-size: 35px;
+    color: rgb(255, 225, 224);
+
+}
+
+.main button {
+    margin-top: 75px;
+    background: #ff523f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 30px;
+    border-radius: 30px;
+    margin-left: 39%;
+    border: none;
+    cursor: pointer;
+}
+
+/*---------------------------- End of the header section----------------- */
+
+/* -----------------------start the main content------------------------ */
+.books-rows {
+    background-color: rgb(236, 226, 226);
+    margin: 0px 30px;
+    border-radius: 20px;
+
+}
+
+.container_2 {
+    text-align: center;
+    margin-top: 60px;
+    color: #555;
+
+
+}
+
+.container_2 h1 {
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+.container_2::after {
+    content: '';
+    background: #ff523b;
+    width: 120px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.book_section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    max-width: 80%;
+    margin: 0px auto;
+
+
+}
+
+.book_cards img,
+.col-2 img,
+.col-3 img {
+    padding: 15px;
+    border-radius: 30px;
+    width: 230px;
+    margin-left: 5px;
+    height: 280px;
+
+}
+
+.book_cards,
+.col-2,
+.col-3 {
+    border-radius: 20px;
+}
+
+.book_cards {
+    width: 240px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.book_cards h4 {
+    margin-left: 30px;
+    width: 200px;
+    color: black;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.book_cards p {
+    margin-left: 30px;
+    width: 255px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.book_cards h4 {
+    margin-bottom: 15px;
+}
+
+.book_cards p>b {
+    color: rebeccapurple;
+    font-size: large;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+.book_cards button {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 8px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f7000074;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    border: none;
+}
+
+.rating {
+    color: #ff523b;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.rating2 {
+    margin-top: 35px;
+    margin-left: 30px;
+    color: #ff523b;
+    margin-bottom: 10px;
+}
+
+.rating2 p {
+    margin-left: 30px;
+}
+
+.book_cards:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------END OF THE BOOKS ROWS ------------*/
+.banner {
+    display: flex;
+    align-items: center;
+    background: radial-gradient(#fff, #eb90ff);
+    margin-top: 120px;
+    margin-bottom: 100px;
+    height: 610px;
+
+}
+
+.ban-text p {
+    text-decoration: underline;
+    position: absolute;
+    top: 249%;
+    color: #555;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.ban-text h1 {
+    position: absolute;
+    top: 258%;
+    font-weight: 900;
+    font-size: 45px;
+}
+small {
+    position: absolute;
+    top: 266%;
+    font-size: 16px;
+    text-align: start;
+    color: #555;
+    line-height: 35px;
+}
+.ban-text button {
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 280%;
+    background-color: #ff523f;
+    padding: 8px 30px;
+    border: none;
+    margin: 10px 0px;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    transition: 0.5s;
+}
+.banner_img img {
+
+    width: 480px;
+    border-radius: 110px;
+    padding: 90px;
+    margin-left: 120px;
+}
+.ban-text button:hover {
+    background-color: brown;
+    color: white;
+}
+
+/*------------------MOTIVATIONAL BOOKS SECTION----------- */
+.adding_books {
+    background-color: rgb(174, 216, 193);
+    margin: 120px 10px;
+    border-radius: 15px;
+
+}
+
+.motivational_books::after {
+
+    content: '';
+    background: #ff523b;
+    width: 120px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -228%;
+    left: 49%;
+    transform: translateX(-50%);
+}
+
+.motivational {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0px auto;
+
+}
+
+.motivational_books>h1 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #555;
+}
+
+/*------end of the motivational ---------- */
+
+/* ------------start of the testimonial---------- */
+
+.testo{
+    margin-top: 110px;
+}
+
+.small_container {
+    margin-bottom: 200px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 70px auto;
+
+}
+
+.testi {
+    max-width: 300px;
+    text-align: center;
+    height: 440px;
+    padding: 30px 20px;
+    box-shadow: 0 0 20px 0px rgb(0 0 0 / 10%);
+    transition: all 0.5s;
+
+}
+
+.testi img {
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.testi > .rating{
+    margin-top: 20px;
+    margin-left:-10px;
+}
+.testi i{
+    color:yellowgreen;
+}
+.testi_head h1{
+    color: #555;
+    font-size: 33px;
+    font-weight: 600;
+
+}
+.testi p{
+    color: #555;
+}
+.testi_head h1::after{
+    content: '';
+    background: #ff523b;
+    width: 120px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -308%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.testi:hover{
+    transform: translateY(-20px);
+}
+/* --------------END OF THE TESTIMONIAL-------- */
+
+/*---------------start the footer content------ */
+footer{
+    background-color: #000;
+    color: whitesmoke;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    margin-top: 130px;
+    height: 300px;
+    
+}
+.bookstore_logo img{
+    width:200px;
+    max-width: 10   00px;
+
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.row ul li{
+    list-style-type: none;
+    margin: 4px;
+    margin-top: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+footer h3{
+    color: white;
+    margin-bottom: 20px;
+}
+.icons{
+    color: white;
+}
+.contact_us .useful_links{
+    align-items:center;
+}
+.icons i{
+    font-size: 30px;
+    padding-left:20px;
+}
+.icons h3{
+    margin-left: 45px;
+    color: red;
+}
+.useful_links h3{
+    margin-left: 5px;
+}
+.row ul li:hover{
+    text-decoration: underline;
+    color:crimson;
+}
+/* -----END OF THE FOOTER CONTENT-----*/

@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+  
+    font-family: 'Montserrat';
+    font-family: 'Martian Mono', monospace;
+    background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+nav{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1;
+}
+
+.container_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:whitesmoke;
+    box-shadow: 3px 8px 9px -4px rgba(224, 220, 227, 1);
+    width: 100%;
+    height: 100px;
+    margin-bottom: 110px;
+}
+
+.head_img img {
+    width: 180px;
+}
+
+.navigation ul {
+    margin-right: 30px;
+    display: flex;
+    list-style-type: none;
+    
+}
+
+.navigation ul li {
+    font-size: 20px;
+    font-family: 'Martian Mono', monospace;
+    font-weight: 700;
+    margin-left: 80px;
+}
+/*--------------End of the nagivation------- */
+
+
+/* ------Start the payment gateway content----- */
+span{
+    font-size: 19px;
+}
+.payment{
+    background-color: whitesmoke;
+    width: 43%;
+    height: 660px;
+    margin-left: 420px;
+    margin-top: 190px;
+    padding: 35px;
+    border-radius: 15px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+.title-1{
+    margin-bottom: 3px;
+    font-size:25px;
+    margin-left: 14px;
+
+}
+.title{
+    margin-left:15px;
+    font-size: 25px;
+}
+.input_box{
+    padding: 15px;
+}
+.input_box img{
+    margin-top: 12px;
+}
+.container-2{
+    margin-left: 30px;
+}
+.input_box input{
+    margin-top: 12px;
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border: 2px solid rgb(195, 195, 195);
+    border-radius: 5px;
+}
+input::placeholder{
+    font-size: 15px;
+    padding:9px;
+}
+.box_flex{
+    display: flex;
+    align-items: center;
+}
+
+/* --------------place order--------- */
+.place_order{
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    color:black;
+    border: none;
+    background-color: lightgreen;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.place_order:hover{
+    text-decoration: underline;
+    background-color:rgb(133, 251, 151);
+    
+}
+
+
+/*---------------start the footer content------ */
+footer{
+    background-color: #000;
+    color: whitesmoke;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    height: 300px;
+    margin-top: 120px;
+    
+}
+.bookstore_logo img{
+    width:200px;
+    max-width: 1000px;
+
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.row ul li{
+    list-style-type: none;
+    margin: 4px;
+    margin-top: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 16px;
+}
+footer h3{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.icons{
+    color: white;
+}
+.contact_us .useful_links{
+    align-items:center;
+}
+.icons i{
+    font-size: 30px;
+    padding-left:20px;
+}
+.icons h3{
+    margin-left: 45px;
+    color: red;
+}
+.useful_links h3{
+    margin-left: 5px;
+}
+.row ul li:hover{
+    text-decoration: underline;
+    color:crimson;
+}
+/* -----END OF THE FOOTER CONTENT-----*/

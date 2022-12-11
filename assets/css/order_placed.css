@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+  
+    font-family: 'Montserrat';
+    font-family: 'Martian Mono', monospace;
+    background-color: rgb(207, 231, 240);
+}
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+nav{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1;
+}
+
+.container_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:whitesmoke;
+     box-shadow: 3px 8px 9px -4px rgba(224, 220, 227, 1);
+    width: 100%;
+    height: 70px;
+    margin-bottom: 110px;
+}
+
+.head_img img {
+    width: 180px;
+}
+
+.navigation ul {
+    margin-right: 30px;
+    display: flex;
+    list-style-type: none;
+    
+}
+
+.navigation ul li {
+    font-size: 20px;
+    font-family: 'Martian Mono', monospace;
+    font-weight: 700;
+    margin-left: 80px;
+}
+/*--------------End of the nagivation------- */
+
+
+
+/* ---------------ORDER PLACED EDIT ---------------------*/
+
+fieldset{
+    border: none;
+    margin-top: 190px;
+    border-radius: 16px;
+    width: 47%;
+    height: 500px;
+    margin-left: 400px;
+    background: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.order_placed{
+    margin-top: 20px;
+}
+fieldset img{
+    margin-top: 10px;
+    width: 190px;
+    margin-left: 250px;
+}
+.order_placed p{
+    margin-left: 275px;
+    font-size: 19px;
+    font-weight: 100;
+}
+.order_placed h3{
+    margin-top: 20px;
+    margin-left: 130px;
+    font-size: 35px;
+    font-weight: 900;
+}
+.order_placed h4{
+    
+    margin-top: 5px;
+    font-size: 23px;
+    font-weight: lighter;
+    margin-left: 229px;
+}
+.span-1{
+    color: red;
+}
+
+span{
+    font-size: 35px;
+}
+.order_placed button{
+    margin-top: 50px;
+    margin-left: 246px;
+    padding: 10px 25px;
+    color:black;
+    border:2px solid #3bb54a;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.fa-sharp{
+    color: #3bb54a;
+    margin-right: 10px;
+    font-size: 20px;
+}
+button:hover{
+    text-decoration: underline;
+    background-color: lightgrey;
+    color: black;
+}
+
+
+/*---------------start the footer content------ */
+footer{
+    background-color: #000;
+    color: whitesmoke;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    height: 300px;
+    margin-top: 130px;
+    
+}
+.bookstore_logo img{
+    width:200px;
+    max-width: 1000px;
+
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.row ul li{
+    list-style-type: none;
+    margin: 4px;
+    margin-top: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 16px;
+}
+footer h3{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.icons{
+    color: white;
+}
+.contact_us .useful_links{
+    align-items:center;
+}
+.icons i{
+    font-size: 30px;
+    padding-left:20px;
+}
+.icons h3{
+    margin-left: 45px;
+    color: red;
+}
+.useful_links h3{
+    margin-left: 5px;
+}
+.row ul li:hover{
+    text-decoration: underline;
+    color:crimson;
+}
+/* -----END OF THE FOOTER CONTENT-----*/

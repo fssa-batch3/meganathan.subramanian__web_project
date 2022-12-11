@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #b9b9b9; */
+    scroll-behavior: smooth;
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration: none;
+    color: rgb(104, 201, 180);
+}
+
+/* -----------Create the navigation-------------- */
+.nav {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    position: absolute;
+    top: 0%;
+    box-shadow: -2px 15px 10px -12px rgba(108, 149, 206, 0.85);
+    width: 100%;
+    padding: 35px;
+    background-color: #cac8c8;
+    z-index: 1;
+}
+
+.nav-logo img {
+    margin-top: 3px;
+    padding: 11px;
+
+}
+
+/*----------- start the forms ---------- */
+form {
+    width: 30%;
+    margin-top: 1030px;
+    margin-right: 500px;
+    margin-bottom: 200px;
+    /* box-shadow: 2px 126px 10px 4px black; */
+    outline: none;
+    /* background-color: rgb(128, 164, 198);  */
+    background-image: linear-gradient(rgb(92, 92, 92,0.7),rgb(92, 92, 92,0.7)), url('../images/backgorund\ img\ for\ signup.avif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 30px;
+}
+.head_img img{
+    /* opacity: 0.9; */
+    filter: blur(6px);
+}
+
+fieldset {
+    padding: 60px;
+    border: none;
+    height: 685px;
+}
+
+input {
+    width: 320px;
+    height: 45px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding-left: 1em;
+}
+
+.login h1 {
+    text-align: center;
+    color:rgb(126, 226, 126);
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.email input{
+    margin-top: 20px;
+}
+.create-password{
+    margin-top: 33px;
+}
+.confirm-pass input{
+    margin-top: 20px;
+}
+.container_login label{
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+#email {
+    margin-bottom: 20px;
+}
+
+.btn-login {
+    margin-bottom: 3em;
+}
+
+.login-btn {
+    text-align: center;
+    background-color: burlywood;
+    color: black;
+    margin-left: 70px;
+    padding: 1em 2.5em;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+.login-btn:hover {
+    background: lightslategrey;
+    color:white;
+
+}
+
+.forget {
+    margin-left: 70px;
+}
+
+
+footer {
+    background-color: #000;
+    color: whitesmoke;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    margin-top: -70px;
+    height: 300px;
+    position: absolute;
+    width: 100%;
+    top: 900px;
+
+}
+
+.bookstore_logo img {
+    width: 200px;
+    max-width: 1000px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row ul li {
+    list-style-type: none;
+    margin: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.icons {
+    color: white;
+}
+
+.contact_us .useful_links {
+    align-items: center;
+}
+
+.icons i {
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.icons h3 {
+    margin-left: 45px;
+    color: red;
+}
+
+.useful_links h3 {
+    margin-left: 5px;
+}
+.row ul li:hover{
+    text-decoration: underline;
+    color:crimson;
+}
+/* --------END OF THE FOOTER------ */
