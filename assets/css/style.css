@@ -90,9 +90,24 @@ body {
 
 .navi1 ul li {
     margin-left: 90px;
+    height: 50px;
 
 }
 
+.navi1 ul li::after{
+    content: '';
+    background-color:red;
+    display: block;
+    height: 3px;
+    width: 0%;
+    margin: auto;
+    
+
+}
+.navi1 ul li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
 .navi1 ul a {
     color: whitesmoke;
     text-decoration: none;
