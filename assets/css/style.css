@@ -146,6 +146,27 @@ body {
     border: none;
     cursor: pointer;
 }
+/* drop down list */
+.drop_down{
+    display: none;
+}
+.navi1 ul li:hover .drop_down{
+    display: block;
+    position: absolute;
+    top:50px;
+    left:15%;
+    
+}
+.navi1 ul li:hover .drop_down ol{
+    margin-top:20px;
+}
+.navi1 ul li:hover .drop_down ol li{
+    height:30px
+}
+.drop_down ol li{
+    list-style-type:none;
+    line-height: 17px;
+}
 
 /*---------------------------- End of the header section----------------- */
 
