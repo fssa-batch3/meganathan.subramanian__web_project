@@ -11,27 +11,28 @@ body {
 }
 
 /* -----------Create the navigation-------------- */
-.nav{
+.nav {
     margin-top: 20px;
     margin-left: 10px;
 }
+
 .nav-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     position: absolute;
     top: 0%;
     box-shadow: -2px 15px 10px -12px rgb(81 102 131 / 85%);
     width: 100%;
     padding: 35px;
-    background-color: #aeb08d;
+    background-color: #e4e4e4;
     z-index: 1;
 }
 
 .nav-logo img {
     margin-top: 3px;
-    padding: 11px;
+    /* padding: 5px; */
 
 }
 
@@ -44,6 +45,12 @@ body {
     margin-top: 5px;
 
 }
+
+.head_img img {
+    filter: blur(4px);
+    border-radius: 12px;
+}
+
 
 .navi2 ul li {
     border-radius: 20px;
@@ -85,29 +92,34 @@ body {
     list-style-type: none;
     color: white;
     margin: 10px 0px 0px 30px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .navi1 ul li {
     margin-left: 90px;
     height: 50px;
 
+    /* horizontal line below the navigation */
 }
 
-.navi1 ul li::after{
+.navi1 ul li::after {
     content: '';
-    background-color:red;
+    background-color: red;
     display: block;
     height: 3px;
     width: 0%;
     margin: auto;
-    
+
 
 }
-.navi1 ul li:hover::after{
+
+.navi1 ul li:hover::after {
     width: 100%;
     transition: 0.5s;
 }
+
+/*  */
+
 .navi1 ul a {
     color: whitesmoke;
     text-decoration: none;
@@ -122,9 +134,11 @@ body {
     padding: 7px;
 
 }
-.main{
+
+.main {
     margin-top: 45px;
 }
+
 .main h1 {
     margin-left: 120px;
     margin-top: 50px;
@@ -161,27 +175,35 @@ body {
     border: none;
     cursor: pointer;
 }
-/* drop down list */
-.drop_down{
+
+/*--------------------- drop down edit ---------------- */
+
+.drop_down {
     display: none;
 }
-.navi1 ul li:hover .drop_down{
+
+.navi1 ul li:hover .drop_down {
     display: block;
     position: absolute;
-    top:50px;
-    left:15%;
-    
+    top: 50px;
+    left: 15%;
+
 }
-.navi1 ul li:hover .drop_down ol{
-    margin-top:20px;
+
+.navi1 ul li:hover .drop_down ol {
+    margin-top: 20px;
 }
-.navi1 ul li:hover .drop_down ol li{
-    height:30px
+
+.navi1 ul li:hover .drop_down ol li {
+    height: 30px
 }
-.drop_down ol li{
-    list-style-type:none;
+
+.drop_down ol li {
+    list-style-type: none;
     line-height: 17px;
 }
+
+
 
 /*---------------------------- End of the header section----------------- */
 
@@ -210,7 +232,7 @@ body {
     content: '';
     background: #ff523b;
     width: 120px;
-    height: 5px;
+    height: 2.5px;
     border-radius: 5px;
     position: absolute;
     top: 97%;
@@ -257,7 +279,7 @@ body {
     margin-left: 30px;
     width: 200px;
     color: black;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 100;
 }
 
@@ -341,6 +363,7 @@ body {
     font-weight: 900;
     font-size: 45px;
 }
+
 small {
     position: absolute;
     top: 266%;
@@ -349,6 +372,7 @@ small {
     color: #555;
     line-height: 35px;
 }
+
 .ban-text button {
     text-align: center;
     cursor: pointer;
@@ -364,6 +388,7 @@ small {
     font-weight: 300;
     transition: 0.5s;
 }
+
 .banner_img img {
 
     width: 480px;
@@ -371,6 +396,7 @@ small {
     padding: 90px;
     margin-left: 120px;
 }
+
 .ban-text button:hover {
     background-color: brown;
     color: white;
@@ -417,7 +443,7 @@ small {
 
 /* ------------start of the testimonial---------- */
 
-.testo{
+.testo {
     margin-top: 110px;
 }
 
@@ -446,23 +472,27 @@ small {
     margin-top: 15px;
 }
 
-.testi > .rating{
+.testi>.rating {
     margin-top: 20px;
-    margin-left:-10px;
+    margin-left: -10px;
 }
-.testi i{
-    color:yellowgreen;
+
+.testi i {
+    color: yellowgreen;
 }
-.testi_head h1{
+
+.testi_head h1 {
     color: #555;
     font-size: 33px;
     font-weight: 600;
 
 }
-.testi p{
+
+.testi p {
     color: #555;
 }
-.testi_head h1::after{
+
+.testi_head h1::after {
     content: '';
     background: #ff523b;
     width: 120px;
@@ -473,61 +503,74 @@ small {
     left: 50%;
     transform: translateX(-50%);
 }
-.testi:hover{
+
+.testi:hover {
     transform: translateY(-20px);
 }
+
 /* --------------END OF THE TESTIMONIAL-------- */
 
 /*---------------start the footer content------ */
-footer{
+footer {
     background-color: #000;
     color: whitesmoke;
     font-size: 14px;
     padding: 60px 0 20px;
     margin-top: 130px;
     height: 300px;
-    
-}
-.bookstore_logo img{
-    width:200px;
-    max-width: 10   00px;
 
 }
-.row{
+
+.bookstore_logo img {
+    width: 200px;
+    max-width: 10 00px;
+
+}
+
+.row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.row ul li{
+
+.row ul li {
     list-style-type: none;
     margin: 4px;
     margin-top: 10px;
     transition: 0.2s;
     cursor: pointer;
 }
-footer h3{
+
+footer h3 {
     color: white;
     margin-bottom: 20px;
 }
-.icons{
+
+.icons {
     color: white;
 }
-.contact_us .useful_links{
-    align-items:center;
+
+.contact_us .useful_links {
+    align-items: center;
 }
-.icons i{
+
+.icons i {
     font-size: 30px;
-    padding-left:20px;
+    padding-left: 20px;
 }
-.icons h3{
+
+.icons h3 {
     margin-left: 45px;
     color: red;
 }
-.useful_links h3{
+
+.useful_links h3 {
     margin-left: 5px;
 }
-.row ul li:hover{
+
+.row ul li:hover {
     text-decoration: underline;
-    color:crimson;
+    color: crimson;
 }
+
 /* -----END OF THE FOOTER CONTENT-----*/
