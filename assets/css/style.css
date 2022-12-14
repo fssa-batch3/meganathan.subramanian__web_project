@@ -42,10 +42,10 @@ body{
     z-index: 1;
 }
 .search_bar input{
-    padding: 15px;
+    padding: 13px;
     font-size: 19px;
     outline: none;
-    border-radius: 12px;
+    border-radius: 8px;
     border: none;
     width: 600px;
 }
@@ -57,7 +57,7 @@ body{
     
 }
 .navi1 img {
-    width: 55px;
+    width: 50px;
     color: white;
     position: absolute;
     top: -11%;
