@@ -232,7 +232,7 @@ body {
     content: '';
     background: #ff523b;
     width: 120px;
-    height: 2.5px;
+    height: 5px;
     border-radius: 5px;
     position: absolute;
     top: 97%;
@@ -351,7 +351,7 @@ body {
 .ban-text p {
     text-decoration: underline;
     position: absolute;
-    top: 249%;
+    top: 255%;
     color: #555;
     font-size: 25px;
     font-weight: 100;
@@ -359,14 +359,14 @@ body {
 
 .ban-text h1 {
     position: absolute;
-    top: 258%;
+    top: 263%;
     font-weight: 900;
     font-size: 45px;
 }
 
 small {
     position: absolute;
-    top: 266%;
+    top: 271%;
     font-size: 16px;
     text-align: start;
     color: #555;
@@ -377,7 +377,7 @@ small {
     text-align: center;
     cursor: pointer;
     position: absolute;
-    top: 280%;
+    top: 284%;
     background-color: #ff523f;
     padding: 8px 30px;
     border: none;
@@ -418,7 +418,7 @@ small {
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    bottom: -228%;
+    bottom: -233%;
     left: 49%;
     transform: translateX(-50%);
 }
@@ -499,7 +499,7 @@ small {
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    bottom: -308%;
+    bottom: -314%;
     left: 50%;
     transform: translateX(-50%);
 }
