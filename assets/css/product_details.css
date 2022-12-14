@@ -128,6 +128,10 @@ main{
     margin-top: 12px;
     line-height: 30px;
 }
+
+.harry_potter_img img{
+    height: 565px;
+}
 /*-----------END OF THE ORDER PAGE CONTENT----- */
 
 /*-------START OF THE FEATURED PRODUCTS--------- */
@@ -226,34 +230,34 @@ main{
     border: none;
 }
 
-.rating {
+.rating{
     color: #ff523b;
     margin-left: 30px;
     margin-bottom: 10px;
 }
 
-.rating2 {
+.rating2{
     margin-top: 35px;
     margin-left: 30px;
     color: #ff523b;
     margin-bottom: 10px;
 }
 
-.rating2 p {
+.rating2 p{
     margin-left: 30px;
 }
 
-.book_cards:hover {
+.book_cards:hover{
     transform: scale(1.1);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
 }
-.adding_books {
+.adding_books{
     margin: 120px 10px;
     border-radius: 15px;
 
 }
 
-.motivational {
+.motivational{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -262,14 +266,19 @@ main{
 
 }
 
-.motivational_books>h1 {
+.motivational_books >h1 {
     padding-top: 30px;
     text-align: center;
     font-size: 30px;
     color: #555;
+
+}
+hr{
+    border: 2px solid navy;
+    margin: 13px 598px;
 }
 
-/*---------------start the footer content------ */
+/*--------------- Start the footer content ----------------- */
 footer{
     background-color: #000;
     color: whitesmoke;
@@ -322,4 +331,4 @@ footer h3{
     text-decoration: underline;
     color:crimson;
 }
-/*---------------END OF THE FOOTER CONTENT------ */
+/*---------------  END OF THE FOOTER CONTENT -------------- */
