@@ -10,7 +10,6 @@ Problem Statement:https://docs.google.com/document/d/16wv-seKMf_BzKHDggePxR9KqQ9
 
 Market Research:https://docs.google.com/document/d/1IjpASIoSNANgxlyk_RdU2AlIjNtq8WBtEqtbWhLr0zI/edit?usp=share_link
 
-Wireframe:
 
 
 Userflow: https://drive.google.com/file/d/1B1N7RkpfPQ2DpVdvL-f3XPTd9eT2Ca-V/view?usp=sharing
