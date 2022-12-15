@@ -56,19 +56,17 @@ form {
     border-radius: 30px;
 }
 .head_img img{
-    /* opacity: 0.9; */
     filter: blur(6px);
 }
 
-fieldset {
-    padding: 60px;
-    border: none;
-    height: 685px;
+label{
+    margin-left: 30px;
 }
 
 input {
-    width: 320px;
+    width: 370px;
     height: 45px;
+    margin-left: 20px;
     border-radius: 10px;
     outline: none;
     border: none;
