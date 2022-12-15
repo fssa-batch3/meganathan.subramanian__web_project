@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,12 +6,12 @@
 
 body {
     scroll-behavior: smooth;
-    /* font-family: 'Montserrat'; */
     font-family: 'Martian Mono', monospace;
     font-family: 'Outfit';
     font-family: 'Montserrat';
 }
-nav{
+
+nav {
     position: fixed;
     top: 0%;
     width: 100%;
@@ -35,7 +35,7 @@ nav{
 
 .navigation ul {
     margin-right: 30px;
-    margin-bottom:40px;
+    margin-bottom: 40px;
     display: flex;
     list-style-type: none;
 }
@@ -46,54 +46,64 @@ nav{
     font-weight: 700;
     margin-left: 80px;
 }
-/*--------------End of the nagivation------- */
 
-/* -Start of the Product detail content------ */
-a{
+/*-------------- End of the nagivation ------- */
+
+/* -------- Start of the Product detail content ------ */
+
+a {
     text-decoration: none;
     color: black;
-   
 }
-.product_img img{
+
+.product_img img {
     width: 510px;
-    height:525px;
+    height: 525px;
 }
-.products{
+
+.products {
     margin-top: 210px;
     display: flex;
     justify-content: space-between;
     margin-left: 40px;
-    
+
 }
-main{
+
+main {
     max-width: 1240px;
     margin-left: 120px;
-    
+
 }
-.product_details a{
+
+.product_details a {
     text-decoration: none;
     font-size: 17px;
 
-   
+
 }
-.product_details{
-    margin-left:70px;
+
+.product_details {
+    margin-left: 70px;
 }
-.product_details h1{
+
+.product_details h1 {
     margin-top: 20px;
     margin-bottom: 30px;
     font-size: 42px;
     font-weight: 700;
 }
-.product_details h4{
-    font-size:20px;
+
+.product_details h4 {
+    font-size: 20px;
     color: rgb(219, 46, 46);
 
 }
-.product_details s{
+
+.product_details s {
     margin-left: 15px;
 }
-.product_details input{
+
+.product_details input {
     margin-top: 40px;
     padding-left: 18px;
     font-size: 20px;
@@ -102,36 +112,40 @@ main{
     border: 1px solid orange;
     outline: none;
 }
- .product_details > .btn{
-    background-color:#ff523f;
+
+.product_details>.btn {
+    background-color: #ff523f;
     padding: 13px;
     font-weight: bold;
-    color:white;
+    color: white;
     border-radius: 20px;
     padding: 8px 30px;
     display: inline-block;
     margin-left: 15px;
     font-size: 17px;
     transition: 0.3s;
+}
 
+.product_details>.btn:hover {
+    background: #a66262;
 }
-.product_details>.btn:hover{
-    background:#a66262;
-}
-.product_details h2{
+
+.product_details h2 {
     margin-top: 40px;
     font-weight: bold;
-    
+
 }
-.product_details p{
+
+.product_details p {
     font-size: 18px;
     margin-top: 12px;
     line-height: 30px;
 }
 
-.harry_potter_img img{
+.harry_potter_img img {
     height: 565px;
 }
+
 /*-----------END OF THE ORDER PAGE CONTENT----- */
 
 /*-------START OF THE FEATURED PRODUCTS--------- */
@@ -230,34 +244,35 @@ main{
     border: none;
 }
 
-.rating{
+.rating {
     color: #ff523b;
     margin-left: 30px;
     margin-bottom: 10px;
 }
 
-.rating2{
+.rating2 {
     margin-top: 35px;
     margin-left: 30px;
     color: #ff523b;
     margin-bottom: 10px;
 }
 
-.rating2 p{
+.rating2 p {
     margin-left: 30px;
 }
 
-.book_cards:hover{
+.book_cards:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
 }
-.adding_books{
+
+.adding_books {
     margin: 120px 10px;
     border-radius: 15px;
 
 }
 
-.motivational{
+.motivational {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -266,39 +281,43 @@ main{
 
 }
 
-.motivational_books >h1 {
+.motivational_books>h1 {
     padding-top: 30px;
     text-align: center;
     font-size: 30px;
     color: #555;
 
 }
-hr{
+
+hr {
     border: 2px solid navy;
     margin: 13px 598px;
 }
 
 /*--------------- Start the footer content ----------------- */
-footer{
+footer {
     background-color: #000;
     color: whitesmoke;
     font-size: 14px;
     padding: 60px 0 20px;
     margin-top: 130px;
     height: 300px;
-    
-}
-.bookstore_logo img{
-    width:200px;
-    max-width: 10   00px;
 
 }
-.row{
+
+.bookstore_logo img {
+    width: 200px;
+    max-width: 10 00px;
+
+}
+
+.row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.row ul li{
+
+.row ul li {
     list-style-type: none;
     margin: 4px;
     margin-top: 10px;
@@ -306,29 +325,37 @@ footer{
     cursor: pointer;
 
 }
-footer h3{
+
+footer h3 {
     color: white;
     margin-bottom: 20px;
 }
-.icons{
+
+.icons {
     color: white;
 }
-.contact_us .useful_links{
-    align-items:center;
+
+.contact_us .useful_links {
+    align-items: center;
 }
-.icons i{
+
+.icons i {
     font-size: 30px;
-    padding-left:20px;
+    padding-left: 20px;
 }
-.icons h3{
+
+.icons h3 {
     margin-left: 45px;
     color: red;
 }
-.useful_links h3{
+
+.useful_links h3 {
     margin-left: 5px;
 }
-.row ul li:hover{
+
+.row ul li:hover {
     text-decoration: underline;
-    color:crimson;
+    color: crimson;
 }
+
 /*---------------  END OF THE FOOTER CONTENT -------------- */
