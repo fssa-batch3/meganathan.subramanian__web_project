@@ -4,19 +4,19 @@
     padding: 0;
 }
 
-body{
+body {
     /* background-color: #b9b9b9; */
     scroll-behavior: smooth;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* -----------Create the navigation-------------- */
-.nav{
+.nav {
     margin-top: 20px;
     margin-left: 10px;
 }
 
-.nav-logo{
+.nav-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,18 +30,19 @@ body{
     z-index: 1;
 }
 
-.nav-logo img{
+.nav-logo img {
     margin-top: 3px;
 }
 
 /* -------------- EDIT THE TOP SEARCH BAR ------  */
-.search_bar{
+.search_bar {
     position: absolute;
     top: 3%;
     left: 26%;
     z-index: 1;
 }
-.search_bar input{
+
+.search_bar input {
     padding: 13px;
     font-size: 19px;
     outline: none;
@@ -49,13 +50,15 @@ body{
     border: none;
     width: 600px;
 }
-::placeholder{
+
+::placeholder {
     padding-left: 30px;
     font-size: 17px;
     padding-top: 30px;
     font-weight: 300;
-    
+
 }
+
 .navi1 img {
     width: 50px;
     color: white;
@@ -68,6 +71,7 @@ body{
     padding: 12px;
 
 }
+
 /* -----------END OF THE NAVIGATION----------- */
 
 /* ------------start the header content------ */
@@ -88,7 +92,7 @@ body{
     border-radius: 10px;
     text-align: center;
     margin-right: 30px;
-    background-color:#ff7a6b;
+    background-color: #ff7a6b;
     color: black;
     padding: 13px 15px;
     width: 160px;
@@ -150,7 +154,6 @@ body{
     transition: 0.5s;
 }
 
-/*  */
 
 .navi1 ul a {
     color: whitesmoke;
@@ -217,13 +220,11 @@ body{
 .navi1 ul li:hover .drop_down ol {
     margin-top: 20px;
     font-size: 21px;
-    
+
 }
 
 .navi1 ul li:hover .drop_down ol li {
     height: 35px
-    
-
 }
 
 .drop_down ol li {
@@ -309,6 +310,7 @@ body{
     color: black;
     font-size: 17px;
     font-weight: 100;
+    margin-bottom: 15px;
 }
 
 .book_cards p {
@@ -316,10 +318,6 @@ body{
     width: 255px;
     font-size: 16px;
     font-weight: 100;
-}
-
-.book_cards h4 {
-    margin-bottom: 15px;
 }
 
 .book_cards p>b {
@@ -331,7 +329,6 @@ body{
 
 .book_cards button {
     margin-left: 10px;
-    font-size: 16px;
     font-weight: 200;
     padding: 8px 20px;
     margin-bottom: 10px;
@@ -475,11 +472,12 @@ small {
 }
 
 .small_container {
+    margin: 70px auto;
     margin-bottom: 200px;
     max-width: 1000px;
     display: flex;
     justify-content: space-between;
-    margin: 70px auto;
+  
 
 }
 
