@@ -208,6 +208,7 @@ main {
     width: 200px;
     color: black;
     font-size: 16px;
+    margin-bottom: 15px;
     font-weight: 100;
 }
 
@@ -218,9 +219,8 @@ main {
     font-weight: 100;
 }
 
-.book_cards h4 {
-    margin-bottom: 15px;
-}
+
+    
 
 .book_cards p>b {
     color: rebeccapurple;
