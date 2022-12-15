@@ -1,6 +1,6 @@
 # 100-Days_Project
 
-About my Project : Here this my 100 days i made prjoect about selling a books like E-commmerce In This World everyting is Tech and no one even use a note book So my idea is selling the books in website like all major books i cover Example:self development and biography and movie review like that so people can buy books through online in simple way So Read the books improve Your knowdledge.
+About my Project : Here this my 100 days i made prjoect about selling a books like E-commmerce In This World everyting is Tech and no one even use a note book So my idea is selling the books in website like all major books i cover Example:self development and biography and movie review like that so people can buy books through online in simple way So Read the books improve Your knowledge.
 
 
 Problem Statement:https://docs.google.com/document/d/16wv-seKMf_BzKHDggePxR9KqQ9w2hHq9WSyHYkmjkyM/edit?usp=share_link
