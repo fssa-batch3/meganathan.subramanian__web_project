@@ -7,8 +7,8 @@
 body {
     scroll-behavior: smooth;
     font-family: 'Martian Mono', monospace;
-    font-family: 'Outfit';
-    font-family: 'Montserrat';
+    font-family: 'Outfit',sans-serif;
+    font-family: 'Montserrat',serif;
 }
 
 nav {
@@ -115,7 +115,6 @@ main {
 
 .product_details>.btn {
     background-color: #ff523f;
-    padding: 13px;
     font-weight: bold;
     color: white;
     border-radius: 20px;

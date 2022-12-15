@@ -6,7 +6,7 @@
 
 body {
     scroll-behavior: smooth;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat',sans-serif;
 }
 
 a {
@@ -130,6 +130,7 @@ nav {
     width: 200px;
     color: black;
     font-size: 17px;
+    margin-bottom: 15px;
     font-weight: 100;
 }
 
@@ -140,9 +141,7 @@ nav {
     font-weight: 100;
 }
 
-.book_cards h4 {
-    margin-bottom: 15px;
-}
+
 
 .book_cards p>b {
     color: rebeccapurple;

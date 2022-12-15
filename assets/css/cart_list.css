@@ -6,7 +6,7 @@
 
 body {
     scroll-behavior: smooth;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat',sans-serif;
     font-family: 'Martian Mono', monospace;
 }
 a{
@@ -112,6 +112,9 @@ td img{
 }
 
 /* total price */
+.total_price table th{
+    background-color: white;
+}
 .total_price{
     display: flex;
     margin-left: 860px;
