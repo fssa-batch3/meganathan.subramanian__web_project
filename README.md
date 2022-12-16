@@ -28,3 +28,4 @@ live server : https://meganathan2003.github.io/100-Days_Project/
 
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_meganathan.subramanian__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_meganathan.subramanian__web_project)
+ 
