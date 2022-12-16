@@ -18,6 +18,8 @@ Market Research:https://docs.google.com/document/d/1IjpASIoSNANgxlyk_RdU2AlIjNtq
 
 Wire Frame:https://drive.google.com/file/d/1YJIUEb2ZUNt0yF8T67edbnTvwFEFIknM/view?usp=sharing
 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_meganathan.subramanian__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_meganathan.subramanian__web_project)
+
 Userflow: https://drive.google.com/file/d/1B1N7RkpfPQ2DpVdvL-f3XPTd9eT2Ca-V/view?usp=sharing
 
 live server : https://meganathan2003.github.io/100-Days_Project/
