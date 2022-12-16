@@ -24,7 +24,7 @@ Userflow: https://drive.google.com/file/d/1B1N7RkpfPQ2DpVdvL-f3XPTd9eT2Ca-V/view
 
 
 
-live server : https://meganathan2003.github.io/100-Days_Project/
+live server : https://github.com/fssa-batch3/meganathan.subramanian__web_project/deployments/activity_log?environment=github-pages
 
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_meganathan.subramanian__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_meganathan.subramanian__web_project)
