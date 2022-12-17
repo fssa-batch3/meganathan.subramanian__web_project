@@ -7,6 +7,7 @@
 body {
     scroll-behavior: smooth;
     font-family: 'Montserrat',sans-serif;
+    width:100%;
 }
 
 a {
@@ -46,7 +47,6 @@ nav {
 
 .navigation ul li {
     font-size: 19px;
-    /* font-family: 'Martian Mono', monospace; */
     font-weight: 900;
     margin-left: 80px;
 }
@@ -62,15 +62,15 @@ nav {
     height: 500px;
 }
 
-/* -----------------------start the main content------------------------ */
+/* ----------------------- Start the main Content ------------------------ */
 .books-rows {
     background-color: rgb(242, 242, 242);
-    height: 1230px;
+    height: 1840px;
 
 }
 
 .book_cards img:hover {
-    transform: scale(0.8);
+    transform: scale(0.9);
 
 }
 
@@ -94,8 +94,8 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-left: 10px;
-    max-width: 90%;
+    padding-left: 16px;
+    max-width: 100%;
     margin: 0px auto;
 
 
@@ -106,9 +106,9 @@ nav {
 .col-3 img {
     padding: 15px;
     border-radius: 30px;
-    width: 230px;
-    margin-left: 5px;
-    height: 280px;
+    width: 260px;
+    margin-left: 13px;
+    height: 290px;
 
 }
 
@@ -119,14 +119,13 @@ nav {
 }
 
 .book_cards {
-    width: 240px;
     margin-top: 50px;
     margin-bottom: 30px;
     transition: 0.5s;
 }
 
 .book_cards h4 {
-    margin-left: 30px;
+    margin-left: 42px;
     width: 200px;
     color: black;
     font-size: 17px;
@@ -135,8 +134,8 @@ nav {
 }
 
 .book_cards p {
-    margin-left: 30px;
-    width: 255px;
+    margin-left: 44px;
+    width: 245px;
     font-size: 16px;
     font-weight: 100;
 }
@@ -151,10 +150,10 @@ nav {
 }
 
 .book_cards button {
-    margin-left: 10px;
+    margin-left: 18px;
     font-weight: 200;
     padding: 8px 17px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 15px;
@@ -171,23 +170,23 @@ nav {
 
 .rating {
     color: #ff523b;
-    margin-left: 30px;
+    margin-left: 42px;
     margin-bottom: 10px;
 }
 
 .rating2 {
     margin-top: 35px;
-    margin-left: 30px;
+    margin-left: 42px;
     color: #ff523b;
     margin-bottom: 10px;
 }
 
 .rating2 p {
-    margin-left: 30px;
+    margin-left:42px;
 }
 
 .book_cards:hover {
-    transform: scale(1.1);
+    transform:translateY(-20px);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
 }
 
