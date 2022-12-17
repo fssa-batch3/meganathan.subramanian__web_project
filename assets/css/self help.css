@@ -6,9 +6,9 @@
 }
 
 body {
-    
-    font-family: 'Montserrat',sans-serif;
-    width:100%;
+
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
 }
 
 a {
@@ -66,8 +66,9 @@ nav {
     font-weight: 300;
 
 }
-.search_bar img{
-    position:fixed;
+
+.search_bar img {
+    position: fixed;
     right: 50.2%;
     top: 3.7%;
     padding: 10px;
@@ -237,11 +238,11 @@ nav {
 }
 
 .rating2 p {
-    margin-left:42px;
+    margin-left: 42px;
 }
 
 .book_cards:hover {
-    transform:translateY(-20px);
+    transform: translateY(-20px);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -250,7 +251,7 @@ nav {
     justify-content: space-between;
     width: 86%;
     margin-bottom: 80px;
-    margin-top: 120px;
+    margin-top: 80px;
     margin-left: 100px;
 }
 
@@ -287,18 +288,20 @@ select {
 }
 
 .motivational_books>h1 {
-    margin-top: 85px;
+    margin-top: 90px;
     padding-top: 30px;
     text-align: center;
     font-size: 30px;
     color: #555;
 }
-.btn{
+
+.btn {
     margin-left: 670px;
     margin-top: 10px;
 
 }
-.btn button{
+
+.btn button {
     cursor: pointer;
     font-size: 17px;
     padding: 12px 30px;
@@ -307,7 +310,8 @@ select {
     transition: 0.3s;
     font-weight: 600;
 }
-button:hover{
+
+.btn button:hover {
     background-color: rgb(165, 214, 165);
     color: black;
 }
@@ -316,36 +320,194 @@ button:hover{
 /*--------------- Edit the biography books --------------*/
 
 
-.biography_banner img{
+.biography_banner img {
     height: 450px;
 }
-.bio_title h1{
-    border-bottom:4px solid orange;
+
+.bio_title h1 {
+    border-bottom: 4px solid orange;
 }
-#bio_option{
+
+#bio_option {
     border: 2px solid orange;
 }
-.container{
-    margin-top: 100px;
-    
-}
-.gif_img img 
 
-/*---------------start the footer content------ */
+.container {
+    margin-top: 150px;
+
+}
+
+.gif {
+    display: flex;
+    max-width: 120%;
+    height: 550px;
+    background-color: #cfe4f6;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gif_img img {
+    z-index: -1;
+    width: 75%;
+    margin-left: 120px;
+}
+
+.gif_content h2 {
+    letter-spacing: 1px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+span {
+    color: tomato;
+    text-decoration: underline;
+
+}
+
+.Albert {
+    margin-left: 380px;
+    text-decoration: none;
+}
+
+.bio_btn {
+    margin-left: 650px;
+    margin-top: 10px;
+}
+
+.bio_btn button {
+    cursor: pointer;
+    font-size: 17px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: 2px solid tomato;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.bio_btn button:hover {
+    color: white;
+    background-color: rgb(255, 118, 94);
+}
+
+.gif_content h3 {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.Explore_btn button {
+    position: absolute;
+    top: 365%;
+    margin-left: 90px;
+    padding: 8px 15px;
+    color: black;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fa-sharp {
+    color: tomato;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.Explore_btn button:hover {
+    text-decoration: underline;
+    background-color: rgb(253, 170, 155);
+    color: black;
+}
+
+/*-------------------- End of the Biogrpahy books -------------------- */
+
+
+
+/* ---------------- Start the fiction Books page ---------------- */
+
+.fiction_title h1 {
+    border-bottom: 4px solid #752e3b;
+}
+
+.fiction_btn button {
+    cursor: pointer;
+    font-size: 17px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: 2px solid #752e3b;
+    transition: 0.3s;
+    font-weight: 600;
+
+}
+
+.fiction_btn {
+    margin-left: 650px;
+    margin-top: 10px;
+
+}
+
+.fiction_btn button:hover {
+    color: white;
+    background-color:#752e3b;
+
+}
+
+
+#fiction_option {
+    border: 2px solid #752e3b;
+}
+.fiction_gif{
+    background-color: #f3f1e9;
+}
+.fiction_gif img{
+    width: 580px;
+    margin-left: 110px;
+}
+.fict_btn button{
+    position: absolute;
+    background-color: #f3f1e9;
+    top: 368%;
+    margin-left: 0px;
+    padding: 8px 15px;
+    color: black;
+    border: 2px solid #752e3b;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.fict_btn button:hover{
+    text-decoration: underline;
+    background-color:#752e3b;
+    color: white;
+}
+.fa-sharp {
+    color:orange;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+
+/*--------------- Start the footer content ----------------- */
+
 
 footer {
     background-color: #000;
     color: whitesmoke;
     font-size: 14px;
     padding: 60px 0 20px;
-    margin-top: 100px;
+    margin-top: 115px;
     height: 300px;
 
 }
 
 .bookstore_logo img {
     width: 200px;
-    max-width: 10 00px;
+    max-width: 1000px;
 
 }
 
@@ -396,4 +558,4 @@ footer h3 {
     color: crimson;
 }
 
-/*---------------END OF THE FOOTER CONTENT------ */
+/*---------------  END OF THE FOOTER CONTENT -------------- */
