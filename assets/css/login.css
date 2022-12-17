@@ -1,76 +1,81 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-body {
-    scroll-behavior: smooth;
+body{
     font-family: 'Montserrat',sans-serif;
 }
 
-a {
+a{
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
-/* -----------Create the navigation-------------- */
-.nav {
+/* ----------- Create the navigation -------------- */
+
+.nav{
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left:10px;
 }
 
-.nav-logo {
+.nav-logo{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    height: 75px;
     position: absolute;
     top: 0%;
-    box-shadow: -2px 15px 10px -12px rgb(81 102 131 / 85%);
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
     width: 100%;
     padding: 35px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     z-index: 1;
 }
 
-.nav-logo img {
+.nav-logo img{
     margin-top: 3px;
 
 }
 
 /* start the forms  */
 
-form {
+form{
     width: 30%;
     height: 580px;
     margin-top: 850px;
     margin-right: 500px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(243, 239, 239, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     outline: none;
-    background-image: linear-gradient(rgb(92, 92, 92, 0.3), rgb(92, 92, 92, 0.3)), url('../images/backgorund\ img\ for\ signup.avif');
+    background-image: linear-gradient(rgb(92, 92, 92, 0.3), rgb(92, 92, 92, 0.1)), url('../images/backgorund\ img\ for\ signup.avif');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 30px;
-    border-radius: 20px;
+    border-radius: 12px;
 }
 
 
 ::placeholder {
     padding: 12px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 200;
+    font-style: italic;
+    
 }
 
 input {
-    width: 320px;
+    width: 340px;
     height: 45px;
     border-radius: 6px;
     outline: none;
     border: none;
     margin-left: 50px;
     padding-left: 1em;
+    transition: 0.4s;
 }
+
 
 .container_login label {
     color: white;
@@ -80,9 +85,14 @@ input {
 .login h1 {
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 40px;
     margin-top: 40px;
+    transition: 0.4s;
+    letter-spacing: 3px;
+}
+.login h1:hover{
+    color: rgb(0, 255, 234);
 }
 
 #email {
@@ -108,9 +118,6 @@ input {
     border-radius: 10px;
 }
 
-.login-btn:hover {
-    background-color: rgb(157, 164, 172);
-}
 
 .forget {
     margin-left: 110px;
@@ -120,13 +127,16 @@ input {
 .login {
     margin-top: 10px;
 }
+/*----------------- End the form content --------------- */
+
+/*------------------- start the footer content ---------------*/
 
 footer {
     background-color: #000;
     color: whitesmoke;
     font-size: 14px;
     padding: 60px 0 20px;
-    margin-top: -70px;
+    margin-top: -60px;
     height: 300px;
     position: absolute;
     width: 100%;
@@ -149,7 +159,14 @@ footer {
 .row ul li {
     list-style-type: none;
     margin: 4px;
+    margin-top: 13px;
+    transition: 0.2s;
+    cursor: pointer;
 
+}
+.row ul li:hover{
+    text-decoration: underline;
+    color: palevioletred;
 }
 
 footer h3 {

@@ -2,11 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-body {
-    
-    scroll-behavior: smooth;
+body{
     font-family: 'Montserrat',sans-serif;
 }
 
@@ -15,7 +14,7 @@ a {
     color: rgb(104, 201, 180);
 }
 
-/* -----------Create the navigation-------------- */
+/* ----------- Create the navigation-------------- */
 .nav {
     margin-top: 20px;
     margin-left: 10px;
@@ -28,10 +27,10 @@ a {
     height: 90px;
     position: absolute;
     top: 0%;
-    box-shadow: -2px 15px 10px -12px rgba(108, 149, 206, 0.85);
+    box-shadow: -2px 15px 10px -12px rgb(81 102 131 / 85%);
     width: 100%;
     padding: 35px;
-    background-color: #cac8c8;
+    background-color:rgb(242, 240, 240);
     z-index: 1;
 }
 
@@ -43,17 +42,16 @@ a {
 
 /*----------- start the forms ---------- */
 form {
-    width: 30%;
-    margin-top: 1030px;
-    margin-right: 500px;
+    width: 34%;
+    padding: 20px;
+    margin-top: 1100px;
+    margin-right: 470px;
     margin-bottom: 200px;
-    /* box-shadow: 2px 126px 10px 4px black; */
     outline: none;
-    /* background-color: rgb(128, 164, 198);  */
-    background-image: linear-gradient(rgb(92, 92, 92,0.7),rgb(92, 92, 92,0.7)), url('../images/backgorund\ img\ for\ signup.avif');
+    background-image: linear-gradient(rgb(92, 92, 92,0.2),rgb(92, 92, 92,0.2)), url('../images/backgorund\ img\ for\ signup.avif');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border-radius: 30px;
+    border-radius: 15px;
 }
 .head_img img{
     filter: blur(6px);
@@ -64,21 +62,29 @@ label{
 }
 
 input {
-    width: 370px;
+    width: 380px;
     height: 45px;
     margin-left: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
     border: none;
     padding-left: 1em;
+    font-size: 18px;
+}
+::placeholder{
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-style: normal;
+    padding-left: 20px;
 }
 
 .login h1 {
     text-align: center;
-    color:rgb(126, 226, 126);
+    color:rgb(108, 229, 108);
     letter-spacing: 3px;
     margin-bottom: 20px;
     font-size: 40px;
+    margin-top: 15px;
 }
 .email input{
     margin-top: 20px;
@@ -87,8 +93,8 @@ input {
     margin-top: 33px;
 }
 .confirm-pass input{
-    margin-top: 20px;
-}
+    margin-top: 30px;
+} 
 .container_login label{
     color: white;
     font-weight: 800;
@@ -106,10 +112,10 @@ input {
     text-align: center;
     background-color: burlywood;
     color: black;
-    margin-left: 70px;
+    margin-left: 130px;
     padding: 1em 2.5em;
     transition: 0.2s;
-    border-radius: 10px;
+    border-radius: 9px;
 }
 
 .login-btn:hover {
@@ -118,17 +124,12 @@ input {
 
 }
 
-.forget {
-    margin-left: 70px;
-}
-
 
 footer {
     background-color: #000;
     color: whitesmoke;
     font-size: 14px;
     padding: 60px 0 20px;
-    margin-top: -70px;
     height: 300px;
     position: absolute;
     width: 100%;

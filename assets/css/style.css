@@ -2,11 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    /* background-color: #b9b9b9; */
-    scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
 }
 a{
@@ -62,6 +61,7 @@ a{
 
 }
 
+
 .navi1 img {
     width: 50px;
     color: white;
@@ -73,7 +73,10 @@ a{
     border-radius: 10%;
     padding: 12px;
 
+    /* End of the search bar edit */
 }
+
+
 
 /* -----------END OF THE NAVIGATION----------- */
 
@@ -236,7 +239,6 @@ a{
 }
 
 
-
 /*---------------------------- End of the header section----------------- */
 
 /* -----------------------start the main content------------------------ */
@@ -267,7 +269,7 @@ a{
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    top: 97%;
+    top: 97.7%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -379,7 +381,7 @@ a{
 .ban-text p {
     text-decoration: underline;
     position: absolute;
-    top: 255%;
+    top: 251%;
     color: #555;
     font-size: 25px;
     font-weight: 100;
@@ -387,14 +389,14 @@ a{
 
 .ban-text h1 {
     position: absolute;
-    top: 263%;
+    top: 260%;
     font-weight: 900;
-    font-size: 45px;
+    font-size: 48px;
 }
 
 small {
     position: absolute;
-    top: 271%;
+    top: 270%;
     font-size: 16px;
     text-align: start;
     color: #555;
@@ -445,7 +447,7 @@ small {
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    bottom: -233%;
+    bottom: -229%;
     left: 49%;
     transform: translateX(-50%);
 }
@@ -527,8 +529,8 @@ small {
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    bottom: -314%;
-    left: 50%;
+    bottom: -309%;
+    left: 49%;
     transform: translateX(-50%);
 }
 
