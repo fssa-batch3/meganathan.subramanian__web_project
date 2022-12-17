@@ -313,7 +313,26 @@ button:hover{
 }
 
 
+/*--------------- Edit the biography books --------------*/
+
+
+.biography_banner img{
+    height: 450px;
+}
+.bio_title h1{
+    border-bottom:4px solid orange;
+}
+#bio_option{
+    border: 2px solid orange;
+}
+.container{
+    margin-top: 100px;
+    
+}
+.gif_img img 
+
 /*---------------start the footer content------ */
+
 footer {
     background-color: #000;
     color: whitesmoke;
