@@ -2,12 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    scroll-behavior: smooth;
-    font-family: 'Martian Mono', monospace;
-    font-family: 'Outfit',sans-serif;
+
     font-family: 'Montserrat',serif;
 }
 
@@ -41,8 +40,7 @@ nav {
 }
 
 .navigation ul li {
-    font-size: 16px;
-    font-family: 'Martian Mono', monospace;
+    font-size: 18px;
     font-weight: 700;
     margin-left: 80px;
 }
@@ -58,7 +56,13 @@ a {
 
 .product_img img {
     width: 510px;
-    height: 525px;
+    height: 540px;
+   
+}
+.attitude_book img{
+    border-top-left-radius:25%;
+    border-bottom-right-radius:25%;
+
 }
 
 .products {
@@ -72,7 +76,7 @@ a {
     position: relative;
     bottom: 30px;
     left: 70px;
-    background-color: #9ef4dd;
+    background-color: #e1885f;
     padding: 10px 18px;
     border-radius: 9px;
     margin-left: 24px;
@@ -86,8 +90,6 @@ main {
 .product_details a {
     text-decoration: none;
     font-size: 17px;
-
-
 }
 
 .product_details {
@@ -97,8 +99,8 @@ main {
 .product_details h1 {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .product_details h4 {
@@ -134,7 +136,7 @@ main {
 }
 
 .product_details>.btn:hover {
-    background: #a66262;
+    /* background: #a66262;  */
 }
 
 .product_details h2 {
@@ -149,9 +151,7 @@ main {
     line-height: 30px;
 }
 
-.harry_potter_img img {
-    height: 565px;
-}
+
 
 /*-----------END OF THE ORDER PAGE CONTENT----- */
 
