@@ -1,10 +1,9 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
-
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -36,7 +35,9 @@ a{
     margin-top: 3px;
 }
 
-/* -------------- EDIT THE TOP SEARCH BAR ------  */
+/* -------------- EDIT THE TOP SEARCH BAR ----------------  */
+
+
 .search_bar {
     position: absolute;
     top: 3%;
