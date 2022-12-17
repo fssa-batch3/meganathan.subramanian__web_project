@@ -23,6 +23,22 @@ nav {
     z-index: 1;
 }
 
+
+.navigation ul li::after {
+    content: '';
+    background-color: red;
+    display: block;
+    height: 4px;
+    width: 0%;
+    margin: auto;
+
+
+}
+
+.navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
 .container_1 {
     display: flex;
     justify-content: space-between;
