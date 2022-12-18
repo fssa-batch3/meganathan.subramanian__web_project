@@ -466,17 +466,18 @@ span {
 
 .fiction_gif {
     background-color: #f3f1e9;
+    height: 531px;
 }
 
 .fiction_gif img {
     width: 580px;
-    margin-left: 110px;
+    margin-left:75px;
 }
-
+.fic_gif h2{
+    margin-top: -80px;
+}
 .fict_btn button {
-    position: absolute;
     background-color: #f3f1e9;
-    top: 368%;
     margin-left: 0px;
     padding: 8px 15px;
     color: black;
