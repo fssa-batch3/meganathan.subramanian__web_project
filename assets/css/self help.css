@@ -394,11 +394,13 @@ span {
     font-size: 25px;
     font-weight: 300;
 }
-.gif_content{
+
+.gif_content {
     margin-bottom: -115px;
 }
+
 .Explore_btn button {
-     margin-top: 100px;
+    margin-top: 100px;
     margin-left: 80px;
     padding: 8px 15px;
     color: black;
@@ -451,7 +453,7 @@ span {
 
 .fiction_btn button:hover {
     color: white;
-    background-color:#752e3b;
+    background-color: #752e3b;
 
 }
 
@@ -459,14 +461,17 @@ span {
 #fiction_option {
     border: 2px solid #752e3b;
 }
-.fiction_gif{
+
+.fiction_gif {
     background-color: #f3f1e9;
 }
-.fiction_gif img{
+
+.fiction_gif img {
     width: 580px;
     margin-left: 110px;
 }
-.fict_btn button{
+
+.fict_btn button {
     position: absolute;
     background-color: #f3f1e9;
     top: 368%;
@@ -480,13 +485,15 @@ span {
     cursor: pointer;
     transition: 0.2s;
 }
-.fict_btn button:hover{
+
+.fict_btn button:hover {
     text-decoration: underline;
-    background-color:#752e3b;
+    background-color: #752e3b;
     color: white;
 }
+
 .fa-sharp {
-    color:orange;
+    color: orange;
     margin-right: 10px;
     font-size: 20px;
 }
