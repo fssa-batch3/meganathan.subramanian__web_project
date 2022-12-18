@@ -137,13 +137,14 @@ nav {
 .container_2 {
     text-align: center;
     margin-top: 80px;
-    color: #555;
+    color: rgb(57, 57, 57);
 
 }
 
 .container_2 h1 {
     padding-top: 30px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 36px;
 }
 
 .book_section {
@@ -161,7 +162,7 @@ nav {
 .col-2 img,
 .col-3 img {
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 23px;
     width: 260px;
     margin-left: 13px;
     height: 290px;
@@ -182,7 +183,7 @@ nav {
 
 .book_cards h4 {
     margin-left: 42px;
-    width: 200px;
+    width: 208px;
     color: black;
     font-size: 17px;
     margin-bottom: 15px;
@@ -226,6 +227,7 @@ nav {
 
 .rating {
     color: #ff523b;
+    margin-top: 35px;
     margin-left: 42px;
     margin-bottom: 10px;
 }
