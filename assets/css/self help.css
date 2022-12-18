@@ -359,7 +359,7 @@ select {
 }
 
 span {
-    color: tomato;
+    color: darkred;
     text-decoration: underline;
 
 }
@@ -394,11 +394,12 @@ span {
     font-size: 25px;
     font-weight: 300;
 }
-
+.gif_content{
+    margin-bottom: 110px;
+}
 .Explore_btn button {
-    position: absolute;
-    top: 365%;
-    margin-left: 90px;
+     margin-top: 100px;
+    margin-left: 80px;
     padding: 8px 15px;
     color: black;
     border: 2px solid tomato;

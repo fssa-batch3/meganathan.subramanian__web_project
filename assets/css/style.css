@@ -263,17 +263,6 @@ a{
     font-weight: 600;
 }
 
-.container_2::after {
-    content: '';
-    background: #ff523b;
-    width: 120px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    top: 94%;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 .book_section {
     display: flex;
@@ -381,23 +370,20 @@ a{
 
 .ban-text p {
     text-decoration: underline;
-    position: absolute;
-    top: 243%;
+    margin-bottom: 40px;
     color: #555;
     font-size: 25px;
     font-weight: 100;
 }
 
 .ban-text h1 {
-    position: absolute;
-    top: 250%;
     font-weight: 900;
     font-size: 48px;
+
 }
 
 small {
-    position: absolute;
-    top: 259%;
+    
     font-size: 16px;
     text-align: start;
     color: #555;
@@ -407,8 +393,6 @@ small {
 .ban-text button {
     text-align: center;
     cursor: pointer;
-    position: absolute;
-    top: 273%;
     background-color: #ff523f;
     padding: 8px 30px;
     border: none;
@@ -440,18 +424,6 @@ small {
 
 }
 
-.motivational_books::after {
-
-    content: '';
-    background: #ff523b;
-    width: 120px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: -218%;
-    left: 49%;
-    transform: translateX(-50%);
-}
 
 .motivational {
     display: flex;
@@ -523,17 +495,6 @@ small {
     color: #555;
 }
 
-.testi_head h1::after {
-    content: '';
-    background: #ff523b;
-    width: 120px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: -295%;
-    left: 49%;
-    transform: translateX(-50%);
-}
 
 .testi:hover {
     transform: translateY(-20px);
