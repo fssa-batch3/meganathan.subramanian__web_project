@@ -437,6 +437,7 @@ span {
 }
 
 .fiction_btn button {
+    margin-top: 4px;
     cursor: pointer;
     font-size: 17px;
     padding: 12px 30px;
