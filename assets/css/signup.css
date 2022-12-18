@@ -48,13 +48,14 @@ form {
     margin-right: 470px;
     margin-bottom: 200px;
     outline: none;
-    background-image: linear-gradient(rgb(92, 92, 92,0.2),rgb(92, 92, 92,0.2)), url('../images/backgorund\ img\ for\ signup.avif');
+    background-image: linear-gradient(rgb(92, 92, 92,0.2),rgb(92, 92, 92,0.2)), url('https://images.unsplash.com/photo-1506609762754-bf3a1b5a4d7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGJvb2tzJTIwU3RvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60');
     background-repeat: no-repeat;
+    
     background-size: 100% 100%;
     border-radius: 15px;
 }
 .head_img img{
-    filter: blur(6px);
+    filter: blur(3px);
 }
 
 label{
@@ -123,8 +124,16 @@ input {
     color:white;
 
 }
-
-
+/* -------Start the Request */
+.book_form h1{
+    color:white;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+.book_form h1:hover{
+    color:lime;
+    transition:0.2s ;
+}
 footer {
     background-color: #000;
     color: whitesmoke;
