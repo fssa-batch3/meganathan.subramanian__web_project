@@ -408,7 +408,7 @@ span {
     margin-left: 80px;
     padding: 8px 15px;
     color: black;
-    border: 2px solid tomato;
+    border: 2px solid darkred;
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
@@ -424,8 +424,8 @@ span {
 
 .Explore_btn button:hover {
     text-decoration: underline;
-    background-color: rgb(253, 170, 155);
-    color: black;
+    background-color:darkred;
+    color:white;
 }
 
 /*-------------------- End of the Biogrpahy books -------------------- */
