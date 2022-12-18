@@ -192,7 +192,7 @@ nav {
 
 .book_cards p {
     margin-left: 44px;
-    width: 245px;
+    width: 240px;
     font-size: 16px;
     font-weight: 100;
 }
@@ -273,7 +273,7 @@ select {
     cursor: pointer;
 }
 
-/*----------------- end of the manin content -------------- */
+/*----------------- End of the manin content -------------- */
 
 
 
@@ -437,7 +437,7 @@ span {
 }
 
 .fiction_btn button {
-    margin-top: 4px;
+    margin-top: -27px;
     cursor: pointer;
     font-size: 17px;
     padding: 12px 30px;
@@ -501,6 +501,33 @@ span {
     margin-right: 10px;
     font-size: 20px;
 }
+
+
+
+
+
+/* 
+------------------Start the Fiction book Content------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------- Enf of the Fiction content------------ */
 
 
 
