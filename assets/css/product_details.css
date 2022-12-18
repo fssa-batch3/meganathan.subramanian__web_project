@@ -43,6 +43,19 @@ nav {
     font-weight: 700;
     margin-left: 80px;
 }
+.navigation ul li::after {
+    content: '';
+    background-color: red;
+    display: block;
+    height: 4px;
+    width: 0%;
+    margin: auto;
+}
+
+.navigation ul li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
 
 /*-------------- End of the nagivation ------- */
 
