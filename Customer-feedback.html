@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../../assets/css/order_placed.css">
-    <link rel="shortcut icon" href="../../assets/images/favicon img.png" type="image/x-icon">
+    <link rel="stylesheet" href="/../assets/css/login.css">
+    <link rel="shortcut icon" href="/../assets/images/favicon img.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--------------------- Font awesome ------------------->
@@ -24,12 +25,10 @@
 
 <body>
 
-    <!------------------------ Create the navigation bar ----------------------->
-
     <div class="head">
         <div class="nav-logo">
             <div class="logo">
-                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png" alt="webiste logo"
+                <a href="index.html"><img src="assets/images/books_store-removebg-preview.png" alt="webiste logo"
                         width="190"></a>
             </div>
             <div class="navi2">
@@ -42,10 +41,10 @@
                     </li>
                 </ol>
                 <ul class="fonts">
-                    <li> <a href="../Account/signup.html">
+                    <li> <a href="Pages/Account/signup.html">
                             <i class="fa-regular fa-heart"></i>
-                        </a></li> <span>0</span>
-                    <li> <a href="../Account/signup.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
+                        </a></li> <a href="Pages/Account/login.html"><span>0</span></a>
+                    <li> <a href="../../Pages/Account/login.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +64,8 @@
             <div class="nav">
                 <div class="navi1">
                     <ul>
-                        <li><a href="#"><img src="../../assets/images/search books.png" alt="search books img"></a></li>
+                        <li><a href="Pages/Books/self_help.html"><img src="assets/images/search books.png"
+                                    alt="search books img"></a></li>
                     </ul>
                 </div>
             </div>
@@ -78,10 +78,10 @@
 
     <div class="navigation">
         <ul>
-            <li> <a href="../../index.html">Home</a></li>
-            <li class="explore-menu" id="click"> <a href="#">Categories<i class="fa-solid fa-caret-down"></i></a>
+            <li> <a href="index.html">Home</a></li>
+            <li class="explore-menu"> <a href="Pages/Books/self help book.html">Categories<i class="fa-solid fa-caret-down"></i></a>
                 <ol class="Explore-option">
-                    <li class="Arts-option"><a href="#">Arts and Biography</a>
+                    <li class="Arts-option"><a href="pages/Books/self_help.html">Arts and Biography</a>
                         <div class="arts-menu">
                             <ol>
                                 <li><a href="#">Arts Forms</a></li>
@@ -93,22 +93,23 @@
                     <li><a href="#">Fiction Books</a></li>
                     <li><a href="#">Law</a></li>
                     <li><a href="#">Medicine</a></li>
-                    <li><a href="../Books/self_help.html">Self Help book</a></li>
+                    <li><a href="Pages/Books/self_help.html">Self Help book</a></li>
                     <li><a href="#">Life Style</a></li>
                     <li><a href="#">Science And Maths</a></li>
 
                 </ol>
             </li>
-            <li><a href="../Books/Combo book.html">combo</a></li>
+            <li><a href="Pages/Books/Combo book.html">Combo</a></li>
             <li><a href="">Best Seller</a></li>
-            <li><a href="../../Customer-feedback.html">Customer Feedback</a></li>
+            <li><a href="Customer-feedback.html">Customer Feedback</a></li>
             <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
                 <div class="profile">
                     <ol>
-                        <li><a href="../Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
-                        <li><a href=""><i class="fa-solid fa-message"></i>Inbox</a> </li>
-                        <li><a href=""><i class="fa-solid fa-bars"></i>Setting</a></li>
-                        <li><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                        <li><a href="Pages/Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit
+                                Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
+                        <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
+                        <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
                     </ol>
                 </div>
             </li>
@@ -116,26 +117,38 @@
     </div>
 
 
-    <!----------------------CREATE ORDER PLACE CONTENT ------------------------>
-    <fieldset>
-        <legend style="text-align: center;"> Orders</legend>
-        <div class="order_placed">
-            <img src="../../assets/images/order places.png" alt="order place img"><br><br>
-            <p>Hey Meganathan.</p>
-            <h3>Your Order is <span class="span-1">Compelete!</span></h3>
-            <h4>Thanks For Visting <span>&#128512;</span></h4>
-            <a href="../../index.html"> <button> <i class="fa-sharp fa-solid fa-compass"></i>Explore More!</button></a>
+    <!-- START THE feedback PAGE -->
+
+    <div class="container container2">
+        <div class="forms feedback-form">
+            <div class="login-form feed-form">
+                <form action="">
+                    <h1>Give Your Valuable <span> Feedback Here !!!</span></h1>
+                    <label for="User id "></label>
+                    <input type="text" placeholder="Name"><br>
+                    <input type="email" placeholder="Enter Your Email"><br>
+                    <textarea name="feed-back" id="" cols="59" rows="12"
+                        placeholder="Enter Your Message here..."></textarea>
+                    <a href="index.html"><input class="btn feed-btn" type="button" value="Submit"></a><br>
+                    <h3>Thanks For Visiting Our Website &#128516;</h3>
+                </form>
+            </div>
+
+            <div class="svg-img feedback-img">
+                <img src="assets/images/undraw_feedback_re_urmj.svg" alt="svg img">
+            </div>
         </div>
+    </div>
 
-    </fieldset>
 
-    <!---------END  OF THE FOOTER CONTENT------- -->
+    <!------ End of the feedback page -------------->
+
 
     <!-------------------FOOTER CONTETNT ------------------>
     <footer>
         <div class="row">
             <div class="bookstore_logo">
-                <img src="../../assets/images/logo.png" alt="bookstore logo">
+                <img src="assets/images/logo.png" alt="bookstore logo">
                 <h3>"Our purpose is motivate yourself <br>and improve your knowdledge".</h3>
             </div>
             <div class="useful_links">
@@ -150,7 +163,7 @@
             <div class="useful_links">
                 <h3>Useful links</h3>
                 <ul>
-                    <li>Blog Post</li>
+                    <li> Blog Post</li>
                     <li>Return Policy</li>
                     <li>join Affilate</li>
                     <li>Terms and Condition</li>
@@ -169,6 +182,7 @@
         </div>
         <p style="text-align:center ;">&#169;Copyright 2022-Meganathan</p>
     </footer>
+
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
 </body>
 

@@ -1,15 +1,32 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+
 }
+
+button {
+    cursor: pointer;
+}
+
+
+
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: visible;
+    z-index: 1;
 }
-a{
+
+.navigation>ul li a {
     color: black;
+    text-decoration: none;
 }
+
+
 
 /* -----------Create the navigation-------------- */
 .nav {
@@ -21,13 +38,13 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
-    position: absolute;
+    height: 110px;
+    position: fixed;
     top: 0%;
-    box-shadow: -2px 15px 10px -12px rgb(81 102 131 / 85%);
     width: 100%;
     padding: 35px;
-    background-color: #e4e4e4;
+    background-color: #e4ad4d;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     z-index: 1;
 }
 
@@ -35,13 +52,147 @@ a{
     margin-top: 3px;
 }
 
+.navi2 {
+    display: flex;
+    align-items: center;
+
+}
+
+.fonts {
+    display: flex;
+    list-style-type: none;
+}
+
+.navi2 ul li {
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+.fa-regular,
+.fa-solid {
+    font-size: 45px;
+    color: whitesmoke;
+    font-weight: 300;
+}
+.fonts span{
+    position: absolute;
+    left: 84.3%;
+    top: 40%;
+    font-size: 20px;
+}
+.Lang_option {
+    display: none;
+    font-size: 19px;
+}
+
+.Lang_option li {
+    margin-top: 10px;
+    list-style-type: none;
+
+
+}
+
+.lang li:nth-child(1):hover .Lang_option {
+    display: block;
+
+}
+
+.lang {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 700;
+    height: 30px;
+    list-style-type: none;
+    display: block;
+    margin-right: 60px;
+    padding: 6px;
+
+}
+
+.lang li a {
+    margin-left: 15px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.Explore-option {
+    display: none;
+    list-style-type: none;
+    line-height: 40px;
+    width: 230px;
+    border-radius: 12px;
+    margin-left: -10px;
+    z-index: 1;
+
+}
+
+.explore-menu:hover .Explore-option{
+    position: absolute;
+    display: block;
+    background-color: rgb(222, 222, 222);
+}
+
+.Explore-option li a:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.Explore-option>li a {
+    margin-left: -45px;
+}
+
+.arts-menu {
+    display: none;
+}
+
+.Arts-option:hover .arts-menu {
+    display: block;
+    position: absolute;
+    background-color: rgb(222, 222, 222);
+    margin-top: -28px;
+    margin-left: 140px;
+
+}
+.arts-menu ol {
+    list-style-type: none ;
+    width: 250px;
+
+}
+.profile{
+    display: none;
+    z-index: 1;
+}
+.profile-menu:hover .profile{
+    position: absolute;
+    display: block;
+    background-color: rgb(222, 222, 222);
+    border-radius: 12px;
+    
+}
+.profile ol{
+    list-style-type: none;
+    margin-top: 15px;
+    margin-left: -50px;
+    width: 240px;
+}
+.profile ol li{
+    margin-bottom: 20px; 
+}
+.profile i{
+    color:black;
+    font-size: 21px;
+    margin-right: 12px;
+}
+
 /* -------------- EDIT THE TOP SEARCH BAR ----------------  */
 
 
 .search_bar {
-    position: absolute;
+    position: fixed;
     top: 3%;
-    left: 26%;
+    left: 18%;
     z-index: 1;
 }
 
@@ -51,11 +202,11 @@ a{
     outline: none;
     border-radius: 8px;
     border: none;
-    width: 600px;
+    width: 772px;
 }
 
 ::placeholder {
-    padding-left: 30px;
+    padding-left: 50px;
     font-size: 17px;
     padding-top: 30px;
     font-weight: 300;
@@ -66,9 +217,9 @@ a{
 .navi1 img {
     width: 50px;
     color: white;
-    position: absolute;
-    top: -11%;
-    right: 37.4%;
+    position: fixed;
+    top: 3%;
+    right: 30%;
     z-index: 1;
     background-color: #d3d3d3;
     border-radius: 10%;
@@ -77,403 +228,604 @@ a{
     /* End of the search bar edit */
 }
 
-
-
-/* -----------END OF THE NAVIGATION----------- */
-
-/* ------------start the header content------ */
-
-.navi2 ul {
-    display: flex;
-    list-style-type: none;
-    margin-top: 5px;
-
-}
-.main span{
-    font-size: 70px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 10px;
-}
-.head_img img {
-    filter: blur(4px);
-    border-radius: 12px;
-}
-
-
-.navi2 ul li {
-    border-radius: 10px;
-    text-align: center;
-    margin-right: 30px;
-    background-color: #ff7a6b;
-    color: black;
-    padding: 13px 15px;
-    width: 160px;
-    font-size: 18px;
-    font-weight: lighter;
-    transition: all 0.5s;
-}
-
-.navi2 ul a {
-    text-decoration: none;
-
-}
-
-.navi2 ul li:hover {
-    color: black;
-    background-color: white;
-    box-shadow: 11px 7px 13px -1px rgba(0, 0, 0, 0.75);
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
+.navi1 ul li {
     position: absolute;
-    top: 40px;
-    left: 10%;
+    left: 70%;
+    top: 3.2%;
 
 }
 
-.navi1 ul {
+/*----------Start the navigation------- */
+
+.navigation ul {
+    background-color: rgb(222, 222, 222);
+    padding: 25px;
+    display: flex;
+    margin-top: 110px;
+    height: 90px;
+    list-style-type: none;
+    border-top: 1px solid navy;
+}
+
+.navigation ul li {
+    font-size: 21px;
+    font-weight: 900;
+    margin-left: 76px;
+    margin-top: 8px;
+}
+
+.fa-caret-down {
+    font-size: 19px;
+    color: crimson;
+    margin-left: 4px;
+}
+
+.fa-sharp {
+    font-size: 19px;
+}
+/* -------- user profile edit ------------- */
+
+.fa-user{
+    margin-left: 10px;
+    font-size: 24px;
+    color: darkblue;
+}
+
+
+/*-------------- Edit the ad image-------- */
+
+.slider-frame {
+    overflow: hidden;
+    width: 97%;
+    margin-left: 38px;
+    margin-top: 20px;
+}
+
+@-webkit-keyframes slide_animation {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    20% {
+        left: 1200px;
+    }
+
+    30% {
+        left: 1200px;
+    }
+
+    40% {
+        left: 2400px;
+    }
+
+    50% {
+        left: 2400px;
+    }
+
+    60% {
+        left: 1200px
+    }
+
+    70% {
+        left: 1200px;
+    }
+
+    80% {
+        left: 0px;
+    }
+
+    90% {
+        left: 0px;
+    }
+
+    100% {
+        left: 0px
+    }
+
+}
+
+.slide-image {
+    width: 5000px;
+    height: 600px;
+    margin: 0 0 0 -2587px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-duration: 13s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+}
+
+.ad-img {
+    height: 600px;
+    width: 1416px;
+    position: relative;
+    float: left;
+}
+
+.ad-img img {
+    height: 500px;
+    width: 1386px;
+}
+
+/*------ End of the animation ----------*/
+
+/*----- Trending Books---------------- */
+
+.books {
     display: flex;
     align-items: center;
-    list-style-type: none;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;  
+
+}
+
+.book-img {
+    margin-right: 33px;
+    transition: 0.5s;
+}
+
+.book-img img:hover {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transform: scale(0.9);
+}
+
+.book-img img {
+    transition: 0.5s;
+}
+
+.trends {
+    max-width: 1290px;
+    margin-left: 120px;
+}
+
+.trends h2 {
+    font-size: 41px;
+    font-weight: 800;
+    letter-spacing: 1px
+}
+
+.arrow-right>.fa-solid {
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    border: 1px solid indigo;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    bottom: -30%;
+}
+
+.books img {
+    width: 190px;
+    height: 290px;
+    margin-top: -10px;
+}
+
+
+.book-info {
+    max-width: 300px;
+    margin-left: 5px;
+
+}
+
+.book-info p {
+    margin-top: -29px;
+}
+
+.book-info p,
+h3,
+.rating {
+    margin-bottom: 10px;
+}
+
+.trends hr {
+    border: none;
+    margin-top: 10px;
+    border-top: 2px solid grey;
+    height: 0;
+}
+
+.bottom-hr1 hr {
+    margin-top: 30px;
+}
+
+::-webkit-scrollbar {
+    scroll-behavior: smooth;
+}
+
+.more-btn {
+    margin-left: 550px;
+    margin-bottom: 80px;
+    position: absolute;
+    bottom: -72%;
+
+}
+
+.more-btn button {
+    padding: 12px 40px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.book-info>p {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.book-info>a>button {
+    width: 90%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.book-info>a>button:hover {
     color: white;
-    margin: 30px 0px 0px 40px;
+    opacity: 1;
+    background-color: #df4257;
+}
+
+/*------- Create ADD to CART ------- */
+.trend_book>a>input {
+    position: relative;
+    font-size: 18px;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 9px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.add {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: -43px;
+    left: 0px;
+    transition: 0.5s;
+}
+
+.trend_book:hover .add {
+    opacity: 1;
+}
+
+.book-info>h3 {
+    font-size: 18px;
+}
+
+.book-info>h3>s {
+    margin-top: 2px;
+    color: red;
+    margin-left: 63px;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-head a {
+    color: red;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+/*------------- End of the trending books ------------ */
+
+
+/*----------Start the best seller book ----------- */
+
+.best-seller {
+    margin-top: 100px;
+    margin-left: 120px;
+    max-width: 1290px;
+}
+
+.best-seller h2 {
+    font-size: 41px;
+    font-weight: 800;
+    transition: 0.2s;
+    letter-spacing: 1px;
+}
+
+.best-seller hr {
+    width: 1290px;
+    margin-top: 10px;
+    border: none;
+    border-top: 2px solid grey;
+    height: 0;
+}
+
+.bottom-hr2 hr {
+    margin-top: 30px;
+}
+
+.best-seller h2:hover {
+    color: tomato;
+}
+
+.Row-2 .fa-solid {
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    border: 1px solid indigo;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    bottom: -116%;
+
+}
+
+.btn-2 {
+    margin-left: 580px;
+    margin-bottom: 50px;
+    position: absolute;
+    bottom: -152%;
+}
+
+.btn-2 button {
+    padding: 12px 40px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+/*-----End of the best seller books------- */
+
+/* ----- New Arrivals ---------------*/
+
+.new-arrival {
+    margin-top: 100px;
+    margin-left: 120px;
+    max-width: 1290px;
+}
+
+.new-arrival h2 {
+    font-size: 41px;
+    font-weight: 800;
+    transition: 0.2s;
+    letter-spacing: 1px;
+}
+
+.new-arrival hr {
+    width: 1290px;
+    margin-top: 10px;
+    border: none;
+    border-top: 2px solid grey;
+    height: 0;
+}
+
+.bottom-hr3 hr {
+    margin-top: 50px;
+}
+
+.new-arrival h2:hover {
+    color: tomato;
+}
+
+.row-3 .fa-solid {
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    border: 1px solid indigo;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    bottom: -281%;
+
+}
+
+.btn-3 {
+    margin-left: 580px;
+    margin-bottom: 50px;
+    position: absolute;
+    bottom: -311%;
+}
+
+.btn-3 button {
+    padding: 12px 40px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-star {
+    color: orange;
+    font-size: 17px;
+}
+
+/*---- End of the New arrivals books---------- */
+
+
+
+/*------------ Start the fiction books ---------- */
+.fiction {
+    margin-top: 100px;
+    margin-left: 120px;
+    max-width: 1290px;
+}
+
+.fiction h2 {
+    font-size: 40px;
+    font-weight: 800;
+    transition: 0.2s;
+    letter-spacing: 1px;
+}
+
+.fiction hr {
+    width: 1290px;
+    margin-top: 10px;
+    border: none;
+    border-top: 2px solid grey;
+    height: 0;
+}
+
+.bottom-hr4 hr {
+    margin-top: 50px;
+}
+
+.fiction h2:hover {
+    color: tomato;
+}
+
+.row-4 .fa-solid {
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    border: 1px solid indigo;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    bottom: -370%;
+
+}
+
+.btn-4 {
+    margin-left: 580px;
+    margin-bottom: 50px;
+    position: absolute;
+    bottom: -409%;
+}
+
+.btn-4 button {
+    padding: 12px 40px;
+    font-size: 17px;
+    margin-bottom: 100px;
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-star {
+    color: orange;
+    font-size: 17px;
+}
+
+
+/*---------- Banner img-------------*/
+
+.container2 {
+    margin-top: 100px;
+}
+
+.gif {
+    display: flex;
+    max-width: 120%;
+    height: 550px;
+    background-color: #f3f1e9;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gif_img img {
+    z-index: -1;
+    width: 61%;
+    margin-left: 60px;
+}
+
+.gif_content h2 {
+    letter-spacing: 1px;
+    font-size: 51px;
+    font-weight: 900;
+    margin-left: -320px;
+    margin-top: -100px;
+}
+
+.gif_content span {
+    color: orange;
+}
+
+.gif_content h3 {
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: -313px;
+}
+
+.gif_content {
+    margin-bottom: -115px;
+}
+
+.Explore_btn button {
+    margin-top: 50px;
+    padding: 8px 15px;
+    margin-left: -310px;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fa-sharp {
+    color: green;
+    margin-right: 10px;
     font-size: 20px;
 }
 
-.navi1 ul li {
-    margin-left: 90px;
-    height: 50px;
-
-    /* horizontal line below the navigation */
-}
-
-.navi1 ul li::after {
-    content: '';
-    background-color: red;
-    display: block;
-    height: 3px;
-    width: 0%;
-    margin: auto;
-
-
-}
-
-.navi1 ul li:hover::after {
-    width: 100%;
-    transition: 0.5s;
-}
-
-
-.navi1 ul a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-
-
-.main {
-    margin-top: 45px;
-}
-
-.main h1 {
-    margin-left: 120px;
-    margin-top: 50px;
-    color: white;
-    font-size: 70px;
-    font-weight: 500;
-    font-style: italic;
-    line-height: 80px;
-}
-
-.main h3 {
-    font-size: 30px;
-    margin-top: 30px;
-    color: rgb(254, 144, 124);
-}
-
-.main p {
-    margin-left: 130px;
-    margin-top: 30px;
-    font-size: 35px;
-    color: rgb(255, 225, 224);
-
-}
-
-.main button {
-    margin-top: 75px;
-    background:#ff7a6b;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 30px;
-    border-radius: 30px;
-    margin-left: 39%;
-    border: none;
-    cursor: pointer;
-}
-
-/*--------------------- drop down edit ---------------- */
-
-.drop_down {
-    display: none;
-}
-
-.navi1 ul li:hover .drop_down {
-    display: block;
-    position: absolute;
-    top: 70px;
-    left: 15%;
-
-}
-
-.navi1 ul li:hover .drop_down ol {
-    margin-top: 20px;
-    font-size: 21px;
-
-}
-
-.navi1 ul li:hover .drop_down ol li {
-    height: 35px
-}
-
-.drop_down ol li {
-    list-style-type: none;
-    line-height: 17px;
-}
-
-
-/*---------------------------- End of the header section----------------- */
-
-/* -----------------------start the main content------------------------ */
-.books-rows {
-    background-color: rgb(236, 226, 226);
-    margin: 0px 30px;
-    border-radius: 20px;
-
-}
-
-.container_2 {
-    text-align: center;
-    margin-top: 60px;
-    color: #555;
-
-
-}
-
-.container_2 h1 {
-    padding-top: 30px;
-    font-weight: 700;
-    font-size: 37px;
-}
-
-
-.book_section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-left: 10px;
-    max-width: 80%;
-    margin: 0px auto;
-
-
-}
-
-.book_cards img,
-.col-2 img,
-.col-3 img {
-    padding: 15px;
-    border-radius: 30px;
-    width: 230px;
-    margin-left: 5px;
-    height: 280px;
-
-}
-
-.book_cards,
-.col-2,
-.col-3 {
-    border-radius: 20px;
-}
-
-.book_cards {
-    width: 240px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    transition: 0.5s;
-}
-
-.book_cards h4 {
-    margin-left: 30px;
-    width: 200px;
-    color: black;
-    font-size: 17px;
-    font-weight: 100;
-    margin-bottom: 15px;
-}
-
-.book_cards p {
-    margin-left: 30px;
-    width: 255px;
-    font-size: 16px;
-    font-weight: 100;
-}
-
-.book_cards p>b {
-    color: rebeccapurple;
-    font-size: large;
+.Explore_btn button:hover {
     text-decoration: underline;
-    letter-spacing: 1px;
-}
-
-.book_cards button {
-    margin-left: 10px;
-    font-weight: 200;
-    padding: 8px 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background-color: #f7000074;
-    cursor: pointer;
-    font-size: 16px;
-    color: black;
-    border: none;
-}
-
-.rating {
-    color: #ff523b;
-    margin-left: 30px;
-    margin-bottom: 10px;
-}
-
-.rating2 {
-    margin-top: 35px;
-    margin-left: 30px;
-    color: #ff523b;
-    margin-bottom: 10px;
-}
-
-.rating2 p {
-    margin-left: 30px;
-}
-
-.book_cards:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
-}
-
-/* --------------END OF THE BOOKS ROWS ------------*/
-.banner {
-    display: flex;
-    align-items: center;
-    background: radial-gradient(#fff, #eb90ff);
-    margin-top: 120px;
-    margin-bottom: 100px;
-    height: 610px;
-
-}
-
-.ban-text p {
-    text-decoration: underline;
-    margin-bottom: 40px;
-    color: #555;
-    font-size: 25px;
-    font-weight: 100;
-}
-
-.ban-text h1 {
-    font-weight: 900;
-    font-size: 48px;
-
-}
-
-small {
-    
-    font-size: 16px;
-    text-align: start;
-    color: #555;
-    line-height: 35px;
-}
-
-.ban-text button {
-    text-align: center;
-    cursor: pointer;
-    background-color: #ff523f;
-    padding: 8px 30px;
-    border: none;
-    margin: 10px 0px;
-    border-radius: 30px;
-    color: white;
-    font-size: 15px;
-    font-weight: 300;
-    transition: 0.5s;
-}
-
-.banner_img img {
-
-    width: 480px;
-    border-radius: 110px;
-    padding: 90px;
-    margin-left: 120px;
-}
-
-.ban-text button:hover {
-    background-color: brown;
+    background-color: orange;
     color: white;
 }
 
-/*------------------MOTIVATIONAL BOOKS SECTION----------- */
-.adding_books {
-    background-color: #e8e8e8;
-    margin-top: 120px;
-
-}
+/* End of the banner  */
 
 
-.motivational {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0px auto;
 
-}
 
-.motivational_books>h1 {
-    padding-top: 30px;
-    text-align: center;
-    font-size: 30px;
-    color: #555;
-}
-
-/*------end of the motivational ---------- */
-
-/* ------------start of the testimonial---------- */
+/* ------------ Start of the testimonial---------- */
 
 .testo {
-    margin-top: 110px;
+    margin-top: 120px;
+    height: 620px;
+    padding: 25px;
+    background-color: rgb(255, 250, 250);
 }
 
 .small_container {
-    margin: 70px auto;
-    margin-bottom: 200px;
+    margin: 50px auto;
+    margin-bottom: 100px;
     max-width: 1000px;
     display: flex;
     justify-content: space-between;
-  
 
 }
 
 .testi {
     max-width: 300px;
     text-align: center;
-    height: 440px;
-    padding: 30px 20px;
+    height: 450px;
+    padding: 10px 20px;
     box-shadow: 0 0 20px 0px rgb(0 0 0 / 10%);
     transition: all 0.5s;
-
 }
 
 .testi img {
@@ -488,20 +840,26 @@ small {
 }
 
 .testi i {
-    color: yellowgreen;
+    color: orange;
 }
 
 .testi_head h1 {
     color: #555;
-    font-size: 33px;
-    font-weight: 600;
+    font-size: 37px;
+    font-weight: 700;
+    transition: 0.2s;
 
+}
+
+.testi_head h1:hover {
+    color: orange;
 }
 
 .testi p {
     color: #555;
+    font-weight: 800;
+    font-size: 17px;
 }
-
 
 .testi:hover {
     transform: translateY(-20px);
@@ -509,20 +867,104 @@ small {
 
 /* --------------END OF THE TESTIMONIAL-------- */
 
+
+
+/*---- Start the New letter Form-------- */
+
+.news-form {
+    max-width: 900px;
+    margin-top: 80px;
+    margin-left: 290px;
+    text-align: center;
+}
+
+.news-form h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: orange;
+}
+
+.news-form p {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 50px auto;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.email-box i {
+    color: black;
+    background: orange;
+    width: 45px;
+    border-radius: 5px;
+    padding: 6px;
+    line-height: 30px;
+}
+
+.email-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 45px;
+    width: 880px;
+}
+
+.tbox,
+.sub-btn {
+    outline: none;
+    border: none;
+}
+
+.tbox {
+    border: 2px solid orange;
+    border-radius: 4px;
+    width: 0px;
+    transition: 0.6s;
+
+}
+
+.email-box:hover>.tbox,
+.tbox:focus {
+    width: 500px;
+    padding: 0px 10px;
+}
+
+.email-box a .sub-btn {
+    text-transform: uppercase;
+    padding: 0 10px;
+    background: orange;
+    height: 45px;
+    border-radius: 4px;
+    margin-left: -18px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ------ End of the Newletter Form-------- */
+
+
+
+
 /*---------------start the footer content------ */
 footer {
+    width: 100%;
     background-color: #000;
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
     padding: 60px 0 20px;
-    margin-top: 130px;
-    height: 300px;
+    margin-top: 100px;
+    height: 310px;
 
 }
 
 .bookstore_logo img {
     width: 200px;
-    max-width: 10 00px;
+    max-width: 1000px;
 
 }
 
@@ -561,7 +1003,7 @@ footer h3 {
 .icons h3 {
     margin-left: 70px;
     color: red;
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .useful_links h3 {

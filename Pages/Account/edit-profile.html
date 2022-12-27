@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../../assets/css/wish_list.css">
+    <link rel="stylesheet" href="../../assets/css/edit_profile.css">
     <link rel="shortcut icon" href="../../assets/images/favicon img.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -23,6 +23,7 @@
 </head>
 
 <body>
+
     <!------------------------ Create the navigation bar ----------------------->
 
     <div class="head">
@@ -33,17 +34,17 @@
             </div>
             <div class="navi2">
                 <ol class="lang">
-                    <li><a href="">Lang <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                    <li><a href="#">Lang <i class=" fa-solid fa-caret-down"></i></a>
                         <ol class="Lang_option">
-                            <li> <a href="">English</a></li>
-                            <li> <a href="">Tamil</a></li>
+                            <li> <a href="#">English</a></li>
+                            <li> <a href="#">Tamil</a></li>
                         </ol>
                     </li>
                 </ol>
                 <ul class="fonts">
-                    <li> <a href="../../Pages/Account/signup.html">
+                    <li> <a href="../../Pages/Account/login.html">
                             <i class="fa-regular fa-heart"></i>
-                        </a></li>
+                        </a></li> <span>0</span>
                     <li> <a href="../../Pages/Account/signup.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
                 </ul>
             </div>
@@ -64,7 +65,7 @@
             <div class="nav">
                 <div class="navi1">
                     <ul>
-                        <li><a href="#"><img src="../../assets/images/search books.png" alt="search books img"></a></li>
+                        <li><a href="../Books/self_help.html"><img src="../../assets/images/search books.png" alt="search books img"></a></li>
                     </ul>
                 </div>
             </div>
@@ -80,7 +81,7 @@
             <li> <a href="../../index.html">Home</a></li>
             <li class="explore-menu" id="click"> <a href="#">Categories<i class="fa-solid fa-caret-down"></i></a>
                 <ol class="Explore-option">
-                    <li class="Arts-option"><a href="">Arts and Biography</a>
+                    <li class="Arts-option"><a href="#">Arts and Biography</a>
                         <div class="arts-menu">
                             <ol>
                                 <li><a href="#">Arts Forms</a></li>
@@ -104,8 +105,7 @@
             <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
                 <div class="profile">
                     <ol>
-                        <li><a href="../../Pages/Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit
-                                Profile</a></li>
+                        <li><a href="../Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
                         <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
                         <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
                         <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
@@ -113,102 +113,60 @@
                 </div>
             </li>
         </ul>
+       
     </div>
-    </nav>
-    <!----------------- END OF THE NAVIGATION------------------->
+   <div class="home-page">
+    <a href="../../index.html">home></a>
+    <a href="../Books/self_help.html">products></a>
+    <a href="../Account/edit-profile.html">Account</a>
+   </div>
 
-
-
-    <!-------------------  cart items deatails    ----------------------->
-
-
-    <div class="my-wish">
-        <h1>My Wishlist <i class="fa-solid fa-bag-shopping"></i></h1>
-        <div class="mycart">
-            <div class="product-detail">
-                <div class="product-cart">
-                    <div class="product-img">
-                        <img src="../../assets/images/attitude is everthing.webp" alt="products img">
-                    </div>
-                    <div class="product-deatils">
-                        <h2>Attitude is Everything by jeff keller.</h2>
-                        <h3>&#8377; 300 &nbsp; &nbsp;<s style="color: red;">&#8377; 400OFF</s></h3>
-                        <p>About the Author : Jeffrey Keller, President of Attitude is Everything, Incorporated, works
-                            with organizations that want
-                            to develop achievers and with sales managers who want their people to be more positive.</p>
-                        <h4>QTY :<input type="number" value="1"> <i class="fa-solid fa-trash"></i></h4>
-                    </div>
+    <!------ START THE PROFILE CONTENT ---------------->
+    <div class="container">
+        <div class="edit-profile">
+            <div class="profile-box">
+                <div class="profile-img">
+                    <img src="../../assets/images/profie img.jpg" alt="profile img">
+                    <h3>Hello,user</h3>
                 </div>
-
-                <div class="product-cart">
-                    <div class="product-img">
-                        <img src="../../assets/images/the stranget.jpg" alt="products img">
-                    </div>
-                    <div class="product-deatils">
-                        <h2>The Stranger By jacques Ferranadez.</h2>
-                        <h3>&#8377; 400 &nbsp; &nbsp;<s style="color: red;">&#8377; 600-OFF</s></h3>
-                        <p>About the Author : Jeffrey Keller, President of Attitude is Everything, Incorporated, works
-                            with organizations that want
-                            to develop achievers and with sales managers who want their people to be more positive.</p>
-                        <h4>QTY :<input type="number" value="1"> <i class="fa-solid fa-trash"></i></h4>
-                    </div>
-                </div>
-
-                <div class="product-cart">
-                    <div class="product-img">
-                        <img src="../../assets/images/can't hurt me.jfif" alt="products img">
-                    </div>
-                    <div class="product-deatils">
-                        <h2>Can't Hurt me By David Goggins.</h2>
-                        <h3>&#8377; 280 &nbsp; &nbsp;<s style="color: red;">&#8377; 450 0OFF</s></h3>
-                        <p>About the Author : Jeffrey Keller, President of Attitude is Everything, Incorporated, works
-                            with organizations that want
-                            to develop achievers and with sales managers who want their people to be more postive.</p>
-                        <h4>QTY :<input type="number" value="1"> <i class="fa-solid fa-trash"></i></h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bill">
-                <div class="check-bill">
-                    <h2>Total -&nbsp; &nbsp; &nbsp;<span> &#8377; 1000</span></h2>
-                    <h2>No of Items -<span>3</span></h2>
-                    <h2>You Save - &nbsp;<span>&#8377; 300</span></h2>
-                    <h2>Total Price -<span>&#8377; 700</span></h2>
-                </div>
-                <div class="proceed">
-                    <div class="input-pro">
-                        <a href="../../Pages/orders/Cart_list.html"><input type="button" value="Proceed to Checkout"></a>
-                    </div>
+                <hr>
+                <div class="profile-options">
+                    <h2>Return & Orders</h2>
+                    <h2>Manage Adresses</h2>
+                    <h2>Your Payment</h2>
+                    <h2>Terms & condition</h2>
+                    <h2>Log Out</h2>
                 </div>
             </div>
         </div>
-        <hr>
-    </div>
 
-
-
-    <!------------- Start the Newsletter forms -------------->
-
-    <div class="news-form">
-        <form action="">
-            <h1>Join Our Newsletter</h1>
-            <p>An email newsletter is a recurring email sent to subscribed contacts containing curated informational
-                content from news articles to resources and tips. The goal is to provide ongoing value while surfacing
-                important industry- or niche-related topics.</p>
-            <div class="email-box">
-                <i class="fa-sharp fa-solid fa-envelope"></i>
-                <input class="tbox" type="email" placeholder="Enter Your Email" required>
-                <a href=""> <input class="sub-btn" type="button" value="Subscribe"></a>
+        <!------------ START THE EDIT CONTENT  ------------->
+        <div class="user-edit">
+            <div class="user">
+                <div class="user-inp">
+                    <h1>Edit Your Profile</h1>
+                    <label for="name">First name :</label>
+                    <a href="">Edit</a> <br>
+                    <input type="text" name="name" placeholder="Meganathan" disabled>
+                    <label for="last" id="last-name">Last Name :</label>
+                    <input type="text" placeholder="S" disabled><br>
+                    <label for="email">Email :</label>
+                    <a href="">Edit</a><br>
+                    <input type="email" name="user-email" placeholder="example@gmail.com" disabled><br>
+                    <label for="number">Phone Number :</label>
+                    <a href="">Edit</a><br>
+                    <input type="number" placeholder="1234567892" disabled><br>
+                    <label for="adreess">Address:</label>
+                    <a href="">Edit</a><br>
+                    <textarea name="adress" cols="30" rows="4" disabled>59/123 Vivenkanda street,vadapalani,chennai-00000"
+        </textarea><br>
+                    <a href=""><button>Save Changes</button></a>
+                </div>
             </div>
-        </form>
+        </div>
     </div>
 
-
-    <!------ End of the New letter Form ----->
-
-    <!-----------------------------FOOTER CONTETNT ------------------------->
-
+    <!-------------------FOOTER CONTETNT ------------------>
     <footer>
         <div class="row">
             <div class="bookstore_logo">
@@ -246,6 +204,7 @@
         </div>
         <p style="text-align:center ;">&#169;Copyright 2022-Meganathan</p>
     </footer>
+
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
 
 </body>

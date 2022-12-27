@@ -1,88 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+
 }
 
+button {
+    cursor: pointer;
+}
+
+
+
 body {
-  
-    font-family: 'Montserrat',sans-serif;
-    font-family: 'Martian Mono', monospace;
-    background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-a{
-    text-decoration: none;
-    color: black;
-   
-}
-nav{
-    position: fixed;
-    top: 0%;
-    width: 100%;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: visible;
     z-index: 1;
 }
 
-.container_1 {
+.navigation>ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* -----------Create the navigation-------------- */
+.nav {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.nav-logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color:whitesmoke;
-    box-shadow: 3px 8px 9px -4px rgba(224, 220, 227, 1);
+    justify-content: space-between;
+    height: 110px;
+    position: fixed;
+    top: 0%;
     width: 100%;
-    height: 100px;
-    margin-bottom: 110px;
+    padding: 35px;
+    background-color: #e4ad4d;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    z-index: 1;
 }
 
-.head_img img {
-    width: 180px;
+.nav-logo img {
+    margin-top: 3px;
 }
 
-.navigation ul {
-    margin-right: 30px;
+.navi2 {
+    display: flex;
+    align-items: center;
+
+}
+
+.fonts {
     display: flex;
     list-style-type: none;
+}
+
+.navi2 ul li {
+    margin-right: 60px;
+    list-style-type: none;
+}
+
+.fa-regular,
+.fa-solid {
+    font-size: 45px;
+    color: whitesmoke;
+    font-weight: 300;
+}
+.fonts span{
+    position: absolute;
+    left: 84.3%;
+    top: 40%;
+    font-size: 20px;
+}
+.Lang_option {
+    display: none;
+    font-size: 19px;
+}
+
+.Lang_option li {
+    margin-top: 10px;
+    list-style-type: none;
+
+
+}
+
+.lang li:nth-child(1):hover .Lang_option {
+    display: block;
+
+}
+
+.lang {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 700;
+    height: 30px;
+    list-style-type: none;
+    display: block;
+    margin-right: 60px;
+    padding: 6px;
+
+}
+
+.lang li a {
+    margin-left: 15px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.Explore-option {
+    display: none;
+    list-style-type: none;
+    line-height: 40px;
+    width: 230px;
+    border-radius: 12px;
+    margin-left: -10px;
+    z-index: 1;
+
+}
+
+.explore-menu:hover .Explore-option{
+    position: absolute;
+    display: block;
+    background-color: rgb(222, 222, 222);
+}
+
+.Explore-option li a:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.Explore-option>li a {
+    margin-left: -45px;
+}
+
+.arts-menu {
+    display: none;
+}
+
+.Arts-option:hover .arts-menu {
+    display: block;
+    position: absolute;
+    background-color: rgb(222, 222, 222);
+    margin-top: -28px;
+    margin-left: 140px;
+
+}
+.arts-menu ol {
+    list-style-type: none ;
+    width: 250px;
+
+}
+.profile{
+    display: none;
+    z-index: 1;
+}
+.profile-menu:hover .profile{
+    position: absolute;
+    display: block;
+    background-color: rgb(222, 222, 222);
+    border-radius: 12px;
     
+}
+.profile ol{
+    list-style-type: none;
+    margin-top: 15px;
+    margin-left: -50px;
+    width: 240px;
+}
+.profile ol li{
+    margin-bottom: 20px; 
+}
+.profile i{
+    color:black;
+    font-size: 21px;
+    margin-right: 12px;
+}
+
+/* -------------- EDIT THE TOP SEARCH BAR ----------------  */
+
+
+.search_bar {
+    position: fixed;
+    top: 3%;
+    left: 18%;
+    z-index: 1;
+}
+
+.search_bar input {
+    padding: 13px;
+    font-size: 19px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    width: 772px;
+}
+
+::placeholder {
+    padding-left: 50px;
+    font-size: 17px;
+    padding-top: 30px;
+    font-weight: 300;
+
+}
+
+
+.navi1 img {
+    width: 50px;
+    color: white;
+    position: fixed;
+    top: 3%;
+    right: 30%;
+    z-index: 1;
+    background-color: #d3d3d3;
+    border-radius: 10%;
+    padding: 12px;
+
+    /* End of the search bar edit */
+}
+
+.navi1 ul li {
+    position: absolute;
+    left: 70%;
+    top: 3.2%;
+
+}
+
+/*----------Start the navigation------- */
+
+.navigation ul {
+    background-color: rgb(222, 222, 222);
+    padding: 25px;
+    display: flex;
+    margin-top: 110px;
+    height: 90px;
+    list-style-type: none;
+    border-top: 1px solid navy;
 }
 
 .navigation ul li {
-    font-size: 22px;
-    font-family: 'Martian Mono', monospace;
-    font-weight: 700;
-    margin-left: 80px;
-}
-.navigation ul li::after {
-    content: '';
-    background-color: red;
-    display: block;
-    height: 4px;
-    width: 0%;
-    margin: auto;
+    font-size: 21px;
+    font-weight: 900;
+    margin-left: 76px;
+    margin-top: 8px;
 }
 
-.navigation ul li:hover::after {
-    width: 100%;
-    transition: 0.5s;
+.fa-caret-down {
+    font-size: 19px;
+    color: crimson;
+    margin-left: 4px;
 }
-/*--------------End of the nagivation------- */
+
+.fa-sharp {
+    font-size: 19px;
+}
+/* -------- user profile edit ------------- */
+
+.fa-user{
+    margin-left: 10px;
+    font-size: 24px;
+    color: darkblue;
+}
 
 
 /* ------Start the payment gateway content----- */
+
+.container-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 span{
     font-size: 19px;
+    font-weight:800;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+
 }
 .payment{
     background-color: whitesmoke;
     width: 43%;
-    height: 660px;
-    margin-left: 420px;
+    height: 685px;
+    margin-left: 80px;
     margin-top: 190px;
     padding: 35px;
-    border-radius: 15px;
-
+    border-radius: 12px;
 }
+.vl{
+    border-right: 3px solid orange;
+    height: 690px;
+    outline: none;
+    position: absolute;
+    right: 47%;
+    top: 42%;
+}
+
 .row{
     display: flex;
     align-items: center;
@@ -91,13 +313,19 @@ span{
 }
 .title-1{
     margin-bottom: 3px;
-    font-size:25px;
+    font-size :27px;
+    font-weight: 800;
+    color: orange;
+    letter-spacing: 1px;
     margin-left: 14px;
 
 }
 .title{
     margin-left:15px;
-    font-size: 25px;
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: orange;
+    font-weight: 800;
 }
 .input_box{
     padding: 15px;
@@ -130,21 +358,75 @@ input::placeholder{
     margin-top: 15px;
     width: 100%;
     padding: 12px;
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: 600;
     border-radius: 8px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
     color:black;
     border: none;
-    background-color: lightgreen;
+    background-color:rgb(229, 168, 54);
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
+    opacity: 0.8;
 }
 .place_order:hover{
     text-decoration: underline;
-    background-color:rgb(133, 251, 151);
+    background-color:rgb(221, 169, 71);
+    opacity: 1;
     
 }
 
 
+/* payment edit */
+
+.other-pay{
+    margin-right: 200px;
+    margin-top: 200px;
+}
+.other-pay input{
+    margin-top:45px;
+}
+.other-pay input[type="checkbox"]{
+    width:38px;
+    height: 14px;
+   
+}
+.checkbox span{
+    font-size: 20px;
+    font-weight: 800;
+}
+.select-date{
+    margin-left: 860px;
+    position: absolute;
+    bottom:-9%;
+}
+.select-date input{
+    margin-top: 30px;
+    height: 16px;
+    width: 48px;
+}
+.select-date h3{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
+
+}
+.select-date span{
+    margin-left: 10px;
+}
+.tot-pay{
+    margin-top: -130px;
+    height:900px ;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+}
 /*---------------start the footer content------ */
 footer{
     background-color: #000;

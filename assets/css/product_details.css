@@ -1,61 +1,247 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Nunito', sans-serif;
+
 }
+
+button {
+    cursor: pointer;
+}
+
+
+::placeholder {
+    padding-left: 50px;
+    font-size: 17px;
+    padding-top: 30px;
+    font-weight: 300;
+}
+
+
 
 body {
-    font-family: 'Montserrat',serif;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
-nav {
+.navigation>ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* -----------Create the navigation-------------- */
+.nav {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
     position: fixed;
     top: 0%;
     width: 100%;
+    padding: 35px;
+    background-color: #e4b35ef7;
     z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.container_1 {
+.nav-logo img {
+    margin-top: 3px;
+}
+
+.navi2 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: white;
-    box-shadow: 3px 13px 9px -4px rgba(224, 220, 227, 1);
-    width: 100%;
-    height: 110px;
-    margin-bottom: 110px;
+
 }
 
-.head_img img {
-    width: 180px;
-}
-
-.navigation ul {
-    margin-right: 30px;
-    margin-bottom: 40px;
+.fonts {
     display: flex;
     list-style-type: none;
 }
 
-.navigation ul li {
-    font-size: 20px;
-    font-weight: 700;
-    margin-left: 80px;
-}
-.navigation ul li::after {
-    content: '';
-    background-color: red;
-    display: block;
-    height: 4px;
-    width: 0%;
-    margin: auto;
+.navi2 ul li {
+    margin-right: 60px;
+    list-style-type: none;
 }
 
-.navigation ul li:hover::after {
-    width: 100%;
-    transition: 0.5s;
+.fa-regular,
+.fa-solid {
+    font-size: 37px;
+    color: white;
 }
+
+.Lang_option {
+    display: none;
+    font-size: 19px;
+}
+
+.Lang_option li {
+    margin-top: 10px;
+    list-style-type: none;
+
+
+}
+
+.lang li:nth-child(1):hover .Lang_option {
+    display: block;
+
+}
+
+.lang {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 700;
+    height: 30px;
+    list-style-type: none;
+    display: block;
+    margin-right: 60px;
+    padding: 6px;
+
+}
+
+.lang li a {
+    margin-left: 15px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.Explore-option {
+    display: none;
+    list-style-type: none;
+    line-height: 40px;
+    width: 230px;
+    border-radius: 12px;
+    margin-left: -10px;
+    z-index: 1;
+
+}
+
+.explore-menu:hover .Explore-option {
+    position: absolute;
+    display: block;
+    background-color: rgb(222, 222, 222);
+}
+
+.Explore-option li a:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.Explore-option>li a {
+    margin-left: -45px;
+}
+
+.arts-menu {
+    display: none;
+}
+
+.Arts-option:hover .arts-menu {
+    display: block;
+    position: absolute;
+    background-color: rgb(222, 222, 222);
+    margin-top: -28px;
+    margin-left: 140px;
+
+}
+
+.arts-menu ol {
+    list-style-type: none;
+    width: 250px;
+
+}
+
+/* -------------- EDIT THE TOP SEARCH BAR ----------------  */
+
+
+.search_bar {
+    position: fixed;
+    top: 3%;
+    left: 18%;
+    z-index: 1;
+}
+
+.search_bar input {
+    padding: 13px;
+    font-size: 19px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    width: 772px;
+}
+
+::placeholder {
+    padding-left: 50px;
+    font-size: 17px;
+    padding-top: 30px;
+    font-weight: 300;
+
+}
+
+
+.navi1 img {
+    width: 55px;
+    color: white;
+    position: fixed;
+    top: 3%;
+    right: 30%;
+    z-index: 1;
+    background-color: #d3d3d3;
+    border-radius: 10%;
+    padding: 12px;
+
+    /* End of the search bar edit */
+}
+
+.navi1 ul li {
+    position: absolute;
+    left: 70%;
+    top: 3.2%;
+
+}
+
+/*----------Start the navigation------- */
+
+.navigation ul {
+    background-color: rgb(222, 222, 222);
+    padding: 25px;
+    display: flex;
+    height: 90px;
+    margin-top: 114px;
+    list-style-type: none;
+    border-top: 1px solid navy;
+}
+
+.navigation ul li {
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 90px;
+    margin-top: 8px;
+}
+
+.fa-caret-down {
+    font-size: 19px;
+    color: crimson;
+    margin-left: 4px;
+}
+
+.fa-sharp {
+    font-size: 19px;
+}
+
 
 /*-------------- End of the nagivation ------- */
 
@@ -68,28 +254,38 @@ a {
 
 .product_img img {
     width: 510px;
-    height: 546px;
-   
+    height: 590px;
+
 }
 
 
 .products {
-    margin-top: 210px;
+    margin-top: 90px;
     display: flex;
     justify-content: space-between;
     margin-left: 40px;
 
 }
-.btn-cart a{
+
+.btn-cart a {
     position: relative;
     bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1;
     left: 70px;
-    background-color: #e9622f;
-    color:white;
+    opacity: 0.8;
+    background-color: #ed9530;
+    color: black;
     padding: 10px 18px;
     border-radius: 6px;
     margin-left: 24px;
- }
+    transition: all 0.2;
+}
+
+.btn-cart a:hover {
+    opacity: 1;
+}
+
 main {
     max-width: 1240px;
     margin-left: 120px;
@@ -98,7 +294,9 @@ main {
 
 .product_details a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 900;
+
 }
 
 .product_details {
@@ -108,12 +306,12 @@ main {
 .product_details h1 {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 45px;
+    font-weight: 900;
 }
 
 .product_details h4 {
-    font-size: 20px;
+    font-size: 24px;
     color: rgb(219, 46, 46);
 
 }
@@ -133,7 +331,7 @@ main {
 }
 
 .product_details>.btn {
-    background-color:#e9622f;
+    background-color: #e9622f;
     font-weight: bold;
     color: white;
     border-radius: 6px;
@@ -145,184 +343,398 @@ main {
 }
 
 .product_details>.btn:hover {
-    background: #b5512d; 
+    background: #b5512d;
 }
 
 .product_details h2 {
-    margin-top: 40px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 12px;
 
 }
 
 .product_details p {
-    font-size: 18px;
-    margin-top: 12px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 700;
 }
 
-
+main hr {
+    /* border: none; */
+    border-top: 1.4px solid black;
+    outline: none;
+    margin-top: 40px;
+    width: 101%;
+    margin-left: 40px;
+}
 
 /*-----------END OF THE ORDER PAGE CONTENT----- */
 
+
 /*-------START OF THE FEATURED PRODUCTS--------- */
-.books-rows {
-    background-color: rgb(236, 226, 226);
-    margin: 0px 30px;
-    border-radius: 20px;
-
-}
-
-.container_2 {
-    text-align: center;
-    margin-top: 60px;
-    color: #555;
-
-
-}
-
-.container_2 h1 {
-    padding-top: 30px;
-    font-weight: 600;
-}
-
-.book_section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-left: 10px;
-    max-width: 80%;
-    margin: 0px auto;
-
-
-}
-
-.book_cards img,
-.col-2 img,
-.col-3 img {
-    padding: 15px;
-    border-radius: 30px;
-    width: 230px;
-    margin-left: 5px;
-    height: 280px;
-
-}
-
-.book_cards,
-.col-2,
-.col-3 {
-    border-radius: 20px;
-}
-
-.book_cards {
-    width: 240px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    transition: 0.5s;
-}
-
-.book_cards h4 {
-    margin-left: 30px;
-    width: 200px;
-    color: black;
-    font-size: 16px;
-    margin-bottom: 15px;
-    font-weight: 100;
-}
-
-.book_cards p {
-    margin-left: 30px;
-    width: 255px;
-    font-size: 16px;
-    font-weight: 100;
-}
-
-
-    
-
-.book_cards p>b {
-    color: rebeccapurple;
-    font-size: large;
-    text-decoration: underline;
-    letter-spacing: 1px;
-}
-
-.book_cards button {
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 8px 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background-color: #f7000074;
-    cursor: pointer;
-    color: black;
-    border: none;
-}
-
-.rating {
-    color: #ff523b;
-    margin-left: 30px;
-    margin-bottom: 10px;
-}
-
-.rating2 {
-    margin-top: 35px;
-    margin-left: 30px;
-    color: #ff523b;
-    margin-bottom: 10px;
-}
-
-.rating2 p {
-    margin-left: 30px;
-}
-
-.book_cards:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
-}
-
-.adding_books {
-    margin: 120px 10px;
-    border-radius: 15px;
-
-}
-
-.motivational {
+.row1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1100px;
-    margin: 0px auto;
+    max-width: 1220px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.author-img img {
+    border-radius: 120%;
+    width: 140%;
+    margin-top: -10px;
+    margin-right: 120px;
 
 }
 
-.motivational_books>h1 {
-    padding-top: 30px;
-    text-align: center;
+.author-content p {
+    margin-left: 60px;
+    line-height: 28px;
+    text-transform: capitalize;
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.about-author h2 {
+    font-size: 29px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+/*---- END OF THE AUTHOR CONTENT -------- */
+
+/*----- PRODUCT DETAILS ------- */
+
+.book-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 900px;
+    margin-top: 30px;
+    margin-left: 110px;
+}
+
+.book-details h2 {
+    color: tomato;
     font-size: 30px;
-    color: #555;
+    font-size: 800;
+    letter-spacing: 1px;
+    margin-left: 195px;
+    margin-top: 60px;
+}
+
+.book-details span {
+    font-size: 18px;
+    font-weight: 300;
+    color: red;
+}
+
+.book-detail h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.book-details hr {
+    border-top: 1.6px solid black;
+    outline: none;
+    width: 86%;
+    margin-left: 145px;
+    margin-top: 50px;
+}
+
+/*------ END OF THE PRODUCTR DETAILS ------- */
+
+
+/*------ START THE SIMILAR PRODUTS ------ */
+
+.books {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-left: 20px;
 
 }
 
-hr {
-    border: 2px solid navy;
-    margin: 13px 598px;
+.book-img {
+    margin-right: 33px;
+    transition: 0.5s;
 }
+
+.book-img img:hover {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transform: scale(0.9);
+}
+
+.book-img img {
+    transition: 0.5s;
+}
+
+.trends {
+    max-width: 1290px;
+    margin-left: 122px;
+}
+
+.trends h2 {
+    margin-top: 90px;
+    margin-left: 22px;
+    font-size: 41px;
+    font-weight: 800;
+    letter-spacing: 1px
+}
+
+.arrow-right>.fa-solid {
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    border: 1px solid indigo;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    bottom: -140%;
+}
+
+.books img {
+    width: 190px;
+    height: 290px;
+    margin-top: -10px;
+}
+
+
+.book-info {
+    max-width: 300px;
+    margin-left: 5px;
+
+}
+
+.book-info p {
+    margin-top: -29px;
+}
+
+.book-info p,
+h3,
+.rating {
+    margin-bottom: 10px;
+}
+
+.trends hr {
+    border: none;
+    margin-top: 10px;
+    border-top: 2px solid grey;
+    height: 0;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 22px;
+}
+
+.bottom-hr1 hr {
+    margin-top: 30px;
+}
+
+::-webkit-scrollbar {
+    scroll-behavior: smooth;
+}
+
+.more-btn {
+    margin-left: 550px;
+    margin-bottom: 80px;
+    position: absolute;
+    bottom: -72%;
+
+}
+
+.more-btn button {
+    padding: 12px 40px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.book-info>p {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.book-info>a>button {
+    width: 90%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.book-info>a>button:hover {
+    color: white;
+    opacity: 1;
+    background-color: #df4257;
+}
+
+/*------- Create ADD to CART ------- */
+.trend_book>a>input {
+    position: relative;
+    font-size: 18px;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 9px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.add {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: -43px;
+    left: 0px;
+    transition: 0.5s;
+}
+
+.trend_book:hover .add {
+    opacity: 1;
+}
+
+.book-info>h3 {
+    font-size: 18px;
+}
+
+.book-info>h3>s {
+    margin-top: 2px;
+    color: red;
+    margin-left: 63px;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-head a {
+    color: red;
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+.fa-star {
+    color: orange;
+    font-size: 17px;
+}
+
+/*-----End of the best seller books------- */
+
+/*---- Start the New letter Form-------- */
+
+.news-form {
+    max-width: 900px;
+    margin-top: 60px;
+    margin-left: 290px;
+    text-align: center;
+}
+
+.news-form h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: orange;
+}
+
+.news-form p {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 50px auto;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.email-box i {
+    color: black;
+    background: orange;
+    width: 45px;
+    border-radius: 5px;
+    padding: 6px;
+    line-height: 30px;
+}
+
+.email-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 45px;
+    width: 880px;
+}
+
+.tbox,
+.sub-btn {
+    outline: none;
+    border: none;
+}
+
+.tbox {
+    border: 2px solid orange;
+    border-radius: 4px;
+    width: 0px;
+    transition: 0.6s;
+
+}
+
+.email-box:hover>.tbox,
+.tbox:focus {
+    width: 500px;
+    padding: 0px 10px;
+}
+
+.email-box a .sub-btn{
+    text-transform: uppercase;
+    padding: 0 10px;
+    background: orange;
+    height: 45px;
+    border-radius: 4px;
+    margin-left: -18px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ------ End of the Newletter Form-------- */
+
+
+
 
 /*--------------- Start the footer content ----------------- */
 footer {
     background-color: #000;
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: 600;
     padding: 60px 0 20px;
-    margin-top: 130px;
-    height: 300px;
+    margin-top: 90px;
+    height: 320px;
 
 }
 
 .bookstore_logo img {
     width: 200px;
-    max-width: 10 00px;
+    max-width: 1000px;
 
 }
 
@@ -374,3 +786,46 @@ footer h3 {
 }
 
 /*---------------  END OF THE FOOTER CONTENT -------------- */
+
+
+.james-clear1 img{
+    border-radius: 140%;
+    width: 94%;
+    margin-top: -10px;
+    
+}
+.james-clear2 p{
+    margin-left: 5px;
+}
+.napolean-hill img{
+    border-radius: 117%;
+    width: 144%;
+    height: 165px;
+    margin-top: -10px;
+    margin-right: 115px;
+}
+.Robert img{
+    border-radius: 100%;
+    width: 178%;
+    height: 170px;
+    margin-top: -10px;
+    margin-right: 97px;
+    margin-left: -1px;
+}
+.Robert2{
+    margin-left: 30px;
+}
+.Rhonda img{
+    border-radius: 120%;
+    width: 140%;
+    margin-top: -10px;
+    margin-right: 120px;
+    height: 172px;
+}
+.David img{
+    border-radius: 120%;
+    width: 140%;
+    margin-top: -10px;
+    margin-right: 120px;
+    height: 172px;
+}

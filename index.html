@@ -18,8 +18,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,200;1,300;1,400&display=swap"
-        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS-STORE</title>
 </head>
@@ -29,281 +27,906 @@
     <!------------------------ Create the navigation bar ----------------------->
 
     <div class="head">
-        <div class="head_img">
-            <img src="assets/images/books-bg.jpg" alt="" width="100%" height="700px">
-        </div>
         <div class="nav-logo">
             <div class="logo">
                 <a href="index.html"><img src="assets/images/books_store-removebg-preview.png" alt="webiste logo"
                         width="190"></a>
             </div>
             <div class="navi2">
-                <ul>
-                    <li><a href="Pages/Account/login.html">Login In</a></li>
-                    <li><a href="Pages/Account/signup.html">Signup</a></li>
+                <ol class="lang">
+                    <li><a href="#">Lang <i class=" fa-solid fa-caret-down"></i></a>
+                        <ol class="Lang_option">
+                            <li> <a href="#">English</a></li>
+                            <li> <a href="#">Tamil</a></li>
+                        </ol>
+                    </li>
+                </ol>
+                <ul class="fonts">
+                    <li> <a href="Pages/Account/signup.html">
+                            <i class="fa-regular fa-heart"></i>
+                        </a></li>  <a href="Pages/Account/login.html"><span>0</span></a> 
+                    <li> <a href="Pages/Account/signup.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
                 </ul>
             </div>
         </div>
+
+
         <!------------------- Create a Search bar ---------------->
 
         <div class="search_bar">
-            <input type="text" placeholder="Search Author Name Or Books name">
+            <input type="text" placeholder="Search By Author Name Or Book name">
         </div>
 
 
         <!------------------------------- END OF THE NAVIGATION --------------------------------->
 
+
         <div class="container">
             <div class="nav">
                 <div class="navi1">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="Pages/Books/biography books.html"> Books
-                                <div class="drop_down">
-                                    <ol>
-                                        <li> <a href="Pages/Books/self help book.html">Self developmemt</a> </li>
-                                        <li> <a href="Pages/Books/biography books.html">Biography Books</a> </li>
-                                        <li> <a href="Pages/Books/fiction books.html">Fiction Books</a> </li>
-                                    </ol>
-                                </div>
-                            </a>
-                        </li>
-                        <li><a href="Pages/orders/Cart_list.html"> My cart</li></a>
-                        <li><a href="Pages/orders/Wish_list.html">Wishlist</a></li></a>
-                        <li><a href="Pages/Account/Books Form.html">Books Form</a></li>
-                        <li><a href="Pages/Books/self help book.html"><img src="assets/images/search books.png"
-                                    alt="search books img"></a></li>
+                        <li><a href="Pages/Books/self_help.html"><img src="assets/images/search books.png" alt="search books img"></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="main">
-                <h1> <span style="color:rgb(255, 245, 245);"> READ THE BOOKS AND IMPROVE <br></span> <span
-                        style="color:#ffadad;"> YOUR KNOWLEDGE!!! </span> </h1>
-                <p>Today a Reader Tommorrow <br> a Leader.<br></p>
-                <a href="#book_container"> <button> View More &#10132;</button></a>
+        </div>
+    </div>
+
+
+
+    <!------------------- navigation content--------->
+
+    <div class="navigation">
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li class="explore-menu"> <a href="Pages/Books/self help book.html">Categories<i
+                        class="fa-solid fa-caret-down"></i></a>
+                <ol class="Explore-option">
+                    <li class="Arts-option"><a href="Pages/Books/self_help.html">Arts and Biography</a>
+                        <div class="arts-menu">
+                            <ol>
+                                <li><a href="#">Arts Forms</a></li>
+                                <li><a href="#">Dance And Performing</a></li>
+                                <li><a href="#">Flim and Tv</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#">Fiction Books</a></li>
+                    <li><a href="#">Law</a></li>
+                    <li><a href="#">Medicine</a></li>
+                    <li><a href="Pages/Books/self_help.html">Self Help book</a></li>
+                    <li><a href="#">Life Style</a></li>
+                    <li><a href="#">Science And Maths</a></li>
+
+                </ol>
+            </li>
+            <li><a href="Pages/Books/Combo book.html">Combo</a></li>
+            <li><a href="">Best Seller</a></li>
+            <li><a href="Customer-feedback.html">Customer Feedback</a></li>
+            <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
+                <div class="profile">
+                    <ol>
+                        <li><a href="Pages/Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
+                        <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
+                        <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                    </ol>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!------ Adding a AD image ------------>
+
+    <div class="slider-frame">
+        <div class="slide-image">
+            <div class="ad-img">
+                <img src="assets/images/ad 1.jfif" alt="ad 1">
+            </div>
+            <div class="ad-img">
+                <img src="assets/images/ad 2.jpeg" alt="ad 1">
+            </div>
+            <div class="ad-img">
+                <img src="assets/images/ad4.jpg" alt="ad 1">
+            </div>
+
+        </div>
+    </div>
+
+    <!---------- End of the ad animation -------------->
+
+
+    <!---------- Trending books Section ---------------->
+
+    <div class="trends reveal">
+        <div class="section-head">
+            <h2>Trending Books</h2>
+            <a href="Pages/Books/self_help.html">See All</a>
+        </div>
+        <hr>
+        <div class="books">
+            <div class="book-img">
+                <div class="trend_book">
+                    <a href="Pages/products_details/Product_page.html"><img
+                            src="https://m.media-amazon.com/images/I/41jOqQ0X7DL.jpg" alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Rich Dad Poor dad Robert T.Kiyosaki
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href="Pages/products_details/Product_page.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <a href="Pages/products_details/atomic details.html"><img src="https://m.media-amazon.com/images/I/41z4lYkfJGL.jpg" alt="trend books"
+                            class="atomic"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Atomic Habits by James Clear</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;250.00 <s>380.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <a href="Pages/products_details/eat frog detail.html"><img src="https://m.media-amazon.com/images/I/516VyKCKi-L.jpg" alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Eat That Frog By Brain Tracy.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;320.00 <s>480.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <a href="Pages/products_details/Think and grow detail.html"><img src="https://m.media-amazon.com/images/I/51390klhT7L.jpg" alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Think And Grow Rich By Napolean Hill.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <a href="#"><img src="https://m.media-amazon.com/images/I/41XsxD79sxL.jpg" alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>How to Win Friends And Influence People.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/91DUwIBj4zL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The Power Of Now By Echkhart Tolle.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/41mDy+EvSqL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The Habits of Highly Effective people.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/41EQfzKomwL._SX323_BO1,204,203,200_.jpg"
+                        alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Deep Work By Cal NewPort.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/6121aKAqd0L.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The One Thing By Gray Keller.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://n3.sdlcdn.com/imgs/h/6/6/7-Secrets-Of-A-Phenomenal-SDL882847032-1-80229.jpg"
+                        alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Life Amazing Secrets By Gaur Gopal.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-right">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="bottom-hr1">
+            <hr>
+        </div>
+    </div>
+
+
+    <!--------- Start The Best seller Book row -------------->
+
+
+
+    <div class="best-seller reveal">
+        <div class="section-head">
+            <h2>Best Seller</h2>
+            <a href="Pages/Books/self_help.html">See All</a>
+        </div>
+        <hr>
+        <div class="books reveal">
+            <div class="book-img reveal">
+                <div class="trend_book">
+                    <a href="Pages/products_details/secert detail.html"><img src="https://m.media-amazon.com/images/I/81fdQIY6ykL.jpg" alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>The Secret Book By Rhonda Byrne.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                   <a href="Pages/products_details/48 laws detail.html"> <img src="https://m.media-amazon.com/images/I/411yaMigwbL._SX498_BO1,204,203,200_.jpg"
+                        alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The 48 Laws Power Robbert Greene.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <a href="Pages/products_details/can't hurt detail.html"><img src="https://m.media-amazon.com/images/I/81gTRv2HXrL.jpg" alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Can't Hurt Me By David Goggins.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+
+            <div class="book-img">
+                <div class="trend_book">
+                   <a href="Pages/products_details/power of habit detail.html"> <img src="https://m.media-amazon.com/images/I/71ONWR6eXDL.jpg" alt="trend books"></a>
+                    <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The Power of Habit By Charles duhigg.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href="Pages/orders/Cart_list.html"><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/81gTwYAhU7L.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The Power of Your Subconsicous Mind</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/814L+vq01mL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Ikigai Chinese Method To Achieve Goal.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/813uPMOnskL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>You Can By Geroge Mathew Adams.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price:&#8377; 120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/71K+FclxRdL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Think Again By Adam Grant.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price:&#8377; 120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/71zytzrg6lL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The 5am Club By Robin Sharma.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price:&#8377; 120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="Row-2">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="bottom-hr2">
+            <hr>
+        </div>
+    </div>
+
+    <!-------- Banner image ----------->
+
+
+
+    <div class="container2">
+        <div class="gif fiction_gif">
+            <div class="gif_img ">
+                <img src="../../assets/images/banner2.gif" alt="always learn gif">
+            </div>
+            <div class="gif_content fic_gif">
+                <h2>Book Store is Always open Get Your<span> Favourite Books Here. !</span> </h2>
+                <h3> Good Books Always Gives You <br><span>Good Vibez.</span>
+                </h3>
+                <div class="Explore_btn fict_btn">
+                    <a href="../../index.html"> <button>Find
+                            More!</button></a>
+                </div>
             </div>
         </div>
     </div>
-    <!-------------------------End of the header content -------------->
 
-    <!------------------Start the main content-------------------------->
 
-    <div class="books-rows" id="book_container">
-        <div class="container_2">
-            <h1>All Books Here.</h1>
+    <!----------------------------- End of the banner img -------------------------------->
+
+    <!---------------------------- New Arrival book ------------------->
+
+    <div class="new-arrival">
+        <div class="section-head">
+            <h2>New Arrival Books</h2>
+            <a href="">See All</a>
         </div>
-        <div class="book_section">
-            <div class="book_cards">
-                <a href="Pages/products_details/Product_page.html"><img src="assets/images/attitude is everthing.webp"
-                        alt="attitude books"></a>
-                <h4>Attitude is everything (change your attitude change your life) by -Jeff keller.</h4>
-                <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+        <hr>
+        <div class="books">
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/81tZufOGaZL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
                 </div>
-                <p>&#8377; 190.90 <a href="Pages/products_details/Product_page.html"><button>BUY NOW</button></a></p>
+                <div class="book-info">
+                    <p>Red Rising By Pierce Brown.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;220.00 <s>380.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/91dPlwNFplL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
 
+                <div class="book-info">
+                    <p>Golden Son By Pierce Brown.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
             </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/harry potter details.html"><img src="assets/images/harry poter.webp"
-                        alt="attitude books"></a>
-                <h4>Harry potter and the half-Blood prince - By Jk Rowling.</h4>
-                <div class="rating2">
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/41LcL0dv3zL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>House Made of Dawn By Scott Momaday</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/91mho0umzyL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>The Water Dancer By Book Club</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/816t5VDY9rL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>City of Bones Clarne ShadowHunters.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/81fc9NgRyuL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>Bazzer Bad Dreams By Stephen King.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;150.00 <s>480.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/81H--wtnoFL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>Saint Anything by Sarah Dessen.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/51MQVBZXBEL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>Lady Of Hay By Barbara Erskine. </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular  fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/71SImNRm4bL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>Blue Fish By Pat Schmatz.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/714cT1J4XkL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+
+                <div class="book-info">
+                    <p>Sting a Broken music By Railing Stone.</p>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
                 </div>
-                <p>&#8377; 150.20 <a href="Pages/products_details/harry potter details.html"><button>BUY
-                            NOW</button></a></p>
             </div>
 
-            <div class="book_cards">
-                <a href="Pages/products_details/cindralla detail.html"><img src="assets/images/cindralla.jpg"
-                        alt="attitude books"></a>
-                <h4>A Cindralla Books of secrets.(books writen by a charles Perrault.)</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 200.20 <a href="Pages/products_details/cindralla detail.html"><button>BUY NOW</button></a>
-                </p>
-
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/elon detail.html"><img src="assets/images/elon musk.jfif"
-                        alt="attitude books"></a>
-                <h4>Elon musk about the Space-X Story.(BY-Asulee Vange)</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 230.90 <a href="Pages/products_details/elon detail.html"><button>BUY NOW</button></a></p>
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/eat frog detail.html"><img src="assets/images/eat that forg.jpg"
-                        alt="attitude books"></a>
-                <h4>Eat that Frog Stop your Procrastinate(-By Brian Tracy.)</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 230.90 <a href="Pages/products_details/eat frog detail.html"><button>BUY NOW</button></a></p>
-
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/invester.html"> <img src="assets/images/The_Intelligent_Investor.png"
-                        alt="attitude books"></a>
-                <h4>Intelligent Investor your money (BY-Benjamin Graham).</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 250.00<a href="Pages/products_details/invester.html"><button>BUY NOW</button></a></p>
-
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/python detail.html"><img src="assets/images/python.jpg"
-                        alt="attitude books"></a>
-                <h4>Python Programming launguages (-By Reema Thareja).</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 230.90 <a href="Pages/products_details/python detail.html"><button>BUY NOW</button></a></p>
-
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/Data structure detail.html"><img src="assets/images/data.jpg"
-                        alt="attitude books">
-                </a>
-                <h4>Data Structures and Algorithms Made Easy(By-Narashima).</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 230.90 <a href="Pages/products_details/Data structure detail.html"><button>BUY
-                            NOW</button></a></p>
-            </div>
         </div>
-    </div>
-    <!---------------- END OF THE BOOKS ROWS ALL BOOKS SECTION --------->
-
-    <!-------------------- START THE BANNERS ---------------------------->
-
-    <div class="banner">
-        <div class="banner_img">
-            <img src="assets/images/banner img.jpeg" alt="banner img">
-        </div>
-        <div class="ban-text">
-            <p>Exclusive Available on Book Store.</p>
-
-            <h1>Top No: 1 Bestseller <span style="color: red;"> Books in India's.</span> </h1><br>
-            <small>“Everyone Has a Story” is about a young girl Meera who is in search of a story and but has no idea
-                where she might find it. In search of her story, she comes across Vivaan, a young and successful banker
-                who has a secret desire; that to escape the world in which he lives and travel to his heart's
-                content.</small>
-            <br> <br>
-            <a href="#"> <button>BUY NOW &#8594;</button></a>
+        <div class="row-3">
+            <i class="fa-solid fa-arrow-right"></i>
         </div>
 
-    </div>
-    <!------------------END OF THE BANNER SECTION--------------------- -->
-
-    <!-------------START THE MOTIVATIOAL SECTION-------------->
-    <div class="adding_books">
-        <div class="motivational_books">
-            <h1> Motivational Books.</h1>
-        </div>
-        <div class="motivational">
-            <div class="book_cards">
-                <a href="Pages/products_details/rich dad book detail.html"><img src="assets/images/rich.webp"
-                        alt="attitude books">
-                </a>
-                <h4>Rich Dad Poor Dad is writen (By-Robert Kiysosaki).</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 120.90 <a href="Pages/products_details/rich dad book detail.html"><button>BUY
-                            NOW</button></a></p>
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/Think and Grow Detail.html"><img
-                        src="assets/images/think and grow rich.jpg" alt="attitude books">
-                </a>
-                <h4>Think and Grow Rich Writen (By-Napolean Hill.)</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 250.90 <a href="Pages/products_details/Think and Grow Detail.html"><button>BUY
-                            NOW</button></a></p>
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/Atomic Details.html"><img src="assets/images/atomic habits.webp"
-                        alt="attitude books">
-                </a>
-                <h4>Atomic Habits Book are Writen (By-James Clear).</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 290.90 <a href="Pages/products_details/Atomic Details.html"><button>BUY
-                            NOW</button></a></p>
-            </div>
-            <div class="book_cards">
-                <a href="Pages/products_details/How to stop worry.html"><img
-                        src="assets/images/how to stop worring and start living.png" alt="attitude books">
-                </a>
-                <h4>How to Stop Worring and Start living(By-Dale Carnegie.)</h4>
-                <div class="rating2">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>&#8377; 330.90 <a href="Pages/products_details/How to stop worry.html"><button>BUY NOW</button></a>
-                </p>
-            </div>
+        <div class="bottom-hr3">
+            <hr>
         </div>
     </div>
-    <!-------------------ENF OF THE MOTIVATIONAL BOOKS------------ -->
 
+    <!---End of the new arrival books -->
+
+    <!-------------- Fiction Books ----------->
+
+
+    <div class="fiction">
+        <div class="section-head">
+            <h2>Our Best Fiction Books</h2>
+            <a href="">See All</a>
+        </div>
+        <hr>
+        <div class="books">
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/81E9oNSK3bL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Life of Pi Yann Martel Picture.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/51eW-wH1K-L.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Catch-22 By joseph Keller.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/7148BYflG2L.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Cindralla Story By Walt Disney.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/613vQdXPDwL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Beloved By Toni Morrison.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/51QRFhEBUNL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The Stranger By Jacques Ferranadez.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/51PcUAhn15L.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>Harry Potter Philosphor Stone.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/A1aDb5U5myL.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>War and Peace By Leo Tolstoy.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+            <div class="book-img">
+                <div class="trend_book">
+                    <img src="https://m.media-amazon.com/images/I/710+HcoP38L.jpg" alt="trend books">
+                    <a href=""><input type="button" value="Add to Cart" class="add"></a>
+                </div>
+                <div class="book-info">
+                    <p>The Hobbit J.K.K Tolkien.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h3>Price : &#8377;120.00 <s>180.00</s></h3>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="row-4">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="bottom-hr4">
+            <hr>
+        </div>
+    </div>
+
+    <!------------- End of the fiction section ----------------->
 
     <!-- ----------------------START THE TESTIMONIAL----------------->
+
     <div class="testo">
         <div class="testi_head">
             <h1 style="text-align: center;">Our Customer Feedback.</h1>
@@ -366,6 +989,27 @@
     </div>
     <!--------------END OF THE TESTIMONIAL----------- -->
 
+
+    <!------------- Start the Newsletter forms -------------->
+
+    <div class="news-form">
+        <form action="">
+            <h1>Join Our Newsletter</h1>
+            <p>An email newsletter is a recurring email sent to subscribed contacts containing curated informational
+                content from news articles to resources and tips. The goal is to provide ongoing value while surfacing
+                important industry- or niche-related topics.</p>
+            <div class="email-box">
+                <i class="fa-sharp fa-solid fa-envelope"></i>
+                <input class="tbox" type="email" placeholder="Enter Your Email" required>
+                <a href=""> <input class="sub-btn" type="button" value="Subscribe"></a>
+            </div>
+        </form>
+    </div>
+
+
+    <!------ End of the New letter Form ----->
+
+
     <!-------------------FOOTER CONTETNT ------------------>
     <footer>
         <div class="row">
@@ -404,6 +1048,7 @@
         </div>
         <p style="text-align:center ;">&#169;Copyright 2022-Meganathan</p>
     </footer>
+
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
 </body>
 

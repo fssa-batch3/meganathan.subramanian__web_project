@@ -1,17 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Heebo', sans-serif;
-    font-family: 'Nunito', sans-serif;
-}
-
-body{
-    font-family: 'Heebo', sans-serif;
-    font-family: 'Nunito', sans-serif;
-}
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -30,8 +17,6 @@ button {
 body {
     font-family: 'Heebo', sans-serif;
     font-family: 'Nunito', sans-serif;
-    overflow-x: visible;
-    z-index: 1;
 }
 
 .navigation>ul li a {
@@ -64,7 +49,25 @@ body {
 .nav-logo img {
     margin-top: 3px;
 }
-
+.navigation hr{
+    margin-bottom: 4px solid blue;
+    margin-top: 10px;
+    width: 84%;
+    height: 0;
+    margin-left:90px;
+}
+.home-page{
+    margin-left: 178px;
+    margin-top: 20px;
+    border: 1px solid orange;
+    width:260px;
+    font-weight: 800;
+}
+.home-page a{
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
 .navi2 {
     display: flex;
     align-items: center;
@@ -87,12 +90,14 @@ body {
     color: whitesmoke;
     font-weight: 300;
 }
-.fonts span{
+
+.fonts span {
     position: absolute;
     left: 84.3%;
     top: 40%;
     font-size: 20px;
 }
+
 .Lang_option {
     display: none;
     font-size: 19px;
@@ -141,7 +146,7 @@ body {
 
 }
 
-.explore-menu:hover .Explore-option{
+.explore-menu:hover .Explore-option {
     position: absolute;
     display: block;
     background-color: rgb(222, 222, 222);
@@ -168,33 +173,39 @@ body {
     margin-left: 140px;
 
 }
+
 .arts-menu ol {
-    list-style-type: none ;
+    list-style-type: none;
     width: 250px;
 
 }
-.profile{
+
+.profile {
     display: none;
     z-index: 1;
 }
-.profile-menu:hover .profile{
+
+.profile-menu:hover .profile {
     position: absolute;
     display: block;
     background-color: rgb(222, 222, 222);
     border-radius: 12px;
-    
+
 }
-.profile ol{
+
+.profile ol {
     list-style-type: none;
     margin-top: 15px;
     margin-left: -50px;
     width: 240px;
 }
-.profile ol li{
-    margin-bottom: 20px; 
+
+.profile ol li {
+    margin-bottom: 20px;
 }
-.profile i{
-    color:black;
+
+.profile i {
+    color: black;
     font-size: 21px;
     margin-right: 12px;
 }
@@ -216,14 +227,6 @@ body {
     border-radius: 8px;
     border: none;
     width: 772px;
-}
-
-::placeholder {
-    padding-left: 50px;
-    font-size: 17px;
-    padding-top: 30px;
-    font-weight: 300;
-
 }
 
 
@@ -254,7 +257,7 @@ body {
     background-color: rgb(222, 222, 222);
     padding: 25px;
     display: flex;
-    margin-top: 110px;
+    margin-top: 90px;
     height: 90px;
     list-style-type: none;
     border-top: 1px solid navy;
@@ -276,219 +279,163 @@ body {
 .fa-sharp {
     font-size: 19px;
 }
+
 /* -------- user profile edit ------------- */
 
-.fa-user{
+.fa-user {
     margin-left: 10px;
     font-size: 24px;
     color: darkblue;
 }
 
+/*----- PROFILE EDIT --------*/
 
 
-/* LOGIN FORM EDIT */
-
-.forms{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 120px;
-    margin-left: 150px;
-}
-.svg-img img{
-    margin-left: 28px;
-    width: 850px;
-}
-.login-form{
-    height: 655px;
-    background-color: #a39dff;
-    border-radius: 20px;
-    max-width: 420px;
-}
-
-form{
-    padding: 25px;
-}
-h1{
-    margin-left:56px;
-    font-size:50px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-p{
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 25px;
-    margin-bottom: 20px;
-}
-span{
-    color:white;
-}
-form input{
-    margin: 10px auto;
-    margin-left: 20px;
-}
-.rem-me{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 5px;
-}
-#check{
-    width:15px;
-}
-.new-user{
-    text-align: center;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-.new-user a{
-    margin-left: 2px;
-    color:white;
-}
-.new-user a:hover{
-    text-decoration: underline;
-
-}
-.rem-me h4{
-    margin-right: 55px;
-    font-size: 18px;
-
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-h3{
-    color: 17px;
-    font-weight: 900;
-    margin-right: 10px;
-}
-h2{
-    margin-left: 50px;
-    margin-top: 12px;
-    font-size: 22px;
-    font-weight: 900;
-    color: white;
-}
-
-.social-link{
-    margin-left: 40px;
-    margin-top: 20px;
-   
-}
-.social-link i{
-    border: 1px solid #a39dff;    
+.profile-img img {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    border: 1px solid black;
     border-radius: 50%;
-    padding:10px;
-    font-size:32px;
-    font-weight: 800;
-    margin-left: 13px;
-    transition: 0.2s;
+    margin-left: 80px;
+}
+
+.profile-box {
+    margin-left: 170px;
+    background-color: #e3b45f;
+    border-radius: 10px;
+    width: 260px;
+    height: 470px;
+    margin-top: -85px;
+}
+.profile-box hr{
+    height: 0;
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 1px solid grey;
+}
+
+
+.profile-img h3 {
+    margin: 15px auto;
+    margin-left: 85px;
+    letter-spacing: 1px;
+}
+.profile-options h2:hover{
     cursor: pointer;
-}
-.social-link i:hover{
-    background-color: white;
+    text-decoration: underline;
 }
 
-
-input[type="text"]{
-    padding-left: 20px;
-}
-input[type="password"]{
-    padding-left: 20px;
-    margin-top: 12px;
-}
-.fa-google:hover{
-    color:#f17f3d;
-}
-.fa-facebook:hover{
-    color:#4285F4;
-}
-.fa-twitter:hover{
-    color: #00acee;
-}
-.fa-apple:hover{
-    color: 	#555555;
+.profile-options {
+    font-size: 14px;
+    margin-left: 55px;
+    margin-top: 15px;
 }
 
+.profile-options h2 {
+    margin-bottom: 25px;
+}
 
-.btn{
-    background-color: #3f3d56;
-    margin-top: 12px;
-    color: white;
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.user-edit {
+    margin-left: 10px;
+    background-color: #e3b45f;
+    border-radius: 10px;
+    margin-top: 31px;
+
+}
+
+.user-inp input {
+    margin: 17px auto;
+    height: 33px;
     border: none;
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-input{
-    font-size: 18px;
-    font-weight:500 ;
-    outline: none;
-    border: none;
-    width: 91%;
-    height:40px;
+    border: 1px solid black;
     border-radius: 5px;
-    background-color: #f2f2f2;
-}
-input::placeholder{
-    padding-left: 5px;
-    font-size: 16px;
-    font-weight: 900;
+    outline: none;
+    width: 315px;
 
 }
 
-/* ----- Edit the feedback form */
-
-.feedback-img img{
-    width: 800px;
-    margin-top: -30px;
-}
-.feed-form h1{
-    margin-left: 16px;
-    margin-bottom: 20px;
-}
-.feed-form{
-    border-radius: 12px;
-    max-width: 520px;
-    height: 684px;
-    margin-top: -30px;
-    margin-left: -10px;
-}
-.feed-form [type="email"]{
-    padding-left: 20px;
-}
-.feed-form span{
+.user-inp input{
     margin-left: 20px;
 }
-textarea::placeholder{
-    padding-left: 10px;
-    padding-top: 13px;
-    font-size: 20px;
+
+.user-inp label {
+    font-size: 21px;
     font-weight: 800;
     letter-spacing: 1px;
+    margin-left: 30px;
 }
-textarea{
-    outline: none;
+
+.user-inp a {
+    margin-left: 30px;
+}
+
+.user-inp button {
+    margin-left: -8px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 315px;
     border: none;
-    background-color: #f2f2f2;
+    color: black;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color:lightgray;
+
+}
+.user-inp button:hover{
+    text-decoration: underline;
+    
+}
+
+
+
+.user-inp textarea {
+    font-size: 17px;
+    font-size: 600;
+    resize: none;
+    padding-left: 17px;
+    line-height: 25px;
+    border: 1px solid black;
     border-radius: 5px;
-    margin-left: 22px;
-    margin-top: 12px;
 }
-.feed-btn{
-    margin-top: 30px;
+
+.user-inp input::placeholder {
+    padding-left: 20px;
+    font-size: 17px;
+    font-weight: 500;
 }
-.feed-form h3{
-    margin-top:10px;
-    font-size: 22px;
+
+.user-inp h1 {
+    text-align: center;
+    margin-top: 25px;
     letter-spacing: 1px;
-    margin-left: 50px;
+    font-size: 34px;
+    text-decoration: underline;
 }
+
+#last-name {
+    margin-left: 20px;
+}
+
+.user-inp textarea {
+    margin-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.user {
+    width: 825px;
+    height: 560px;
+}
+
+
+
 
 
 /*---------------start the footer content------ */
@@ -500,7 +447,7 @@ footer {
     font-weight: 600;
     padding: 60px 0 20px;
     margin-top: 100px;
-    height: 320px;
+    height: 310px;
 
 }
 

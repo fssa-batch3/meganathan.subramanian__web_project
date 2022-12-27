@@ -5,95 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../../assets/css/login.css">
-    <link rel="shortcut icon" href="../../assets/images/favicon img.png " type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon img.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- ---------Font awesome------- -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- google fonts -->
-    
+    <!--------------------- Font awesome ------------------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!------------------ google fonts ------------------------>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,200;1,300;1,400&display=swap"
-        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS-STORE</title>
 </head>
 
 <body>
-    <div class="head">
-        <div class="head_img">
-            <img src="../../assets/images/aaron-burden-QJDzYT_K8Xg-unsplash.jpg" alt="" width="100%" height="50%">
-        </div>
-        <div class="nav-logo">
-            <div class="logo">
-                <a href=""><img src="../../assets/images/books_store-removebg-preview.png" alt="webiste logo"
-                        width="190"></a>
+
+    <!-- START THE LOGIN PAGE -->
+
+    <div class="container">
+        <div class="forms">
+            <div class="login-form">
+                <form action="">
+                    <h1>Welcome to <span>Book Store.</span></h1><br> <p>Enhance Your knowledge Here.</p> 
+                    <label for="User id "></label>
+                    <input type="text" placeholder="Username or Email"><br>
+                    <input type="password" placeholder="Enter Your Password"><br>
+                    <a href="../../Pages/orders/Wish_list.html"><input class="btn" type="button" value="Login in"></a><br>
+                    <div class="rem-me">
+                        <input type="checkbox" id="check">
+                        <h4>Remember me</h4>
+                        <a href="">
+                            <h3>Forget Password?</h3>
+                        </a>
+                    </div>
+                    <div class="new-user">
+                        <h3>New User:<a href="../../Pages/Account/signup.html"> Signup</a></h3>
+                    </div>
+                    
+                    <h2>Login With Our Social links</h2>
+
+                    <div class="social-link">
+                        <i class="fa-brands fa-google"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-apple"></i>
+                    </div>
+
+                </form>
             </div>
-            <div class="navi2">
+
+            <div class="svg-img">
+                <img src="../../assets/images/reading time.svg" alt="svg img">
             </div>
-            <form action="#">
-                <div class="container_login">
-                    <div class="login">
-                        <h1>USER LOGIN</h1>
-                        <label for="email" id="email"> USERNAME :</label><br><br>
-                        <input type="name" placeholder="Enter Your Username" class="ipt"><br><br>
-                    </div>
-                    <div class="login">
-                        <label for="password" id="lab">PASSWORD :</label><br><br>
-                        <input type="password" placeholder="Enter Your Password" class="ipt"><br><br><br>
-                    </div>
-                    <div class="btn-login"><br><br>
-                        <a href="../../index.html" class="login-btn">LOGIN</a>
-                        <br>
-                    </div>
-                    <a href="" class="forget">Forget Password?</a>
-                </div>
-            </form>
         </div>
+
     </div>
 
 
-    </div>
-
-    <!-------------------------End of the header content------------>
-    <footer>
-        <div class="row">
-            <div class="bookstore_logo">
-                <img src="../../assets/images/logo.png" alt="bookstore logo">
-                <h3>"Our purpose is motivate yourself <br>and improve your knowdledge".</h3>
-            </div>
-            <div class="useful_links">
-                <h3>Stuff</h3>
-                <ul>
-                    <li>Privacy</li>
-                    <li>Security</li>
-                    <li>FQA</li>
-                    <li>Coupons</li>
-                </ul>
-            </div>
-            <div class="useful_links">
-                <h3>Useful links</h3>
-                <ul>
-                    <li> Blog Post</li>
-                    <li>Return Policy</li>
-                    <li>join Affilate</li>
-                    <li>Terms and Condition</li>
-
-                </ul>
-            </div>
-            <div class="contact_us">
-                <div class="icons">
-                    <h3>Contact US</h3>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                </div>
-            </div>
-        </div>
-        <p style="text-align:center ;">&#169;Copyright 2022-Meganathan</p>
-    </footer>
 </body>
 
 </html>

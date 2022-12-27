@@ -1,17 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Heebo', sans-serif;
-    font-family: 'Nunito', sans-serif;
-}
-
-body{
-    font-family: 'Heebo', sans-serif;
-    font-family: 'Nunito', sans-serif;
-}
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -285,222 +272,250 @@ body {
 }
 
 
+/* -------------------Wishlist-page------------------- */
 
-/* LOGIN FORM EDIT */
-
-.forms{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 120px;
-    margin-left: 150px;
-}
-.svg-img img{
-    margin-left: 28px;
-    width: 850px;
-}
-.login-form{
-    height: 655px;
-    background-color: #a39dff;
-    border-radius: 20px;
-    max-width: 420px;
-}
-
-form{
-    padding: 25px;
-}
-h1{
-    margin-left:56px;
-    font-size:50px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-p{
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 25px;
-    margin-bottom: 20px;
-}
-span{
-    color:white;
-}
-form input{
-    margin: 10px auto;
-    margin-left: 20px;
-}
-.rem-me{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 5px;
-}
-#check{
-    width:15px;
-}
-.new-user{
-    text-align: center;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-.new-user a{
-    margin-left: 2px;
-    color:white;
-}
-.new-user a:hover{
-    text-decoration: underline;
-
-}
-.rem-me h4{
-    margin-right: 55px;
-    font-size: 18px;
-
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-h3{
-    color: 17px;
-    font-weight: 900;
-    margin-right: 10px;
-}
-h2{
-    margin-left: 50px;
-    margin-top: 12px;
-    font-size: 22px;
-    font-weight: 900;
-    color: white;
-}
-
-.social-link{
-    margin-left: 40px;
-    margin-top: 20px;
-   
-}
-.social-link i{
-    border: 1px solid #a39dff;    
-    border-radius: 50%;
-    padding:10px;
-    font-size:32px;
+.fa-bag-shopping{
+    color:orange;
+    font-size: 38px;
     font-weight: 800;
-    margin-left: 13px;
-    transition: 0.2s;
-    cursor: pointer;
 }
-.social-link i:hover{
-    background-color: white;
+
+.my-wish{
+    margin-top: 50px;
+}
+.my-wish hr{
+    height: 0;
+    width: 85%;
+    border-top:1.8px solid grey;
+    margin-left: 160px;
+    margin-top: 45px;
+}
+.my-wish h1{
+    margin-top: 40px;
+    margin-left:160px;
+    letter-spacing: 1px; 
+    font-size: 45px;
+}
+
+.mycart {
+    display: flex;
+    margin-left: 160px;
+}
+
+.mycart h1 {
+    text-align: center;
+}
+
+.bill {
+    margin-top: 30px;
+    padding: 18px;
+    background-color: #ededed;
+    border-radius: 10px;
+    width: 298px;
+    margin-left: 20px;
+    transition: 0.3s;
+
+}
+.bill:hover{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.bill h2 {
+    margin-bottom: 35px;
+    font-size: 23px;
+}
+
+.check-bill h2 p {
+    margin-left: 200px;
 }
 
 
-input[type="text"]{
-    padding-left: 20px;
-}
-input[type="password"]{
-    padding-left: 20px;
-    margin-top: 12px;
-}
-.fa-google:hover{
-    color:#f17f3d;
-}
-.fa-facebook:hover{
-    color:#4285F4;
-}
-.fa-twitter:hover{
-    color: #00acee;
-}
-.fa-apple:hover{
-    color: 	#555555;
+.check-bill span {
+    margin-left: 80px;
+    color: red;
+    font-size: 22px;
+    font-weight: 700;
 }
 
-
-.btn{
-    background-color: #3f3d56;
-    margin-top: 12px;
-    color: white;
+.input-pro input {
+    padding: 14px;
+    width: 100%;
+    font-size: 19px;
     border: none;
-    font-size: 17px;
     font-weight: 600;
     cursor: pointer;
-    text-transform: uppercase;
+    background-color: orange;
+    border-radius:6px;
+    opacity: 0.8;
+    text-transform: capitalize;
 }
-
-input{
-    font-size: 18px;
-    font-weight:500 ;
-    outline: none;
-    border: none;
-    width: 91%;
-    height:40px;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-}
-input::placeholder{
-    padding-left: 5px;
-    font-size: 16px;
-    font-weight: 900;
+.input-pro input:hover{
+    opacity: 1;
 
 }
 
-/* ----- Edit the feedback form */
 
-.feedback-img img{
-    width: 800px;
-    margin-top: -30px;
-}
-.feed-form h1{
-    margin-left: 16px;
-    margin-bottom: 20px;
-}
-.feed-form{
-    border-radius: 12px;
-    max-width: 520px;
-    height: 684px;
-    margin-top: -30px;
-    margin-left: -10px;
-}
-.feed-form [type="email"]{
-    padding-left: 20px;
-}
-.feed-form span{
+.product-cart p
+{
     margin-left: 20px;
+    font-weight: 800;
+    margin-top: -12px;
+    margin-bottom: 6px;
+    font-size: 19px;
+
 }
-textarea::placeholder{
-    padding-left: 10px;
-    padding-top: 13px;
+
+.fa-trash{
+    color: black;
+    font-size: 26px;
+    margin-left:350px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s;
+
+}
+.fa-trash:hover{
+    color: orange;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.product-detail h4{
+    margin-left:20px;
+    font-size: 18px;
+}
+
+
+.product-cart input {
+    width: 35px;
+    height: 30px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid orange;
+    padding-left: 9px;
+    margin-left: 3px;
+}
+.product-detail h3 {
+    margin: 20px;
     font-size: 20px;
+}
+
+.product-cart h2 {
+    margin-top: 22px;
+    margin-left: 20px;
+    font-size: 28px;
     font-weight: 800;
     letter-spacing: 1px;
 }
-textarea{
+
+.product-cart {
+    display: flex;
+    margin-top: 16px;
+    background-color: #ededed;
+    border-radius: 10px;
+    width: 855px;
+    transition: 0.2s;
+    height: 253px;
+}
+.product-detail{
+    margin-top: 14px;
+}
+.product-cart:hover{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.product-img img {
+    border-radius: 10px;
+    width: 200px;
+    height:240px;
+}
+
+
+/*---- Start the New letter Form-------- */
+
+.news-form {
+    max-width: 900px;
+    margin-top: 30px;
+    margin-left: 290px;
+    text-align: center;
+}
+
+.news-form h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: orange;
+}
+
+.news-form p {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 50px auto;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.email-box i {
+    color: black;
+    background: orange;
+    width: 45px;
+    border-radius: 5px;
+    padding: 6px;
+    line-height: 30px;
+}
+
+.email-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 45px;
+    width: 880px;
+}
+
+.tbox,
+.sub-btn {
     outline: none;
     border: none;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    margin-left: 22px;
-    margin-top: 12px;
 }
-.feed-btn{
-    margin-top: 30px;
+
+.tbox {
+    border: 2px solid orange;
+    border-radius: 4px;
+    width: 0px;
+    transition: 0.6s;
+
 }
-.feed-form h3{
-    margin-top:10px;
-    font-size: 22px;
-    letter-spacing: 1px;
-    margin-left: 50px;
+
+.email-box:hover>.tbox,
+.tbox:focus {
+    width: 500px;
+    padding: 0px 10px;
 }
+
+.email-box a .sub-btn {
+    text-transform: uppercase;
+    padding: 0 10px;
+    background: orange;
+    height: 45px;
+    border-radius: 4px;
+    margin-left: -18px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ------ End of the Newletter Form-------- */
 
 
 /*---------------start the footer content------ */
 footer {
-    width: 100%;
     background-color: #000;
     color: whitesmoke;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
     padding: 60px 0 20px;
+    height: 300px;
     margin-top: 100px;
-    height: 320px;
 
 }
 
@@ -522,11 +537,13 @@ footer {
     margin-top: 10px;
     transition: 0.2s;
     cursor: pointer;
+    font-size: 16px;
 }
 
 footer h3 {
     color: white;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .icons {
@@ -538,14 +555,13 @@ footer h3 {
 }
 
 .icons i {
-    font-size: 33px;
-    padding-left: 30px;
+    font-size: 30px;
+    padding-left: 20px;
 }
 
 .icons h3 {
-    margin-left: 70px;
+    margin-left: 45px;
     color: red;
-    font-size: 20px;
 }
 
 .useful_links h3 {
@@ -558,3 +574,8 @@ footer h3 {
 }
 
 /* -----END OF THE FOOTER CONTENT-----*/
+
+
+
+
+
