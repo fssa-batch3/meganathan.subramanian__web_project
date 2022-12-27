@@ -343,7 +343,7 @@ body {
 
 .user-edit {
     margin-left: 10px;
-    background-color: #e3b45f;
+    background-color: lightgrey;
     border-radius: 10px;
     margin-top: 31px;
 
@@ -385,11 +385,12 @@ body {
     color: black;
     border: 1px solid black;
     border-radius: 6px;
-    background-color:lightgray;
+    background-color:white;
 
 }
 .user-inp button:hover{
     text-decoration: underline;
+    background-color: rgb(235, 180, 77);
     
 }
 
