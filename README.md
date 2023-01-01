@@ -16,11 +16,7 @@ Market Research:https://docs.google.com/document/d/1IjpASIoSNANgxlyk_RdU2AlIjNtq
 
 
 
-Wire Frame:https://drive.google.com/file/d/1YJIUEb2ZUNt0yF8T67edbnTvwFEFIknM/view?usp=sharing
 
-
-
-Userflow: https://drive.google.com/file/d/1B1N7RkpfPQ2DpVdvL-f3XPTd9eT2Ca-V/view?usp=sharing
 
 
 
