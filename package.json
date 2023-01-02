@@ -1,0 +1,22 @@
+{
+  "name": "book_store",
+  "version": "1.0.0",
+  "description": "About my Project : Here this my 100 days i made prjoect about selling a books like E-commmerce In This World everyting is Tech and no one even use a note book So my idea is selling the books in website like all major books i cover Example:self development and biography and movie review like that so people can buy books through online in simple way So Read the books improve Your knowledge.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/meganathan.subramanian__web_project.git"
+  },
+  "author": "meganathan2003",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/meganathan.subramanian__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/meganathan.subramanian__web_project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
