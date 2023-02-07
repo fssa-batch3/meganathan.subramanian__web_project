@@ -29,8 +29,8 @@
     <div class="head">
         <div class="nav-logo">
             <div class="logo">
-                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png" alt="webiste logo"
-                        width="190"></a>
+                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png"
+                        alt="webiste logo" width="190"></a>
             </div>
             <div class="navi2">
                 <ol class="lang">
@@ -65,7 +65,8 @@
             <div class="nav">
                 <div class="navi1">
                     <ul>
-                        <li><a href="../Books/self_help.html"><img src="../../assets/images/search books.png" alt="search books img"></a></li>
+                        <li><a href="../Books/self_help.html"><img src="../../assets/images/search books.png"
+                                    alt="search books img"></a></li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +106,8 @@
             <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
                 <div class="profile">
                     <ol>
-                        <li><a href="../Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
+                        <li><a href="../Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit
+                                Profile</a></li>
                         <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
                         <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
                         <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
@@ -113,13 +115,13 @@
                 </div>
             </li>
         </ul>
-       
+
     </div>
-   <div class="home-page">
-    <a href="../../index.html">home></a>
-    <a href="../Books/self_help.html">products></a>
-    <a href="../Account/edit-profile.html">Account</a>
-   </div>
+    <div class="home-page">
+        <a href="../../index.html">home></a>
+        <a href="../Books/self_help.html">products></a>
+        <a href="../Account/edit-profile.html">Account</a>
+    </div>
 
     <!------ START THE PROFILE CONTENT ---------------->
     <div class="container">
@@ -127,7 +129,7 @@
             <div class="profile-box">
                 <div class="profile-img">
                     <img src="../../assets/images/profie img.jpg" alt="profile img">
-                    <h3>Hello,user</h3>
+                    <h3>Hello, <span id="user_email">user</span>  </h3>
                 </div>
                 <hr>
                 <div class="profile-options">
@@ -207,6 +209,11 @@
 
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
 
+    <script>
+        const user_name = localStorage.getItem("user_email");
+        console.log(user_email)
+        document.getElementById("user_email").innerText= user_email;
+    </script>
 </body>
 
 </html>
