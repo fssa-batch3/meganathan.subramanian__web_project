@@ -23,7 +23,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
+        "source": "../assets/images/attitude book.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -205,7 +205,6 @@ for (i = 0; i <= 9; i++) {
     console.log(book_img_div);
 
 }
-
 
 // Write a Json Code 
 
