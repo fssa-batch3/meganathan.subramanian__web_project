@@ -23,7 +23,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "../assets/images/attitude book.jpg",
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -33,7 +33,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "../assets/images/attitude book.jpg",
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -43,7 +43,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "../assets/images/attitude book.jpg",
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -53,7 +53,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "../assets/images/attitude book.jpg",
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -63,7 +63,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "../assets/images/attitude book.jpg",
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -73,7 +73,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "../assets/images/attitude book.jpg",
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -83,7 +83,7 @@ const Book_cards = [{
 },
 {
     "image": {
-        "source": "../assets/images/attitude book.jpg",
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
         "alt": "Attitude is everything book"
     },
     'title': 'Attitude is Everything Written by Jeff',
@@ -91,6 +91,16 @@ const Book_cards = [{
     'strike_price': 200,
 
 },
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
+        "alt": "Attitude is everything book"
+    },
+    'title': 'Attitude is Everything Written by Jeff',
+    'price': 120.00,
+    'strike_price': 200,
+
+}
 
 ]
 
