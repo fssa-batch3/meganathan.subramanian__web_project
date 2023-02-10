@@ -129,7 +129,7 @@
             <div class="profile-box">
                 <div class="profile-img">
                     <img src="../../assets/images/profie img.jpg" alt="profile img">
-                    <h3>Hello, <span id="user_email">user</span>  </h3>
+                    <h3>Hello, <span id="user_name">user</span> </h3>
                 </div>
                 <hr>
                 <div class="profile-options">
@@ -149,8 +149,8 @@
                     <h1>Edit Your Profile</h1>
                     <label for="name">First name :</label>
                     <a href="">Edit</a> <br>
-                    <input type="text" name="name" placeholder="Meganathan" disabled>
-                    <label for="last" id="last-name">Last Name :</label>
+                    <input type="text" name="name" id="show_user_name" placeholder="Meganathan" disabled>
+                    <label for="last">Last Name :</label>
                     <input type="text" placeholder="S" disabled><br>
                     <label for="email">Email :</label>
                     <a href="">Edit</a><br>
@@ -210,9 +210,17 @@
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
 
     <script>
-        const user_name = localStorage.getItem("user_email");
-        console.log(user_email)
-        document.getElementById("user_email").innerText= user_email;
+        let users = JSON.parse(localStorage.getItem('usersdata'));
+        console.log("users")
+        document.getElementById("show_user_name").innerText = users["name"];
+
+        document.getElementById("User_name").innerText = users["name"];
+        // document.getElementById("last_name").innerText = users["lastname"];
+        document.getElementById("email").innerText = users["email"];
+        // document.getElementById("address").innerText = users["address"];
+        document.getElementById("create_password").innerText = users["creatpassword"];
+        document.getElementById("confirm_password").innerText = users["confirmpassword"];
+
     </script>
 </body>
 

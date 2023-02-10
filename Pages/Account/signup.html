@@ -38,10 +38,11 @@
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id "></label>
                     <input type="text" placeholder="Ener Your Name" id="name"><br>
+                    <input type="email" placeholder="Enter Your Email" id="email"><br>
                     <input type="password" placeholder="Enter Your Password" id="password"><br>
                     <input type="password" name="pass" placeholder="Confirm Password" id="confirm_pwd">
-                    <a href=""><input class="btn" type="button" value="Sign Up"
-                            onclick="signup()"></a><br>
+                    <a href=""><input class="btn" type="button" value="Sign Up"></a><br>
+                    <button class="btn" type="button" onclick="signup()">Sign Up</button>
                     <div class="rem-me">
                         <input type="checkbox" id="check">
                         <h4>Remember me</h4>
@@ -72,31 +73,26 @@
         // get a user value 
         function signup() {
             let user = {};
-      
-            // local storage set item
 
+            // local storage set item
             user["name"] = document.getElementById("name").value;
+            user["email"] = document.getElementById("email").value;
             user["password"] = document.getElementById("password").value;
             user["confirm_password"] = document.getElementById("confirm_pwd").value;
 
-            let user_records = JSON.parse(localStorage.getItem("user list")) || [];
+            // save the user record to userslist 
+
+            // left part = [{}, {}]                                  ??  right part
+            let user_records = (JSON.parse(localStorage.getItem("userslist"))) ?? [];
             user_records.push(user);
 
-            localStorage.setItem("user list", JSON.stringify(user_records));
 
-            if (user["name"] != "" && user["password"] != "" && user["confirm_password"] != "") {
-                window.location.href="../../index.html";
-                alert('logged in');
-            }
-            else {
-                alert('invalid credential');
-
-            }
+            localStorage.setItem("userslist", JSON.stringify(user_records));
+            window.location.href = "../../Pages/Account/login.html";
+            console.log(user_records );
 
         }
     </script>
-
-
 </body>
 
 </html>

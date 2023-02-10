@@ -30,14 +30,14 @@
     <div class="container">
         <div class="forms">
             <div class="login-form">
-                <form action="">
+                <form id="loginform">
                     <h1>Welcome to <span>Book Store.</span></h1><br>
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id "></label>
                     <input type="text" placeholder="Username or Email" id="email"><br>
                     <input type="password" placeholder="Enter Your Password" id="password"><br>
-                    <input class="btn" type="button" value="Login in" onclick="login()"><br>
-                    <!-- <button type="button" onclick="login()">login</button> -->
+                    <button class="btn" onclick="login()">login</button>
+
                     <div class="rem-me">
                         <input type="checkbox" id="check">
                         <h4>Remember me</h4>
@@ -58,7 +58,9 @@
                         <i class="fa-brands fa-apple"></i>
                     </div>
 
+
                 </form>
+
             </div>
 
             <div class="svg-img">
@@ -70,15 +72,36 @@
 
     <script>
         function login() {
-            const email = document.getElementById("email").value
-            const password = document.getElementById("password").value
-            console.log(email)
-            console.log(password)
-            localStorage.setItem("user_email", email)
-            localStorage.setItem("user_password", password)
-            window.location.href = "../../index.html"
+            const email_inpt = document.getElementById("email").value;
+            const password_inpt = document.getElementById("password").value;
+
+            let usersdata = JSON.parse(localStorage.getItem("userslist"));
+            if (email_inpt != "") {
+                let res;
+                usersdata.find(user => {
+                    if (user["email"] == email_inpt && user["password"] == password_inpt) {
+                        return res = 1;
+                    }
+                    else {
+                        return res = 0;
+                    }
+                })
+                if (res == 1) {
+                    alert("logged in");
+                    window.location.href = "edit-profile.html";
+                }
+                else {
+                    alert("wrong info");
+                }
+                // console.log(email_Input);
+
+            }
+            else {
+                alert("fill the detsails")
+            }
         }
     </script>
+
 </body>
 
 </html>
