@@ -33,16 +33,21 @@
                 <img src="../../assets/images/undraw_bibliophile_re_xarc.svg" alt="svg img">
             </div>
             <div class="login-form">
-                <form action="">
+                <form id="register">
                     <h1>Welcome to <span>Book Store.</span></h1><br>
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id "></label>
-                    <input type="text" placeholder="Ener Your Name" id="name"><br>
-                    <input type="email" placeholder="Enter Your Email" id="email"><br>
-                    <input type="password" placeholder="Enter Your Password" id="password"><br>
-                    <input type="password" name="pass" placeholder="Confirm Password" id="confirm_pwd">
-                    <a href=""><input class="btn" type="button" value="Sign Up"></a><br>
-                    <button class="btn" type="button" onclick="signup()">Sign Up</button>
+                    <input type="text" placeholder="Ener Your Name" id="name" required="true"
+                        pattern="[A-Za-z]{1,16}"><br>
+                    <input type="text" placeholder="User Name" id="user_name" required="true"
+                        pattern="[a-zA-Z0-9]+"><br>
+                    <input type="email" placeholder="Enter Your Email" id="email" required="true"><br>
+                    <input type="password" placeholder="Enter Your Password" id="password" required="true"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"> <br>
+                    <input type="password" name="pass" placeholder="Confirm Password" id="confirm_pwd" required="true"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                    <a href=""><input class="btn" type="submit" value="Sign Up"></a><br>
+                    <!-- <button class="btn" type="submit" id="bt">Sign Up</button> -->
                     <div class="rem-me">
                         <input type="checkbox" id="check">
                         <h4>Remember me</h4>
@@ -67,29 +72,70 @@
 
         </div>
 
+
     </div>
     <script>
 
-        // get a user value 
+        // USE THE PREVENT DEFAULT 
+
+        let form = document.querySelector("form");
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            signup();
+        });
+
         function signup() {
+
+            let name = document.getElementById("name").value.trim();
+            let username = document.getElementById("user_name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let confirmpassword = document.getElementById("confirm_pwd").value.trim();
+
             let user = {};
 
-            // local storage set item
-            user["name"] = document.getElementById("name").value;
-            user["email"] = document.getElementById("email").value;
-            user["password"] = document.getElementById("password").value;
-            user["confirm_password"] = document.getElementById("confirm_pwd").value;
+            // Get the value from users    
+
+            user["name"] = name;
+            user["user_name"] = username;
+            user["email"] = email;
+            user["password"] = password;
+            user["confirm_password"] = confirmpassword;
 
             // save the user record to userslist 
 
             // left part = [{}, {}]                                  ??  right part
             let user_records = (JSON.parse(localStorage.getItem("userslist"))) ?? [];
-            user_records.push(user);
 
+            // Checking the user have already account 
+            let j = 0;
 
-            localStorage.setItem("userslist", JSON.stringify(user_records));
-            window.location.href = "../../Pages/Account/login.html";
-            console.log(user_records );
+            for (let i = 0; i < user_records.length; i++) {
+                if (user_records[i]["email"] === email) {
+                    j = 1;
+                    break;
+                }
+            }
+
+            if (j == 1) {
+                alert("This email is already exists");
+                window.location.href = "../Account/login.html";
+
+            }
+            else {
+                alert("Successfully logged in");
+                user_records.push(user);
+                localStorage.setItem("userslist", JSON.stringify(user_records));
+
+            }
+
+            // check the password 
+            if (user["password"] === user["confirm_password"]) {
+                window.location.href = "../Account/login.html";
+            }
+            else {
+                alert("Please check the password");
+            }
 
         }
     </script>

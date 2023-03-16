@@ -489,7 +489,11 @@ textarea{
 }
 .feed-btn{
     margin-top: 30px;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 800;
 }
+
 .feed-form h3{
     margin-top:10px;
     font-size: 22px;

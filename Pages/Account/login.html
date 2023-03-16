@@ -34,10 +34,9 @@
                     <h1>Welcome to <span>Book Store.</span></h1><br>
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id "></label>
-                    <input type="text" placeholder="Username or Email" id="email"><br>
-                    <input type="password" placeholder="Enter Your Password" id="password"><br>
-                    <button class="btn" onclick="login()">login</button>
-
+                    <input type="email" type="name" placeholder="Username or Email" id="email" required><br>
+                    <input type="password" placeholder="Enter Your Password" id="password" required><br>
+                    <button class="btn">login</button>
                     <div class="rem-me">
                         <input type="checkbox" id="check">
                         <h4>Remember me</h4>
@@ -48,9 +47,7 @@
                     <div class="new-user">
                         <h3>New User:<a href="../../Pages/Account/signup.html"> Signup</a></h3>
                     </div>
-
                     <h2>Login With Our Social links</h2>
-
                     <div class="social-link">
                         <i class="fa-brands fa-google"></i>
                         <i class="fa-brands fa-facebook"></i>
@@ -71,15 +68,20 @@
     </div>
 
     <script>
+        let form = document.querySelector("form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            login();
+        });
         function login() {
-            const email_inpt = document.getElementById("email").value;
-            const password_inpt = document.getElementById("password").value;
+            const _email = document.getElementById("email").value;
+            const _password = document.getElementById("password").value;
 
             let usersdata = JSON.parse(localStorage.getItem("userslist"));
-            if (email_inpt != "") {
+            if (_email != "") {
                 let res;
                 usersdata.find(user => {
-                    if (user["email"] == email_inpt && user["password"] == password_inpt) {
+                    if (user["email"] == _email && user["password"] == _password) {
                         return res = 1;
                     }
                     else {
@@ -88,17 +90,17 @@
                 })
                 if (res == 1) {
                     alert("logged in");
-                    window.location.href = "edit-profile.html";
+                    window.location.href = "../Account/edit-profile.html";
                 }
                 else {
                     alert("wrong info");
                 }
-                // console.log(email_Input);
 
             }
             else {
-                alert("fill the detsails")
+                alert("fill the details");
             }
+          
         }
     </script>
 
