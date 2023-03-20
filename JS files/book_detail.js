@@ -55,7 +55,7 @@ label.append(inpt);
 
 // create a another div 
 const cart_div =  document.createElement("div");
-cart_div.setAttribute("class","btn_cart");
+cart_div.setAttribute("class","btn-cart");
 
 // Create a anchor tag 
 const a2 = document.createElement("a");
