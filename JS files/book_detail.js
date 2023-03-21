@@ -1,3 +1,4 @@
+//  Wrtie the json for product detail page
 // create a profile details page using js 
 
 
@@ -59,21 +60,14 @@ cart_div.setAttribute("class","btn-cart");
 
 // Create a anchor tag 
 const a2 = document.createElement("a");
-<<<<<<< HEAD
 a2.setAttribute("class","btn");
 a2.innerHTML = "Add to Cart"; 
-=======
-a2.setAttribute("class","btn"); 
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 a2.setAttribute("href","../../Pages/orders/Wish_list.html");
 
 // Create a anchor tag 
 const a3 = document.createElement("a");
 a3.setAttribute("class","btn");
-<<<<<<< HEAD
 a3.innerHTML = "Buy now"
-=======
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 a3.setAttribute("href","../../Pages/orders/Cart_list.html");
 cart_div.append(a2,a3);
 
@@ -105,11 +99,7 @@ document.querySelector("main").append(product_div);
 // AUTHOR SECTION
 
 
-<<<<<<< HEAD
 // Create a another div about the author..
-=======
-// Create a another div about the author 
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
 // const about_author_div = document.createElement("div");
 // about_author_div.setAttribute( "class","about-author");
@@ -327,7 +317,3 @@ col2.append(h3_12);
 book_detail.append(col1);
 book_detail.append(col2);
 document.querySelector(".book-details").append(h2,book_detail);
-<<<<<<< HEAD
-=======
-
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
