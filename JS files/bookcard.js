@@ -1,69 +1,43 @@
+
 // write a new code 
 // Write a Json Code 
 
 
 const Book_cards = [{
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything  by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
+    'title': 'Attitude is Everything  by Jeff',
+    'price': 120.00,
+    'strike_price': 200,
+
+},
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
+        "alt": "Attitude is everything book"
+    },
     'title': 'Attitude is everything book',
     'price': 200.00,
     'strike_price': 300,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
+},
+{
+    "image": {
+        "source": " https://m.media-amazon.com/images/I/516VyKCKi-L.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": " https://m.media-amazon.com/images/I/516VyKCKi-L.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
     'title': 'Eat that Frog Written by brian Tracy',
     'price': 200.00,
     'strike_price': 400,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
+},
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/71H8-WDVR9L.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/71H8-WDVR9L.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-
-    },
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/61xFwIM2UNL.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
     'title': "Happy is the Goal Tamil Edition Book",
     'price': 150.00,
     'strike_price': 300,
@@ -77,89 +51,58 @@ const Book_cards = [{
     'title': 'The Secret Book By Rhina',
     'price': 200.00,
     'strike_price': 400,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
+},
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/51jpuH++30L._SX318_BO1,204,203,200_.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/51jpuH++30L._SX318_BO1,204,203,200_.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
     'title': 'Rich dad Poor Dad in Tamil edition',
     'price': 200.00,
     'strike_price': 400,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
+},
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/51390klhT7L.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/51390klhT7L.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
     'title': 'Attitude is everything book',
     'price': 150.00,
     'strike_price': 400,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
+},
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/519tZhMkdIL.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/519tZhMkdIL.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
     'title': 'Attitude is Everything Written by Jeff',
     'price': 300.00,
     'strike_price': 500,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
+},
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/512fCrERU2L.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/512fCrERU2L.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
     'title': 'Attitude is Everything Written by Jeff',
     'price': 200.00,
     'strike_price': 500,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
+},
+{
+    "image": {
+        "source": "https://m.media-amazon.com/images/I/712H8OZbswS.jpg",
+        "alt": "Attitude is everything book"
     },
-<<<<<<< HEAD
-    {
-        "image": {
-            "source": "https://m.media-amazon.com/images/I/712H8OZbswS.jpg",
-            "alt": "Attitude is everything book"
-        },
-        'title': 'Attitude is Everything Written by Jeff',
-        'price': 120.00,
-        'strike_price': 200,
-=======
     'title': 'Attitude is Everything Written by Jeff',
     'price': 190.00,
     'strike_price': 400,
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
 
-    },
+},
 
 
 ]
@@ -268,9 +211,6 @@ for (i = 0; i <= 9; i++) {
 
 }
 
-<<<<<<< HEAD
-// Write a Json Code 
-=======
 // show the new product 
 
 //  let products_details = JSON.parse(localStorage.getItem("Book_details"));
@@ -384,11 +324,3 @@ for (i = 0; i <= 9; i++) {
 
 
 // }
-
-
-
-
-
-
->>>>>>> f233b879644870dbf04fa21c5d9ec364f881269a
-
