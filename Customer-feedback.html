@@ -125,11 +125,11 @@
                 <form action="">
                     <h1>Give Your Valuable <span> Feedback Here !!!</span></h1>
                     <label for="User id "></label>
-                    <input type="text" placeholder="Name"><br>
-                    <input type="email" placeholder="Enter Your Email"><br>
-                    <textarea name="feed-back" id="" cols="59" rows="12"
-                        placeholder="Enter Your Message here..."></textarea>
-                    <a href="index.html"><input class="btn feed-btn" type="button" value="Submit"></a><br>
+                    <input type="text" placeholder="Name" id="user_name"><br>
+                    <input type="email" placeholder="Enter Your Email" id="user_email"><br>
+                    <textarea name="feed-back" id="user_feedback" cols="59" rows="12"
+                        placeholder="Enter Your Message here..." ></textarea>
+                    <a href="#"><input class="btn feed-btn" type="button" onclick="getdata()" value="submit"></a><br>
                     <h3>Thanks For Visiting Our Website &#128516;</h3>
                 </form>
             </div>
@@ -184,6 +184,26 @@
     </footer>
 
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
+    <script>
+        function getdata(){
+        let name = document.getElementById("user_name").value;
+        let user_email = document.getElementById("user_email").value;
+        let user_feedback = document.getElementById("user_feedback").value;
+         
+        let user_data ={};
+
+        // Get data from users 
+
+        user_data["name"] = name;
+        user_data["user_email"] = user_email;
+        user_data["user_feedback"] = user_feedback;
+
+        // save to the all user_data to the local storage 
+
+        localStorage.setItem()
+        }
+
+    </script>
 </body>
 
 </html>

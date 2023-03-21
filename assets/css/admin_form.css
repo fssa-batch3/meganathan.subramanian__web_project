@@ -1,0 +1,53 @@
+/* CSS PROPPETY */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Nunito:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    margin: auto;
+    width: 600px;
+    margin-top: 160px;
+    
+}
+input{
+    margin-bottom: 20px;
+    width: 400px;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid grey;
+    margin-top: 5px;
+    margin-left: 90px;
+}
+input::placeholder{
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(62, 60, 60);
+
+}
+::placeholder{
+    padding-left: 25px;
+}
+
+label {
+    font-size: 18px;
+    font-family: 'Heebo', sans-serif;
+    margin-left: 93px;
+}
+#submit-btn{
+    font-family: 'Heebo', sans-serif;
+    font-size: 17px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(105, 241, 105);
+}
+
+#submit-btn:hover{
+    background-color: lightgreen;    
+}
