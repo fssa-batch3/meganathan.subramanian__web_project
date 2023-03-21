@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   topic_tagging:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     name: Topic Tagging
     steps: 
         - name: checkout
