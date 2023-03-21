@@ -1,4 +1,4 @@
-
+ 
 // write a new code 
 // Write a Json Code 
 
@@ -103,8 +103,6 @@ const Book_cards = [{
     'strike_price': 400,
 
 },
-
-
 ]
 
 // create a div 
