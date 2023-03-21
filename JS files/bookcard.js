@@ -1,106 +1,105 @@
-
 // write a new code 
 
 const Book_cards = [{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
-        "alt": "Attitude is everything book"
-    },
-    'title': 'Attitude is Everything  by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/71Rcjb+1yLL.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything  by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": " https://m.media-amazon.com/images/I/516VyKCKi-L.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": " https://m.media-amazon.com/images/I/516VyKCKi-L.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/71H8-WDVR9L.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/71H8-WDVR9L.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/61xFwIM2UNL.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/61xFwIM2UNL.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/51jpuH++30L._SX318_BO1,204,203,200_.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/51jpuH++30L._SX318_BO1,204,203,200_.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/51390klhT7L.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/51390klhT7L.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/519tZhMkdIL.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/519tZhMkdIL.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/512fCrERU2L.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/512fCrERU2L.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
-{
-    "image": {
-        "source": "https://m.media-amazon.com/images/I/712H8OZbswS.jpg",
-        "alt": "Attitude is everything book"
     },
-    'title': 'Attitude is Everything Written by Jeff',
-    'price': 120.00,
-    'strike_price': 200,
+    {
+        "image": {
+            "source": "https://m.media-amazon.com/images/I/712H8OZbswS.jpg",
+            "alt": "Attitude is everything book"
+        },
+        'title': 'Attitude is Everything Written by Jeff',
+        'price': 120.00,
+        'strike_price': 200,
 
-},
+    },
 
 
 ]
@@ -208,12 +207,4 @@ for (i = 0; i <= 9; i++) {
 }
 
 // Write a Json Code 
-
-
-
-
-
-
-
-
 
