@@ -103,6 +103,12 @@ live server : https://github.com/fssa-batch3/meganathan.subramanian__web_project
     4.apple sign-in - Yet to start
     5.Facebook sign-in - Yet to start
 
+- User profile - CRUD
+     1.View profile - Completed
+     2.Add profile - Completed
+     3.Delete profile - Completed
+     4.Create profile - Completed
+
 # Prouduct list
 
 - Product In user CRUD
