@@ -92,3 +92,23 @@ live server : https://github.com/fssa-batch3/meganathan.subramanian__web_project
         5. Click the "Create Product" button.
     - Expected Result:
         - The new product is created and added to the seller's list of products.
+
+
+# Feature list 
+ 
+- User moudle:
+    1.Signup - completed
+    2.Login - completed
+    3.Google sign-in - Yet to start
+    4.apple sign-in - Yet to start
+    5.Facebook sign-in - Yet to start
+
+# Prouduct list
+
+- Product In user CRUD
+    1.Create product - Completed
+    2.Add product - Completed
+    3.Delete product - Completed
+    4.View product - Completed
+
+#
