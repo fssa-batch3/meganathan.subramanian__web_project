@@ -123,8 +123,8 @@ else {
                 "Chankya nithi tamil edition book",
             bookid
                 :
-                73
-originalPrice
+                73,
+            originalPrice
                 :
                 "100",
             rating
