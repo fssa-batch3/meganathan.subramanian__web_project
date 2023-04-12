@@ -49,8 +49,9 @@ else {
                 "100",
             rating
                 :
-                ""
-        }, {
+                "",
+        },
+        {
             DiscountPrice
                 :
                 "200",
@@ -68,7 +69,7 @@ else {
                 "100",
             rating
                 :
-                ""
+                "",
         },
         {
             DiscountPrice
@@ -88,7 +89,7 @@ else {
                 "100",
             rating
                 :
-                ""
+                "",
         },
         {
             DiscountPrice
@@ -108,7 +109,7 @@ else {
                 "100",
             rating
                 :
-                ""
+                "",
 
         },
         {
@@ -129,7 +130,7 @@ else {
                 "100",
             rating
                 :
-                ""
+                "",
         },
         {
             DiscountPrice
@@ -149,7 +150,7 @@ else {
                 "180",
             rating
                 :
-                ""
+                "",
         }
 
     ]));
