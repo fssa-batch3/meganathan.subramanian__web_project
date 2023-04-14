@@ -31,25 +31,12 @@ if (localStorage.getItem("Book_details")) {
 else {
     localStorage.setItem("Book_details", JSON.stringify([
         {
-
-            DiscountPrice
-                :
-                "200",
-            bookImage
-                :
-                "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
-            bookName
-                :
-                "ponniyin selvan book for tamil",
-            bookid
-                :
-                27,
-            originalPrice
-                :
-                "100",
-            rating
-                :
-                "",
+            DiscountPrice : "200",
+            bookImage : "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
+            bookName : "ponniyin selvan book for tamil",
+            bookid : 27,
+            originalPrice : "100",
+            rating  : "",
         },
         {
             DiscountPrice

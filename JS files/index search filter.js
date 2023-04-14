@@ -1,10 +1,10 @@
 
-console.log("ntijfkldsj")
 let book_detail = JSON.parse(localStorage.getItem("Book_details"));
-// console.log(book_detail)
+
+console.log(book_detail);
 const searchbox = document.getElementById("Search_book");
-searchbox.addEventListener("keydown", (e) => {
-    console.log("ksjdfkl");
+
+searchbox.addEventListener("keydown", e => {
     const searchquery = searchbox.value.trim().toLowerCase();
     // console.log(searchquery);
     if (e.key === "Enter") {
@@ -34,11 +34,11 @@ searchbox.addEventListener("keydown", (e) => {
         //  a_1.setAttribute("href", "../../Pages/products_details/Product_page.html");
 
         // create a img tag 
-
         const img = document.createElement("img");
         img.setAttribute("src", item["bookImage"]);
         // img.setAttribute("alt", Book_cards[i]["image"]["alt"]);
         a_1.append(img);
+
 
         // Create a another anchor tag 
 
