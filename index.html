@@ -112,7 +112,7 @@
                                 Profile</a></li>
                         <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
                         <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
-                        <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                        <li id="log-out"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
                     </ol>
                 </div>
             <li><a href="./Pages/Account/login.html">Login</a></li>
@@ -125,13 +125,13 @@
     <div class="slider-frame">
         <div class="slide-image">
             <div class="ad-img">
-                <img src="assets/images/ad 1.jfif" alt="ad 1">
+                <img src="./assets/images/ad 1.jfif" alt="ad 1">
             </div>
             <div class="ad-img">
-                <img src="assets/images/ad 2.jpeg" alt="ad 1">
+                <img src="./assets/images/ad 2.jpeg" alt="ad 1">
             </div>
             <div class="ad-img">
-                <img src="assets/images/ad4.jpg" alt="ad 1">
+                <img src="./assets/images/ad4.jpg" alt="ad 1">
             </div>
 
         </div>
@@ -142,14 +142,23 @@
 
     <!---------- Trending books Section ---------------->
 
+    <!-- wishlist icons -->
+
     <div class="trends">
         <div class="section-head">
             <h2>Tamil Edition Books</h2>
             <a href="Pages/Books/self_help.html">See All</a>
         </div>
         <hr>
+
+
+
+
         <div class="books">
-            <!-- <div class="book-img">
+
+            <div class="wish_icons">
+                <!-- <i class="fa-sharp fa-regular fa-heart icon_wishlist"></i>
+            <div class="book-img">
                 <div class="trend_book">
                     <a href="Pages/products_details/Product_page.html"><img
                             src="https://m.media-amazon.com/images/I/41jOqQ0X7DL.jpg" alt="trend books"></a>
@@ -168,8 +177,11 @@
                     <h3>Price : &#8377;120.00 <s>180.00</s></h3>
                     <a href="Pages/products_details/Product_page.html"> <button>Buy Now</button></a>
                 </div>
+            </div> -->
             </div>
-            <div class="book-img">
+
+
+            <!--  <div class="book-img">
                 <div class="trend_book">
                     <a href="Pages/products_details/atomic details.html"><img
                             src="https://m.media-amazon.com/images/I/41z4lYkfJGL.jpg" alt="trend books"
@@ -351,8 +363,6 @@
 
     <!--------- Start The Best seller Book row -------------->
 
-
-
     <div class="best-seller reveal">
         <div class="section-head">
             <h2>Best Seller</h2>
@@ -366,7 +376,6 @@
                             src="https://m.media-amazon.com/images/I/81fdQIY6ykL.jpg" alt="trend books"></a>
                     <a href="Pages/orders/Wish_list.html"><input type="button" value="Add to Cart" class="add"></a>
                 </div>
-
                 <div class="book-info">
                     <p>The Secret Book By Rhonda Byrne.</p>
                     <div class="rating">
@@ -1065,6 +1074,19 @@
     <script src="./JS files/bookcard.js"></script>
     <script src="./JS files/index search filter.js"></script>
     <script src="main.js"></script>
+
+    <script>
+        // logout
+        let log_out = document.getElementById("log-out");
+        let active_user = localStorage.getItem("activeUser");
+        log_out.addEventListener("click", (e) => {
+            const log_Out = delete active_user;
+            localStorage.setItem("activeUser", log_Out);
+            window.location.href = "/Pages/Account/login.html";
+            alert("Thank you visiting our website");
+        });
+
+    </script>
 
 
 </body>

@@ -44,6 +44,70 @@
                 <label for="Rating">Rating</label>
                 <input type="number" id="rating" placeholder="Enter Your Rating">
             </div>
+
+            <!-- // Product Book_details   -->
+
+            <div class="Book_details">
+                <label for="book_description">Book Description:</label>
+                <textarea name="book_description" id="book_description" cols="60" rows="9"></textarea>
+            </div>
+            <div class="author_img">
+                <label for="Author_img">About Image:</label>
+                <input type="url" name="author_img" id="author_image">
+            </div>
+            <div class="about_author">
+                <label for="About_author">About_Author:</label>
+                <textarea name="about_author" id="author_content" cols="60" rows="9"></textarea>
+            </div>
+            <div class="Publisher_date">
+                <label for="Publisher_date">Publisher Date:</label>
+                <input type="date" name="Publisher_date" id="publisher_date">
+            </div>
+            <div class="Binding">
+                <label for="binding"> Binding:</label>
+                <input type="text" name="binding" id="book_binding">
+            </div>
+            <div class="book_height">
+                <label for="Height"> Book Height:</label>
+                <input type="text" name="book_height" id="Book_height">
+            </div>
+            <div class="No_of_pages">
+                <label for="No of pages">No of pages:</label>
+                <input type="number" name="no of pages" id="Book_pages">
+            </div>
+            <div class="series_of_title">
+                <label for="Series of title"> Series of Title:</label>
+                <input type="text" name="series of title" id="Book_series_title">
+            </div>
+            <div class="book_weight">
+                <label for="Weight">Book Weight:</label>
+                <input type="text" name="book_weight" id="Book_weight">
+            </div>
+
+            <div class="Publisher_imprint">
+                <label for="Publisher_jmprint">Publisher imprint:</label>
+                <input type="text" name="Publisher_inmprint" id="imprint">
+            </div>
+            <div class="book_depth">
+                <label for="Depth">Book Depth:</label>
+                <input type="text" name="Boook_depth" id="Book_depth">
+            </div>
+            <div class="Book_language">
+                <label for="Language">Book Language:</label>
+                <input type="text" name="Book_language" id="Book_language">
+            </div>
+            <div class="Book_return">
+                <label for="Return">Book Return:</label>
+                <input type="text" name="book return" id="return">
+            </div>
+            <div class="Book_spin_width">
+                <label for="Spin_width">Book Spin Width:</label>
+                <input type="text" name="spin width" id="spin_width">
+            </div>
+            <div class="Book_Width">
+                <label for="Width">Book Width:</label>
+                <input type="text" name="Book width" id="width">
+            </div>
             <div class="submit">
                 <button type="submit" id="submit-btn" onclick="product_add()">Upload</button>
             </div>
@@ -53,6 +117,7 @@
             <div class="submit">
                 <button type="submit" id="submit-btn" onclick="edit()">update</button>
             </div>
+            <!-- <button>submit</button> -->
         </div>
     </form>
     <!-- </div> -->
@@ -100,8 +165,22 @@
             let DiscountPrice = document.getElementById("DiscountPrice").value;
             let originalPrice = document.getElementById("original_price").value;
             let bookImage = document.getElementById("book_img").value;
-            let rating = document.getElementById("rating").value;
-            let bookid=Math.floor(Math.random()*100);
+            let book_description = document.getElementById("book_description").value;
+            let author_img = document.getElementById("author_image").value;
+            let author_content = document.getElementById("author_content").value;
+            let publisher_date = document.getElementById("publisher_date").value;
+            let book_binding = document.getElementById("book_binding").value;
+            let Book_height = document.getElementById("Book_height").value;
+            let Book_pages = document.getElementById("Book_pages").value;
+            let Book_title = document.getElementById("Book_series_title").value;
+            let Book_weight = document.getElementById("Book_weight").value;
+            let Book_imprint = document.getElementById("imprint").value;
+            let Book_depth = document.getElementById("Book_depth").value;
+            let Book_language = document.getElementById("Book_language").value;
+            let Book_return = document.getElementById("return").value;
+            let Book_spin_width = document.getElementById("spin_width").value;
+            let Book_width = document.getElementById("width").value;
+            let bookid = Math.floor(Math.random() * 100);
 
 
             let productAdd = JSON.parse(localStorage.getItem("Book_details")) ?? [];
@@ -123,14 +202,28 @@
                     "originalPrice": originalPrice,
                     "bookImage": bookImage,
                     "rating": rating,
-                    "bookid":bookid
+                    "bookid": bookid,
+                    "book_description": book_description,
+                    "author_image": author_img,
+                    "author_content": author_content,
+                    "publisher_date": publisher_date,
+                    "book_binding": book_binding,
+                    "Book_height": Book_height,
+                    "Book_pages": Book_pages,
+                    "Book_series_title": Book_title,
+                    "Book_weight": Book_weight,
+                    "imprint": Book_imprint,
+                    "Book_depth": Book_depth,
+                    "Book_language": Book_language,
+                    "return": Book_return,
+                    "spin_width": Book_spin_width,
+                    "width": Book_width,
 
                 });
                 localStorage.setItem("Book_details", JSON.stringify(productAdd));
-            }
+            };
 
         };
-
 
         // Create a delete profile 
         function deleteprofile() {
@@ -145,7 +238,7 @@
             };
         };
 
-        
+
         // Create a update product 
         function edit() {
             let editproduct = JSON.parse(localStorage.getItem("Book_details"));
@@ -153,7 +246,7 @@
             for (let i = 0; i < editproduct.length; i++) {
                 if (document.getElementById("book_img").value == editproduct[i]["bookImage"]) {
                     editproduct[i]["bookName"] = document.getElementById("book_name").value;
-                    editproduct[i]["DiscountPrice"] = document.getElementById("DiscountPrice").value;
+                    // editproduct[i]["DiscountPrice"] = document.getElementById("DiscountPrice").value;
                 }
                 localStorage.setItem("Book_details", JSON.stringify(editproduct));
 
@@ -162,7 +255,6 @@
         };
 
     </script>
-    <a href="../../assets//images/po"></a>
 </body>
 
 

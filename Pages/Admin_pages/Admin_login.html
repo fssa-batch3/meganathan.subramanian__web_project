@@ -34,9 +34,9 @@
                     <h1>Welcome to <span>Book Store.</span></h1><br>
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id "></label>
-                    <input type="email" type="name" placeholder="Username or Email" id="email" required ><br>
+                    <input type="email" type="name" placeholder="Username or Email" id="email" required><br>
                     <input type="password" placeholder="Enter Your Password" id="password" required><br>
-                    <button class="btn">login</button>
+                    <button class="btn" type="submit">login</button>
                     <div class="rem-me">
                         <input type="checkbox" id="check">
                         <h4>Remember me</h4>
@@ -76,32 +76,32 @@
         function login() {
             const _email = document.getElementById("email").value;
             const _password = document.getElementById("password").value;
-
-            let usersdata = JSON.parse(localStorage.getItem("userslist"));
+            let sellerdata = JSON.parse(localStorage.getItem("seller_details"));
+            console.log(sellerdata);
             if (_email != "") {
-                let res=0;
-                usersdata.find(user => {
-                    if (user["email"] == _email && user["password"] == _password){
-                     localStorage.setItem("activeUser", JSON.stringify(_email))
-                     res = 1;
+                let res;
+                sellerdata.find(user => {
+                    if (user["email"] == _email && user["password"] == _password) {
+                        return res = 1;
                     }
-                })
+                    else {
+                        return res = 0;
+                    };
+                });
                 if (res == 1) {
                     alert("logged in");
-                    window.location.href = "../Account/edit-profile.html";
+                    window.location.href = "../Account/Admin_form.html";
                 }
                 else {
                     alert("wrong info");
-                }
+                };
 
             }
             else {
                 alert("fill the details");
-            }
-          
-        }
+            };
 
-        
+        };
     </script>
 
 </body>

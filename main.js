@@ -1,6 +1,7 @@
 if (localStorage.getItem("userslist")) {
 
 }
+
 else {
     localStorage.setItem("userslist", JSON.stringify([
         {
@@ -142,8 +143,5 @@ else {
 
     ]));
 }
-
-
-
 
 

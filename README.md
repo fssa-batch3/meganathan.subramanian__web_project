@@ -14,11 +14,7 @@ live server : https://github.com/fssa-batch3/meganathan.subramanian__web_project
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_meganathan.subramanian__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_meganathan.subramanian__web_project)
  
 
-
-
-
 # E-commerce
-
 ## Buyer
 
 ### Create an account

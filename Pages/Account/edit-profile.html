@@ -110,7 +110,7 @@
                                 Profile</a></li>
                         <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
                         <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
-                        <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                        <li id="log-out"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
                     </ol>
                 </div>
             </li>
@@ -209,14 +209,15 @@
     </footer>
 
     <!------------------------END OF THE FOOTER CONTENT ---------------------->
-
     <script>
         let users = JSON.parse(localStorage.getItem("userslist"));
         for (let i = 0; i < users.length; i++) {
             document.getElementById("name").value = users[i]["user_name"];
             document.getElementById('email').value = users[i]['email'];
             document.getElementById("user_name").innerHTML = users[i]["user_name"];
-        }
+        };
+
+        // Edit the user profile
         function edit() {
             let users = JSON.parse(localStorage.getItem("userslist"));
             for (i = 0; i < users.length; i++) {
@@ -236,10 +237,21 @@
                 if (document.getElementById("email").value == users[i].email) {
                     users.splice(i, 1);
                     localStorage.setItem("userslist", JSON.stringify(users));
-                }
-
-            }
+                };
+            };
         };
+
+        // logout
+
+        let log_out = document.getElementById("log-out");
+        let active_user = localStorage.getItem("activeUser");
+        log_out.addEventListener("click", (e) => {
+            const log_Out = delete active_user;
+            localStorage.setItem("activeUser", log_Out);
+            window.location.href = "/Pages/Account/login.html";
+            alert("Thank you visiting our website");
+        });
+
     </script>
 </body>
 

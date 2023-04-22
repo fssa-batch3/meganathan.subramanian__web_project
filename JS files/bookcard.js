@@ -110,6 +110,14 @@ let products_details = JSON.parse(localStorage.getItem("Book_details"));
 
 for (let i = 0; i < products_details.length; i++) {
 
+    let wish_icons = document.createElement("div");
+    wish_icons.setAttribute("id", "wishlist_icons");
+    wish_icons.setAttribute("class", "wish_icons");
+
+    let icon_i = document.createElement("i")
+    icon_i.setAttribute("class", "fa-sharp fa-regular fa-heart icon_wishlist")
+    wish_icons.prepend(icon_i)
+
     const book_img_div = document.createElement("div");
     book_img_div.setAttribute("class", "book-img");
 
@@ -187,7 +195,7 @@ for (let i = 0; i < products_details.length; i++) {
     // Create a anchor tag 
 
     const a_3 = document.createElement("a");
-    a_3.setAttribute("href", "Pages/products_details/Product_page.html");
+    a_3.setAttribute("href", "Pages/products_details/Product_page.html?id=" + products_details[i]["bookid"]);
 
     // Create a button tag 
 
@@ -203,8 +211,68 @@ for (let i = 0; i < products_details.length; i++) {
     book_info_div.append(h_3);
     book_info_div.append(a_3);
     book_img_div.append(book_info_div);
-    document.querySelector("div.books").append(book_img_div);
+    wish_icons.append(book_img_div);
+    document.querySelector("div.books").append(wish_icons);
 
 
-}
+    // add to cart logic
+
+    // let cart = document.getElementById("wishlist_icons");
+    icon_i.addEventListener("click", (e) => {
+
+        let user_wish_list = JSON.parse(localStorage.getItem("wishlist")) ?? [];
+
+        // get the book for this book is already there in the wishlist
+        let book_id = products_details[i]["bookid"];
+
+        let check;
+
+        // get the local storage for the active user
+        const active_user = localStorage.getItem("activeUser");
+
+
+        user_wish_list.find(f => {
+            // console.log(check);
+
+
+            if (f["bookid"] == products_details[i]["bookid"] && active_user == f["user_email"]) {
+                return check = 1;
+
+            }
+            else {
+                return check = 0;
+            };
+
+        });
+        if (check == 1) {
+            for (let j = 0; j < user_wish_list.length; j++) {
+                if (book_id == user_wish_list[j]["bookid"]) {
+                    user_wish_list.splice(j, 1);
+                    localStorage.setItem("wishlist", JSON.stringify(user_wish_list));
+                };
+                alert("This product is deleted");
+            };
+        }
+        else {
+            let user_wishlist = {};
+            user_wishlist["user_email"] = active_user,
+                user_wishlist["Book_image"] = products_details[i]["bookImage"],
+                user_wishlist["Book_title"] = products_details[i]["bookName"],
+                user_wishlist["DiscountPrice"] = products_details[i]["DiscountPrice"],
+                user_wishlist["originalPrice"] = products_details[i]["originalPrice"],
+                user_wishlist["author_content"] = products_details[i]["author_content"],
+                user_wishlist["Book_id"] = products_details[i]["bookid"]
+
+
+            user_wish_list.push(user_wishlist);
+            localStorage.setItem("wishlist", JSON.stringify(user_wish_list));
+
+        };
+    });
+
+};
+
+
+
+
 

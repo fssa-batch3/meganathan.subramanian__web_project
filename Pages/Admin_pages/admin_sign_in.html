@@ -38,9 +38,9 @@
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id "></label>
                     <input type="text" placeholder="Ener Your Name" id="name" required="true"
-                        pattern="^[a-zA-Z]{3,20}$"><br>
+                        pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"><br>
                     <input type="text" placeholder="User Name" id="user_name" required="true"
-                        pattern="^[a-zA-Z]{3,20}$"><br>
+                        pattern="[a-zA-Z0-9]+"><br>
                     <input type="email" placeholder="Enter Your Email" id="email" required="true"><br>
                     <input type="password" placeholder="Enter Your Password" id="password" required="true"
                         pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"> <br>
@@ -53,7 +53,7 @@
                         <h4>Remember me</h4>
                         <a href="">
                             <div class="already-user">
-                                <span>Already a user? <a href="../../Pages/Account/login.html">Log in</a></span>
+                                <span>Already a user? <a href="../../Pages/Admin_pages/Admin_login.html">Log in</a></span>
                             </div>
                         </a>
                     </div>
@@ -91,27 +91,28 @@
             let email = document.getElementById("email").value.trim();
             let password = document.getElementById("password").value.trim();
             let confirmpassword = document.getElementById("confirm_pwd").value.trim();
+            let bookid = Math.floor(Math.random() * 100);
 
-            let user = {};
+            let seller = {};
 
             // Get the value from users    
-
-            user["name"] = name;
-            user["user_name"] = username;
-            user["email"] = email;
-            user["password"] = password;
-            user["confirm_password"] = confirmpassword;
+            seller["name"] = name;
+            seller["user_name"] = username;
+            seller["email"] = email;
+            seller["password"] = password;
+            seller["confirm_password"] = confirmpassword;
+            seller["bookid"] = bookid;
 
             // save the user record to userslist 
 
             // left part = [{}, {}]                                  ??  right part
-            let user_records = (JSON.parse(localStorage.getItem("userslist"))) ?? [];
+            let seller_records = (JSON.parse(localStorage.getItem("seller_details"))) ?? [];
 
             // Checking the user have already account 
             let j = 0;
 
-            for (let i = 0; i < user_records.length; i++) {
-                if (user_records[i]["email"] === email) {
+            for (let i = 0; i < seller_records.length; i++) {
+                if (seller_records[i]["email"] === email) {
                     j = 1;
                     break;
                 }
@@ -119,19 +120,19 @@
 
             if (j == 1) {
                 alert("This email is already exists");
-                window.location.href = "../Account/login.html";
+                window.location.href = "../Admin_pages/Admin_login.html";
 
             }
             else {
                 alert("Successfully logged in");
-                user_records.push(user);
-                localStorage.setItem("userslist", JSON.stringify(user_records));
+                seller_records.push(seller);
+                localStorage.setItem("seller_details", JSON.stringify(seller_records));
 
             }
 
             // check the password 
-            if (user["password"] === user["confirm_password"]) {
-                window.location.href = "../Account/login.html";
+            if (seller["password"] === seller["confirm_password"]) {
+                window.location.href = "../Admin_pages/Admin_login.html";
             }
             else {
                 alert("Please check the password");
