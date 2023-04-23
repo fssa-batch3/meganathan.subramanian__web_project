@@ -343,7 +343,7 @@ body {
 
 .user-edit {
     margin-left: 10px;
-    background-color: lightgrey;
+    background-color: rgb(215, 202, 116);
     border-radius: 10px;
     margin-top: 31px;
 
@@ -351,12 +351,15 @@ body {
 
 .user-inp input {
     margin: 17px auto;
-    height: 33px;
+    height: 38px;
     border: none;
+    font-weight: 700;
+    font-size: 17px;
+    padding-left: 10px;
     border: 1px solid black;
     border-radius: 5px;
     outline: none;
-    width: 315px;
+    width: 50%;
 
 }
 
@@ -367,25 +370,34 @@ body {
 .user-inp label {
     font-size: 21px;
     font-weight: 800;
-    letter-spacing: 1px;
-    margin-left: 30px;
+    margin-left: 20px;
+    width:164px;
+    display: inline-block;
 }
 
+
+/* THIS IS FOR CHANGE THE POSITIOIN OF THE ADDRESS LABEL */
+.user-address > label{
+    position: absolute;
+    top: 74%;
+}
+
+
 .user-inp a {
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .user-inp button {
-    margin-left: -8px;
-    height: 32px;
+    height: 35px;
     font-size: 16px;
-    font-weight: 500;
-    width: 315px;
+    font-weight: 600;
+    width: 180px;
     border: none;
-    color: black;
-    border: 1px solid black;
-    border-radius: 6px;
+    color: rgb(71, 51, 51);
+    border: 1px solid rgb(116, 53, 53);
+    border-radius: 10px;
     background-color:white;
+    transition: 0.2s;
 
 }
 .user-inp button:hover{
@@ -395,44 +407,43 @@ body {
 }
 
 
-
 .user-inp textarea {
     font-size: 17px;
-    font-size: 600;
+    font-weight: 700;
     resize: none;
-    padding-left: 17px;
+    width: 446px;
+    padding-left: 20px;
     line-height: 25px;
     border: 1px solid black;
     border-radius: 5px;
+    margin-left: 205px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    
+
 }
 
-.user-inp input::placeholder {
-    padding-left: 20px;
-    font-size: 17px;
-    font-weight: 500;
-}
+
 
 .user-inp h1 {
     text-align: center;
-    margin-top: 25px;
     letter-spacing: 1px;
-    font-size: 34px;
-    text-decoration: underline;
+    font-size: 39px;
+    transition: 0.2s;
+
+}
+.user-inp h1:hover{
+    color:rgb(254, 118, 118);
 }
 
-#last-name {
-    margin-left: 20px;
-}
-
-.user-inp textarea {
-    margin-left: 20px;
-    margin-top: 12px;
-    margin-bottom: 20px;
-}
 
 .user {
-    width: 825px;
-    height: 560px;
+    width: 889px;
+    height: 585px;
+}
+.user_edit_btn{
+    margin-top: 15px;
+    margin-left:150px;
 }
 
 

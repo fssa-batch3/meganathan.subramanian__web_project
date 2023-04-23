@@ -147,23 +147,40 @@
             <div class="user">
                 <div class="user-inp">
                     <h1>Edit Your Profile</h1>
-                    <label for="name">First name :</label>
-                    <a href="" onclick="edit()">Edit</a> <br>
-                    <input type="text" name="name" id="name" placeholder="Username">
-                    <label for="last">Last Name :</label>
-                    <input type="text" placeholder="S"><br>
-                    <label for="email">Email :</label>
-                    <a href="">Edit</a><br>
-                    <input type="email" name="user-email" placeholder="example@gmail.com" id="email"><br>
-                    <label for="number">Phone Number :</label>
-                    <a href="">Edit</a><br>
-                    <input type="number" placeholder="1234567892"><br>
-                    <label for="adreess">Address:</label>
-                    <a href="">Edit</a><br>
-                    <textarea name="adress" cols="30" rows="4">59/123 Vivenkanda street,vadapalani,chennai-00000"
-        </textarea><br>
-                    <a href=""><button>Save Changes</button></a>
-                    <button onclick="deleteprofile()">delete</button>
+                    <div class="user-name">
+                        <label for="name">Name :</label>
+                        <input type="text" name="name" id="name" placeholder="Username" pattern="^[a-zA-Z]{3,20}$"
+                            disabled>
+                    </div>
+
+                    <div class="user-password">
+                        <label for="last">Password :</label>
+                        <input type="password" pattern="^[a-zA-Z]{3,20}$" id="password" placeholder="*********"
+                            disabled>
+                    </div>
+                    <div class="user-email">
+                        <label for="email">Email :</label>
+                        <input type="email" name="user-email" placeholder="example@gmail.com" id="email" disabled>
+                    </div>
+
+                    <div class="user-phone-number">
+                        <label for="number">Phone Number :</label>
+                        <input type="number" placeholder="1234567892" id="phone_number" pattern="^(\d{7}|\d{10})$"
+                            disabled>
+                    </div>
+
+                    <div class="user-address">
+                        <label for="adreess">Address :</label>
+                        <textarea name="adress" cols="30" rows="4" id="user_address" disabled>59/123 Vivenkanda street,vadapalani,chennai-00000"
+                         </textarea>
+                    </div>
+                    <div class="user_edit_btn">
+                        <button onclick="edit()">Save Changes</button>
+                        <button id="edit_user">Edit</button>
+                        <button onclick="deleteprofile()">delete</button>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -214,25 +231,38 @@
         for (let i = 0; i < users.length; i++) {
             document.getElementById("name").value = users[i]["user_name"];
             document.getElementById('email').value = users[i]['email'];
-            document.getElementById("user_name").innerHTML = users[i]["user_name"];
+            document.getElementById("phone_number").value = users[i]["Phone_number"];
+            document.getElementById("password").value = users[i]["password"];
         };
+        // console.log(users);
 
         // Edit the user profile
+
         function edit() {
-            let users = JSON.parse(localStorage.getItem("userslist"));
-            for (i = 0; i < users.length; i++) {
+            // let users = JSON.parse(localStorage.getItem("userslist"));
+            document.getElementById("name").setAttribute("disabled", "");
+            document.getElementById("phone_number").setAttribute("disabled", "");
+            document.getElementById("password").setAttribute("disabled", "");
+            document.getElementById("user_address").setAttribute("disabled", "");
+
+            for (let i = 0; i < users.length; i++) {
                 if (document.getElementById("email").value == users[i]["email"]) {
+                    let user_address = document.getElementById("user_address").value;
+                    users[i].address = user_address;
                     users[i].user_name = document.getElementById("name").value;
-                }
+                    users[i].password = document.getElementById("password").value;
+                    
+                };
                 localStorage.setItem("userslist", JSON.stringify(users));
-            }
+            };
             console.log(users);
         };
+
 
         // Create a delete profile 
 
         function deleteprofile() {
-            alert("are you sure want to delete your profile?");
+            confirm("are you sure want to delete your profile?");
             for (let i = 0; i < users.length; i++) {
                 if (document.getElementById("email").value == users[i].email) {
                     users.splice(i, 1);
@@ -240,6 +270,26 @@
                 };
             };
         };
+
+
+        // Remove the disabled button with js
+        let edit_user = document.getElementById("edit_user");
+
+        edit_user.addEventListener("click", (e) => {
+            document.getElementById("name").removeAttribute("disabled");
+            document.getElementById("phone_number").removeAttribute("disabled");
+            document.getElementById("password").removeAttribute("disabled");
+            document.getElementById("user_address").removeAttribute("disabled");
+
+            // Adding the Address field into the local storge
+
+            // for (let i = 0; i < users.length; i++) {
+            //     if (active_user == users[i]["email"]) {
+                   
+            //     };
+            // };
+
+        });
 
         // logout
 
@@ -251,7 +301,6 @@
             window.location.href = "/Pages/Account/login.html";
             alert("Thank you visiting our website");
         });
-
     </script>
 </body>
 

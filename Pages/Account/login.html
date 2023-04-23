@@ -21,6 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS-STORE</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -34,9 +36,9 @@
                     <h1>Welcome to <span>Book Store.</span></h1><br>
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id "></label>
-                    <input type="email" type="name" placeholder="Username or Email" id="email" required ><br>
+                    <input type="email" type="name" placeholder="Enter your Email" id="email" required><br>
                     <input type="password" placeholder="Enter Your Password" id="password" required><br>
-                    <button class="btn">login</button>
+                    <button class="btn" id="user_login">login</button>
                     <div class="rem-me">
                         <input type="checkbox" id="check">
                         <h4>Remember me</h4>
@@ -79,31 +81,27 @@
 
             let usersdata = JSON.parse(localStorage.getItem("userslist"));
             if (_email != "") {
-                let res=0;
+                let res = 0;
                 usersdata.find(user => {
-                    if (user["email"] == _email && user["password"] == _password){
-                     localStorage.setItem("activeUser", JSON.stringify(_email))
-                     res = 1;
+                    if (user["email"] == _email && user["password"] == _password) {
+                        localStorage.setItem("activeUser", JSON.stringify(_email))
+                        res = 1;
                     }
-                })
+                });
                 if (res == 1) {
                     alert("logged in");
-                    window.location.href = "../Account/edit-profile.html";
+                    window.location.href = "./Account/edit-profile.html";
                 }
                 else {
                     alert("wrong info");
-                }
+                };
 
             }
             else {
                 alert("fill the details");
-            }
-          
-        }
-
-        
+            };
+        };
     </script>
-
 </body>
 
 </html>

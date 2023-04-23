@@ -94,12 +94,7 @@ const delete_cart = document.getElementById("delete_cart");
 
 delete_cart.addEventListener("click", e => {
     alert("Do you want this delete this product");
-    book_detatils.find(f =>{
-        if(f["bookid"] == user_wishlist["Book_id"] && active_user == user_wishlist["user_email"]){
-            user_wishlist.splice(0,1);
-            localStorage.setItem("wishlist",JSON.stringify(user_wishlist));
-        };
-    });
+   
 
 });
 
