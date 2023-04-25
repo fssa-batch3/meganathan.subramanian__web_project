@@ -1,7 +1,7 @@
 
 let book_detail = JSON.parse(localStorage.getItem("Book_details"));
 
-console.log(book_detail);
+// console.log(book_detail);
 const searchbox = document.getElementById("Search_book");
 
 searchbox.addEventListener("keydown", e => {

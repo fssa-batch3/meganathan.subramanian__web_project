@@ -73,7 +73,7 @@ for (let i = 0; i < user_wishlist.length; i++) {
         let icon = document.createElement("i");
         icon.setAttribute("id", "delete_cart");
         icon.setAttribute("class", "fa-solid fa-trash");
-
+        icon.setAttribute("onclick",`deleteWishlist(${user_wishlist[i]["Book_id"]})`)
         // append the input and icons tag to h4
         h4_tag.append(inpt, icon);
 
@@ -81,22 +81,42 @@ for (let i = 0; i < user_wishlist.length; i++) {
         product_cart_div.append(product_img_div, product_details_div);
         product_details_div.append(h2_tag1, h3_tag1, p_tag, h4_tag);
         document.querySelector("div.product-detail").append(product_cart_div);
+
+
+        // delete the add to cart feature
+
+        // icon.addEventListener("click", () => {
+        //     confirm("Do you want this delete this product");
+        //     for (let j = 0; j < user_wishlist.length; j++) {
+        //         if (active_user == user_wishlist[j]["user_email"] && book_detatils[j]["bookid"] == user_wishlist[j]["Book_id"]) {
+        //             user_wishlist.splice(j, 1);
+        //         };
+        //         localStorage.setItem("wishlist", JSON.stringify(user_wishlist));
+        //         // location.reload();
+        //         break;
+        //     };
+        //     // alert("Product is removed");
+        // });
+
     }
     else {
         console.log("else");
     };
 
-
 };
 
-// delete the add to cart feature
-const delete_cart = document.getElementById("delete_cart");
+function deleteWishlist(id) {
+    let user_wishlist = JSON.parse(localStorage.getItem("wishlist"));
+    let finded_wishlist = user_wishlist.find((f) => f.Book_id == id) ;
+    let index = user_wishlist.indexOf(finded_wishlist);
+    user_wishlist.splice(index,1);
+    localStorage.setItem("wishlist",JSON.stringify(user_wishlist));
+    location.reload()
+};
 
-delete_cart.addEventListener("click", e => {
-    alert("Do you want this delete this product");
-   
 
-});
+
+
 
 
 

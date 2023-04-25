@@ -45,8 +45,8 @@
                 <ul class="fonts">
                     <li> <a href="Pages/Account/signup.html">
                             <i class="fa-regular fa-heart"></i>
-                        </a></li> <a href="Pages/Account/login.html"><span>0</span></a>
-                    <li> <a href="Pages/Account/signup.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
+                        </a></li> <a href="/Pages/orders/Wish_list.html"><span id="wish_count">0</span></a>
+                    <li> <a href="/Pages/orders/Wish_list.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
                 </ul>
             </div>
         </div>
@@ -116,6 +116,7 @@
                     </ol>
                 </div>
             <li><a href="./Pages/Account/login.html">Login</a></li>
+            <li><a href="./Pages/Admin_pages/Admin_login.html">Admin</a></li>
             </li>
         </ul>
     </div>
@@ -150,14 +151,10 @@
             <a href="Pages/Books/self_help.html">See All</a>
         </div>
         <hr>
-
-
-
-
         <div class="books">
-
-            <div class="wish_icons">
-                <!-- <i class="fa-sharp fa-regular fa-heart icon_wishlist"></i>
+            <!-- <div class="wish_icons">
+                <i class="fa-sharp fa-regular fa-heart icon_wishlist"></i>
+            </div>
             <div class="book-img">
                 <div class="trend_book">
                     <a href="Pages/products_details/Product_page.html"><img
@@ -177,8 +174,7 @@
                     <h3>Price : &#8377;120.00 <s>180.00</s></h3>
                     <a href="Pages/products_details/Product_page.html"> <button>Buy Now</button></a>
                 </div>
-            </div> -->
-            </div>
+            </div>  -->
 
 
             <!--  <div class="book-img">
@@ -359,7 +355,6 @@
             <hr>
         </div>
     </div>
-
 
     <!--------- Start The Best seller Book row -------------->
 
@@ -958,7 +953,8 @@
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae doloribus ipsa ipsam
                         aspernatur,
-                        ipsum laudantium odit autem quaerat repellendus aliquid, suscipit asperiores esse omnis placeat
+                        ipsum laudantium odit autem quaerat repellendus aliquid, suscipit asperiores esse omnis
+                        placeat
                         voluptatum voluptas, maiores aperiam.</p>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -975,7 +971,8 @@
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae doloribus ipsa ipsam
                         aspernatur,
-                        ipsum laudantium odit autem quaerat repellendus aliquid, suscipit asperiores esse omnis placeat
+                        ipsum laudantium odit autem quaerat repellendus aliquid, suscipit asperiores esse omnis
+                        placeat
                         voluptatum voluptas, maiores aperiam.</p>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -992,7 +989,8 @@
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae doloribus ipsa ipsam
                         aspernatur,
-                        ipsum laudantium odit autem quaerat repellendus aliquid, suscipit asperiores esse omnis placeat
+                        ipsum laudantium odit autem quaerat repellendus aliquid, suscipit asperiores esse omnis
+                        placeat
                         voluptatum voluptas, maiores aperiam.</p>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -1017,7 +1015,8 @@
         <form action="">
             <h1>Join Our Newsletter</h1>
             <p>An email newsletter is a recurring email sent to subscribed contacts containing curated informational
-                content from news articles to resources and tips. The goal is to provide ongoing value while surfacing
+                content from news articles to resources and tips. The goal is to provide ongoing value while
+                surfacing
                 important industry- or niche-related topics.</p>
             <div class="email-box">
                 <i class="fa-sharp fa-solid fa-envelope"></i>
@@ -1078,16 +1077,13 @@
     <script>
         // logout
         let log_out = document.getElementById("log-out");
-        let active_user = localStorage.getItem("activeUser");
         log_out.addEventListener("click", (e) => {
             const log_Out = delete active_user;
             localStorage.setItem("activeUser", log_Out);
             window.location.href = "/Pages/Account/login.html";
             alert("Thank you visiting our website");
         });
-
     </script>
-
 
 </body>
 

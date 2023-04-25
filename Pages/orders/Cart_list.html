@@ -120,13 +120,19 @@
     <div class="orders">
         <h1>My Carts</h1>
         <table aria-label="Create a Heading">
-            <tr>
-                <th>S.NO</th>
-                <th>Products</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-            </tr>
-            <tr>
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Products</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr> 
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+         
+            <!-- <tr>
                 <td>1.</td>
                 <td>
                     <div class="book_info">
@@ -141,8 +147,8 @@
                 </td>
                 <td><input type="number" value="1"></td>
                 <td>&#8377;120.00</td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
                 <td>2.</td>
                 <td>
                     <div class="book_info">
@@ -173,7 +179,7 @@
                 </td>
                 <td><input type="number" value="1"></td>
                 <td>&#8377;190.00</td>
-            </tr>
+            </tr> -->
         </table>
         <!-------------------total price----------------->
         <div class="total_price">
@@ -188,7 +194,7 @@
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>&#8377;510.00</td>
+                    <td id="price">&#8377;510.00</td>
                 </tr>
             </table>
         </div>
@@ -235,7 +241,7 @@
         <p style="text-align:center ;">&#169;Copyright 2022-Meganathan</p>
     </footer>
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
-
+    <script src="/assets/JS files/user_cart.js"></script>
 </body>
 
 </html>

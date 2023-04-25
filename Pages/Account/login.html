@@ -21,11 +21,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS-STORE</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.css">
+
 
 </head>
 
 <body>
+    
 
     <!-- START THE LOGIN PAGE -->
 
@@ -68,7 +70,7 @@
         </div>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.js"> </script>
     <script>
         let form = document.querySelector("form");
         form.addEventListener("submit", (e) => {
@@ -89,16 +91,18 @@
                     }
                 });
                 if (res == 1) {
-                    alert("logged in");
-                    window.location.href = "./Account/edit-profile.html";
+                    Notify.success("Sucessfully loggedIN");
+                    window.location.href = "/Pages/Account/edit-profile.html";
                 }
                 else {
-                    alert("wrong info");
+                    // alert("wrong info");
+                    Notify.error("Please Enter the valid details");
                 };
 
             }
             else {
-                alert("fill the details");
+                // alert("fill the details");
+                Notify.error("Please fill the details");
             };
         };
     </script>

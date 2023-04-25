@@ -20,10 +20,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS-STORE</title>
+    <script src="/assets/JS files/sweetalert.min.js"></script>
+
 </head>
 
 <body>
-
     <!------------------------ Create the navigation bar ----------------------->
 
     <div class="head">
@@ -42,7 +43,7 @@
                     </li>
                 </ol>
                 <ul class="fonts">
-                    <li> <a href="../../Pages/Account/login.html">
+                    <li> <a href="../orders/Wish_list.html">
                             <i class="fa-regular fa-heart"></i>
                         </a></li> <span>0</span>
                     <li> <a href="../../Pages/Account/signup.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
@@ -237,7 +238,6 @@
         // console.log(users);
 
         // Edit the user profile
-
         function edit() {
             // let users = JSON.parse(localStorage.getItem("userslist"));
             document.getElementById("name").setAttribute("disabled", "");
@@ -251,18 +251,21 @@
                     users[i].address = user_address;
                     users[i].user_name = document.getElementById("name").value;
                     users[i].password = document.getElementById("password").value;
-                    
+
                 };
                 localStorage.setItem("userslist", JSON.stringify(users));
             };
-            console.log(users);
+            // console.log(users);
+            swal( 'Great','Youre account in Successfully Changed!','success');
+
         };
 
 
         // Create a delete profile 
 
         function deleteprofile() {
-            confirm("are you sure want to delete your profile?");
+            confirm("are you sure want to delete your profile?")
+            Notify.success("Your're account is successfully deleted");
             for (let i = 0; i < users.length; i++) {
                 if (document.getElementById("email").value == users[i].email) {
                     users.splice(i, 1);
@@ -285,7 +288,7 @@
 
             // for (let i = 0; i < users.length; i++) {
             //     if (active_user == users[i]["email"]) {
-                   
+
             //     };
             // };
 

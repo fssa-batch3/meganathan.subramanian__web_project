@@ -107,16 +107,26 @@
 // create a div 
 
 let products_details = JSON.parse(localStorage.getItem("Book_details"));
+// get the local storage for the active user
+let active_user = localStorage.getItem("activeUser");
 
+let user_wish_list = JSON.parse(localStorage.getItem("wishlist")) ?? [];
+
+let user_cart = JSON.parse(localStorage.getItem("user_cart")) ?? [];
+
+let wish_count = 0;
 for (let i = 0; i < products_details.length; i++) {
-
+    // Create a wishlist count
     let wish_icons = document.createElement("div");
     wish_icons.setAttribute("id", "wishlist_icons");
     wish_icons.setAttribute("class", "wish_icons");
 
+
     let icon_i = document.createElement("i")
-    icon_i.setAttribute("class", "fa-sharp fa-regular fa-heart icon_wishlist")
+    icon_i.setAttribute("class", "fa-sharp fa-regular fa-heart icon_wishlist");
+    icon_i.setAttribute("id", "wish_icon");
     wish_icons.prepend(icon_i)
+    // console.log(wish_icons);
 
     const book_img_div = document.createElement("div");
     book_img_div.setAttribute("class", "book-img");
@@ -142,7 +152,7 @@ for (let i = 0; i < products_details.length; i++) {
     // Create a another anchor tag 
 
     const a_2 = document.createElement("a");
-    a_2.setAttribute("href", "Pages/orders/Wish_list.html");
+    a_2.setAttribute("href", "");
 
     // create a input tag 
 
@@ -150,6 +160,7 @@ for (let i = 0; i < products_details.length; i++) {
     inpt.setAttribute("type", "button");
     inpt.setAttribute("value", "add to cart");
     inpt.setAttribute("class", "add");
+    // inpt.setAttribute("id","User_cart");
     a_2.append(inpt);
     trend_book_div.append(a_1);
     trend_book_div.append(a_2);
@@ -215,27 +226,20 @@ for (let i = 0; i < products_details.length; i++) {
     document.querySelector("div.books").append(wish_icons);
 
 
-    // add to cart logic
+    // ADD TO WISHLIST PAGE LOGIC
 
     // let cart = document.getElementById("wishlist_icons");
     icon_i.addEventListener("click", (e) => {
 
-        let user_wish_list = JSON.parse(localStorage.getItem("wishlist")) ?? [];
-
         // get the book for this book is already there in the wishlist
         let book_id = products_details[i]["bookid"];
+        // console.log(book_id)
 
         let check;
 
-        // get the local storage for the active user
-        const active_user = localStorage.getItem("activeUser");
-
-
         user_wish_list.find(f => {
             // console.log(check);
-
-
-            if (f["bookid"] == products_details[i]["bookid"] && active_user == f["user_email"]) {
+            if (f["Book_id"] == products_details[i]["bookid"] && active_user == f["user_email"]) {
                 return check = 1;
 
             }
@@ -243,15 +247,17 @@ for (let i = 0; i < products_details.length; i++) {
                 return check = 0;
             };
 
-        });
+        })
+
         if (check == 1) {
             for (let j = 0; j < user_wish_list.length; j++) {
-                if (book_id == user_wish_list[j]["bookid"]) {
+                if (book_id == user_wish_list[j]["Book_id"]) {
                     user_wish_list.splice(j, 1);
                     localStorage.setItem("wishlist", JSON.stringify(user_wish_list));
                 };
-                alert("This product is deleted");
             };
+            alert("This product is deleted");
+
         }
         else {
             let user_wishlist = {};
@@ -266,11 +272,67 @@ for (let i = 0; i < products_details.length; i++) {
 
             user_wish_list.push(user_wishlist);
             localStorage.setItem("wishlist", JSON.stringify(user_wish_list));
-
+            alert("Product is Added");
         };
     });
+    // This is for add to cart
+    a_2.addEventListener("click", () => {
+        let book_id = products_details[i]["bookid"];
+        let check;
+        user_cart.find(f => {
+            if (f["Book_id"] == products_details[i]["bookid"] && active_user == f["user_email"]) {
+                return check = 1;
+            }
+            else {
+                return check = 0;
+            };
+        });
+        if (check == 1) {
+            for (let j = 0; j < user_cart.length; j++) {
+                if (book_id == user_cart[j]["Book_id"]) {
+                    user_cart.splice(j, 1);
+                    localStorage.setItem("user_cart", JSON.stringify(user_cart));
+                };
+            };
+            alert("This product is deleted");
+        }
+        else {
+            let user_carlist = {};
+            user_carlist["user_email"] = active_user,
+                user_carlist["Book_image"] = products_details[i]["bookImage"],
+                user_carlist["Book_title"] = products_details[i]["bookName"],
+                user_carlist["DiscountPrice"] = products_details[i]["DiscountPrice"],
+                user_carlist["originalPrice"] = products_details[i]["originalPrice"],
+                user_carlist["author_content"] = products_details[i]["author_content"],
+                user_carlist["Book_id"] = products_details[i]["bookid"]
 
+            user_cart.push(user_carlist);
+            localStorage.setItem("user_cart", JSON.stringify(user_cart));
+            alert("Product is Added");
+        };
+    });
+    const wish = JSON.parse(localStorage.getItem("wishlist"))
+    wish_count = wish.length
+    document.getElementById("wish_count").innerHTML = wish_count
 };
+// BELOWE THE CONTENT THE COUNT THE WIHSLIST 
+
+const btn = document.querySelectorAll(".wish_icons")
+console.log(btn);
+
+for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", function () {
+        const wish = JSON.parse(localStorage.getItem("wishlist"))
+        document.getElementById("wish_count").innerHTML = wish.length
+    });
+};
+
+
+
+
+
+
+
 
 
 
