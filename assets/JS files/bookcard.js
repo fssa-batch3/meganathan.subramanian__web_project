@@ -186,7 +186,7 @@ for (let i = 0; i < products_details.length; i++) {
 
 
     // Create a Icon tag 
-    for (a = 1; a <= 5; a++) {
+    for (let a = 1; a <= 5; a++) {
         icon = document.createElement("i");
         icon.setAttribute("class", "fa-solid fa-star");
         rating_div.append(icon);
@@ -250,13 +250,13 @@ for (let i = 0; i < products_details.length; i++) {
         })
 
         if (check == 1) {
-            for (let j = 0; j < user_wish_list.length; j++) {
-                if (book_id == user_wish_list[j]["Book_id"]) {
-                    user_wish_list.splice(j, 1);
-                    localStorage.setItem("wishlist", JSON.stringify(user_wish_list));
-                };
-            };
-            alert("This product is deleted");
+            // for (let j = 0; j < user_wish_list.length; j++) {
+            //     if (book_id == user_wish_list[j]["Book_id"]) {
+            //         user_wish_list.splice(j, 1);
+            //         localStorage.setItem("wishlist", JSON.stringify(user_wish_list));
+            //     };
+            // };
+            alert("This product is Already there in you're Cart");
 
         }
         else {
@@ -288,13 +288,13 @@ for (let i = 0; i < products_details.length; i++) {
             };
         });
         if (check == 1) {
-            for (let j = 0; j < user_cart.length; j++) {
-                if (book_id == user_cart[j]["Book_id"]) {
-                    user_cart.splice(j, 1);
-                    localStorage.setItem("user_cart", JSON.stringify(user_cart));
-                };
-            };
-            alert("This product is deleted");
+            // for (let j = 0; j < user_cart.length; j++) {
+            //     if (book_id == user_cart[j]["Book_id"]) {
+            //         user_cart.splice(j, 1);
+            //         localStorage.setItem("user_cart", JSON.stringify(user_cart));
+            //     };
+            // };
+            alert("This product is Already there in you're Cart");
         }
         else {
             let user_carlist = {};
@@ -323,7 +323,7 @@ console.log(btn);
 for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener("click", function () {
         const wish = JSON.parse(localStorage.getItem("wishlist"))
-        document.getElementById("wish_count").innerHTML = wish.length
+        document.getElementById("wish_count").innerHTML = wish.length;
     });
 };
 

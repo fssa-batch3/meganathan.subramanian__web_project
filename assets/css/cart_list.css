@@ -463,3 +463,20 @@ footer h3{
     color:crimson;
 }
 /* -----END OF THE FOOTER CONTENT-----*/
+.countCart i{
+    font-size: 29px;
+    color: rgb(195, 192, 192);
+}
+.countCart{
+    display: flex;
+    margin-left:72px;
+    margin-top: 55px;
+}
+.countCart p{
+    margin-right: 15px;
+    margin-left:15px ;
+}
+#remove{
+    cursor: pointer;
+    color: red;
+}

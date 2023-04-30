@@ -82,6 +82,7 @@ for (let i = 0; i < user_wishlist.length; i++) {
         product_details_div.append(h2_tag1, h3_tag1, p_tag, h4_tag);
         document.querySelector("div.product-detail").append(product_cart_div);
 
+        // create a another div check bill 
 
         // delete the add to cart feature
 
@@ -104,14 +105,13 @@ for (let i = 0; i < user_wishlist.length; i++) {
     };
 
 };
-
 function deleteWishlist(id) {
-    let user_wishlist = JSON.parse(localStorage.getItem("wishlist"));
-    let finded_wishlist = user_wishlist.find((f) => f.Book_id == id) ;
+    // let user_wishlist = JSON.parse(localStorage.getItem("wishlist"));
+    let finded_wishlist = user_wishlist.find((f) => f.Book_id == id && active_user == f.user_email) ;
     let index = user_wishlist.indexOf(finded_wishlist);
     user_wishlist.splice(index,1);
     localStorage.setItem("wishlist",JSON.stringify(user_wishlist));
-    location.reload()
+    location.reload();
 };
 
 
