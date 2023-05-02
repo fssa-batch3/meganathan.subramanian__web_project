@@ -517,3 +517,31 @@ footer h3 {
 }
 
 /* -----END OF THE FOOTER CONTENT-----*/
+.user_orders{
+    display: none;
+}
+.single_book{
+    display: flex;
+    margin-top:20px;
+}
+.book_info{
+    border-style: groove;
+    padding: 30px 50px;
+}
+.book_info h2{
+    margin:-3px 0px 20px;
+    /* font-family:'Montserrat', sans-serif;  */
+}
+.book_img{
+    justify-content: center;
+    align-items: center;
+}
+.status{
+    margin:5px 50px 0px 50px;
+}
+.status p{
+    margin: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+

@@ -32,12 +32,12 @@ if (localStorage.getItem("Book_details")) {
 else {
     localStorage.setItem("Book_details", JSON.stringify([
         {
-            DiscountPrice : "200",
-            bookImage : "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
-            bookName : "ponniyin selvan book for tamil",
-            bookid : 27,
-            originalPrice : "100",
-            rating  : "",
+            DiscountPrice: "200",
+            bookImage: "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
+            bookName: "ponniyin selvan book for tamil",
+            bookid: 27,
+            originalPrice: "100",
+            rating: "",
         },
         {
             DiscountPrice
@@ -142,6 +142,130 @@ else {
         }
 
     ]));
+}
+if (localStorage.getItem("user_cart")) {
+
+}
+else {
+    localStorage.setItem("user_cart", JSON.stringify([
+        {
+            Book_id
+                :
+                27,
+            Book_image
+                :
+                "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
+            Book_title
+                :
+                "ponniyin selvan book for tamil",
+            DiscountPrice
+                :
+                "200",
+            originalPrice
+                :
+                "100",
+            user_email
+                :
+                "\"meganathan212003@gmail.com\"",
+        },
+        {
+            Book_id
+                :
+                19,
+            Book_image
+                :
+                "https://m.media-amazon.com/images/I/516VyKCKi-L.jpg",
+            Book_title
+                :
+                "Eat that frog Tamil edition",
+            DiscountPrice
+                :
+                "200",
+            originalPrice
+                :
+                "100",
+            user_email
+                :
+                "\"meganathan212003@gmail.com\"",
+        },
+        {
+            Book_id
+                :
+                19,
+            Book_image
+                :
+                "https://m.media-amazon.com/images/I/516VyKCKi-L.jpg",
+            Book_title
+                :
+                "Eat that frog Tamil edition",
+            DiscountPrice
+                :
+                "200",
+            originalPrice
+                :
+                "100",
+            user_email
+                :
+                "\"dinesh@gmail.com\"",
+        },
+        {
+            Book_id
+                :
+                1,
+            Book_image
+                :
+                "https://m.media-amazon.com/images/I/71H8-WDVR9L.jpg",
+            Book_title
+                :
+                " Happy is the Goal Tamil Edition Book",
+            DiscountPrice
+                :
+                "200",
+            originalPrice
+                :
+                "100",
+            user_email
+                :
+                "\"dinesh@gmail.com\""
+        }
+    ]));
+}
+if (localStorage.getItem("wishlist")) {
+
+}
+else {
+    localStorage.setItem("wishlist", JSON.stringify([
+        {
+            Book_id
+                :
+                27,
+            Book_image
+                :
+                "https://m.media-amazon.com/images/I/617UBjNbf9L.jpg",
+            Book_title
+                :
+                "ponniyin selvan book for tamil",
+            DiscountPrice
+                :
+                "200",
+            originalPrice
+                :
+                "100",
+            user_email
+                :
+                "\"dinesh@gmail.com\""
+        }
+    ]
+    )
+    );
+};
+if (localStorage.getItem("activeUser")) {
+
+}
+else {
+    localStorage.setItem("activeUser", JSON.stringify([{
+        activeUser: "dinesh@gmail.com"
+    }]))
 }
 
 

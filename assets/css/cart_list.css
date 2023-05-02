@@ -271,7 +271,9 @@ body {
     color: darkblue;
 }
 
-/*---------------Cart items--------- */
+/*---------------Cart items --------- */
+
+/* 
 h1{
    font-size: 40px;
    font-weight: 800;
@@ -337,26 +339,25 @@ td img{
 }
 
 /* total price */
-.total_price table th{
+/* .total_price table th{
     background-color: white;
 }
 .total_price{
     display: flex;
     margin-left: 860px;
-    margin-bottom: 150px;
+    margin-bottom: 20px;
 } 
 .total_price table{
     border-top: 2px solid red;
 }
 .btn{
     margin-left: 1100px;
+    margin-bottom: 30px;
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 6px;
     border: none;
-    position: absolute;
-    top: 125%;
     cursor: pointer;
     background-color: #fcbf4b;
     color: black;
@@ -369,14 +370,86 @@ td img{
 }
 .orders_list{
     margin-bottom: 120px;
+}  */
+
+.my-cart{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color:#1c3a1c;
+  }
+ 
+  tr th{
+    background-color:  #e4ad4d;
+      color: black;
+  }
+  th{
+    padding:20px 50px;
+    margin-left:50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: larger;
+    font-weight: 700;
+  }
+  td{
+    margin-left: 50px;
+    text-align: center;
+    padding-top:20px;
+  }
+  td input{
+    max-width: 25px;
+  }
+  
+  table{
+    margin:50px 100px 100px 170px;
+    padding-bottom: 20px;
+    /* margin-left:200px; */
+    border-style: solid;
+    border-color: lightgray;
+  }
+  .orders h1{
+    margin-left:200px;
+  }
+  .cart-total{
+    display:flex;
+    justify-content: space-between;
+  }
+  .cart-amt{
+    border-style: solid;
+    border-color: lightgray;
+    max-width: 500px;
+    margin-left:660px;
+    padding:30px;
+  }
+  .cart-amt p{
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  .cart-amt h2{
+    font-family:'Montserrat', sans-serif;
+    font-size:xx-large;
+    font-weight: 700;
+    margin-top:-7px;
+    color:#1c3a1c;
+  }
+  .checkout{
+    margin-top: 15px;
+    padding: 20px;
+    border: none;
+    background-color:  #e4ad4d;
+    color: black;
+    width: 500px;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+table img{
+    width: 40%;
 }
-
-
  /* -------------------Wishlist-page------------------- */ 
 
 
 /*-------------------users option edit-------------------- */
-.orders select{
+/* .orders select{
     padding: 10px;
     border-radius: 8px;
     font-weight: 700;
@@ -406,7 +479,7 @@ hr{
     outline: none;
     border-radius: 12px;
     border: none;
-}
+} */
 
 
 /*---------------start the footer content------ */
@@ -463,6 +536,22 @@ footer h3{
     color:crimson;
 }
 /* -----END OF THE FOOTER CONTENT-----*/
+.quantity {
+    display: flex;
+    margin-left: 80px;
+
+}
+.quantity i{
+    color: black;
+    font-size: 28px;
+    cursor: pointer;
+}
+.fa-plus{
+    margin-left: 20px;
+}
+.fa-minus{
+    margin-right: 20px;
+}
 .countCart i{
     font-size: 29px;
     color: rgb(195, 192, 192);
