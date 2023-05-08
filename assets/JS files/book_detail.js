@@ -259,7 +259,7 @@ const product_details = [{
 
 console.log(product_details);
 
-// url params
+// url params 
 
 let url = window.location.search;
 const search = new URLSearchParams(url);
@@ -346,7 +346,7 @@ a2.innerHTML = "Add to Cart";
 const a3 = document.createElement("a");
 a3.setAttribute("class", "btn");
 a3.innerHTML = "Buy now"
-a3.setAttribute("href", "../../Pages/orders/Cart_list.html");
+a3.setAttribute("href", "../../Pages/orders/singleprod_checkout.html?id=" + res['bookid']);
 cart_div.append(a2, a3);
 
 // Create h2 tag 
