@@ -26,8 +26,8 @@
     <div class="head">
         <div class="nav-logo">
             <div class="logo">
-                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png" alt="webiste logo"
-                        width="190"></a>
+                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png"
+                        alt="webiste logo" width="190"></a>
             </div>
             <div class="navi2">
                 <ol class="lang">
@@ -102,7 +102,8 @@
             <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
                 <div class="profile">
                     <ol>
-                        <li><a href="../../Pages/Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
+                        <li><a href="../../Pages/Account/edit-profile.html"><i
+                                    class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
                         <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
                         <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
                         <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
@@ -117,7 +118,7 @@
     <!------------------------START THE PAYMENT CONTENT------------>
     <h1>You're Almost Done !!!</h1>
     <div class="tot-pay">
-      
+
         <div class="container-1">
             <div class="payment">
                 <form autocomplete="off" action="#">
@@ -126,29 +127,29 @@
                             <h3 class="title-1">BILLING ADDRESS:</h3>
                             <div class="input_box">
                                 <span>Name:</span>
-                                <input type="text" placeholder="Enter Your full name">
+                                <input type="text" id="User_name" placeholder="Enter Your full name">
                             </div>
                             <div class="input_box">
                                 <span>Email:</span>
-                                <input type="email" placeholder="Enter Your Email">
+                                <input type="email" id="User_email" placeholder="Enter Your Email">
                             </div>
                             <div class="input_box">
                                 <span>Address:</span>
-                                <input type="text" placeholder="Street - Locality">
+                                <input type="text" id="User_address" placeholder="Street - Locality">
                             </div>
 
                             <div class="input_box">
                                 <span>City:</span>
-                                <input type="text" placeholder="Tamilnadu">
+                                <input type="text" id="User_city" placeholder="Tamilnadu">
                             </div>
                             <div class="box_flex">
                                 <div class="input_box">
                                     <span>State:</span>
-                                    <input type="text" placeholder="India">
+                                    <input type="text" id="User_state" placeholder="India">
                                 </div>
                                 <div class="input_box">
                                     <span>Zip-code:</span>
-                                    <input type="number" placeholder="600081">
+                                    <input type="number" id="User_zipcode" placeholder="600081">
                                 </div>
                             </div>
                         </div>
@@ -189,7 +190,7 @@
                         </div>
                     </div>
                     <a href="../../Pages/orders/order_placed.html"><input type="button" value="Proceed to Order"
-                            class="place_order"></a>
+                            class="place_order" id="proceed_order"></a>
 
             </div>
             </form>
@@ -268,6 +269,136 @@
         <p style="text-align:center ;">&#169;Copyright 2022-Meganathan</p>
     </footer>
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
+
+
+
+    <script>
+        // get the all book details from the local storage
+        let bookList = JSON.parse(localStorage.getItem("Book_details"));
+
+
+        // Get the all user detail from the local storage
+        let user_details = JSON.parse(localStorage.getItem("userslist"));
+
+        // Create a new localstorage to user_order
+        let active_user = JSON.parse(localStorage.getItem("activeUser"));
+
+        let order = JSON.parse(localStorage.getItem("User_Order")) ?? [];
+
+        let cart = JSON.parse(localStorage.getItem("user_cart"));
+
+
+        // Create a order date
+        let newdate;
+        let dateObj = new Date();
+        let month = dateObj.getUTCMonth() + 1; //months from 1-12
+        let day = dateObj.getUTCDate();
+        let year = dateObj.getUTCFullYear();
+        newdate = day + "/" + month + "/" + year;
+        // orders id code
+        let order_id = Date.now();
+        // console.log(order_id);
+
+        // Below the code for URL params
+        let url = window.location.search;
+        const search = new URLSearchParams(url);
+        const product_id = search.get("id");
+
+        console.log(product_id)
+        const qty = Number(search.get("qty"));
+
+        let userName = document.getElementById("User_name");
+        let user_email = document.getElementById("User_email");
+        let user_address = document.getElementById("User_address");
+        let user_city = document.getElementById("User_city");
+        let user_state = document.getElementById("User_state");
+        let user_pincode = document.getElementById("User_zipcode");
+        let product_img;
+        let product_title;
+
+
+        console.log(bookList);
+        console.log(user_details);
+
+
+        for (let i = 0; i < user_details.length; i++) {
+
+            if (active_user == user_details[i]["email"]) {
+
+                userName.value = user_details[i]["user_name"];
+                user_email.value = user_details[i]["email"];
+                user_address.value = user_details[i]["address"];
+                user_state.value = user_details[i]["user_state"];
+                user_city.value = user_details[i]["user_city"];
+                user_pincode.value = user_details[i]["user_pincode"];
+
+            }
+        };
+
+        let res1;
+        bookList.forEach(element => {
+            if (element["bookid"] == product_id) {
+                return res1 = element
+
+            }
+        });
+
+
+        // below the code for the single order prod
+        if (product_id == Number(product_id)) {
+            let userOrder = {
+                "username": userName.value,
+                "user_email": user_email.value,
+                "user_address": user_address.value,
+                "user_state": user_state.value,
+                "user_city": user_city.value,
+                "user_pincode": user_pincode.value,
+                "product_id": product_id,
+                "active_user": active_user,
+                "product_img": res1["bookImage"],
+                "product_title": res1["bookName"],
+                "product_Price": res1["originalPrice"],
+                "order_id": order_id,
+                "Order_date": newdate,
+                "Quantity": qty
+            }
+
+            order.push(userOrder);
+            document.getElementById("proceed_order").onclick = function () {
+                localStorage.setItem("User_Order", JSON.stringify(order));
+            };
+
+        }
+        else {
+            cart.find(e => {
+                if (e.user_email == active_user) {
+                    let cartOrder = {
+                        "username": userName.value,
+                        "user_email": user_email.value,
+                        "user_address": user_address.value,
+                        "user_state": user_state.value,
+                        "user_city": user_city.value,
+                        "user_pincode": user_pincode.value,
+                        "product_id": product_id,
+                        "active_user": active_user,
+                        "product_img": res1["bookImage"],
+                        "product_title": res1["bookName"],
+                        "product_Price": res1["originalPrice"],
+                        "order_id": order_id,
+                        "Order_date": newdate,
+                        "Quantity": qty
+                    }
+                    order.push(cartOrder);
+                    document.getElementById("proceed_order").onclick = function () {
+                        localStorage.setItem("User_Order", JSON.stringify(order));
+                    };
+                }
+            })
+        }
+        // come from the cart
+
+
+    </script>
 </body>
 
 </html>

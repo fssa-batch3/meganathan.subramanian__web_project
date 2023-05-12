@@ -232,7 +232,7 @@ for (let i = 0; i < products_details.length; i++) {
     icon_i.addEventListener("click", (e) => {
 
         // get the book for this book is already there in the wishlist
-        let book_id = products_details[i]["bookid"];
+        // let book_id = products_details[i]["bookid"];
         // console.log(book_id)
 
         let check;
@@ -277,7 +277,7 @@ for (let i = 0; i < products_details.length; i++) {
     });
     // This is for add to cart
     a_2.addEventListener("click", () => {
-        let book_id = products_details[i]["bookid"];
+        // let book_id = products_details[i]["bookid"];
         let check;
         user_cart.find(f => {
             if (f["Book_id"] == products_details[i]["bookid"] && active_user == f["user_email"]) {

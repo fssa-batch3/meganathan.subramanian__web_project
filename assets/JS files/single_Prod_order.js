@@ -11,10 +11,10 @@ popUp.addEventListener("click", function () {
 let url = window.location.search;
 const search = new URLSearchParams(url);
 const product_id = search.get("id");
-console.log(product_id);
 const Book_details = JSON.parse(localStorage.getItem("Book_details"));
 const active_user = localStorage.getItem("activeUser");
 const user_details = JSON.parse(localStorage.getItem("userslist"));
+let quantity = 1;
 
 let res;
 Book_details.find(function (e) {
@@ -30,6 +30,7 @@ Book_details.find(function (e) {
 // Below create the create element
 
 // create a div
+
 
 const info_div = document.createElement("div");
 info_div.setAttribute("class", "info");
@@ -118,7 +119,7 @@ h4_tag.append(s_tag, br_tag);
 
 // Create a h1 tag
 const h1_tag = document.createElement("h1");
-h1_tag.innerText = "Original Price : " + "₹" + res["originalPrice"];
+h1_tag.innerText = "Orginal price" + "₹" + res["originalPrice"];
 
 // append the child tags
 price_sec_div.append(h4_tag, h1_tag);
@@ -143,7 +144,8 @@ console.log(Remove_div);
 
 // Create a another p_tag
 const p_tag4 = document.createElement("p");
-p_tag4.innerText = "₹" + "20,000";
+p_tag4.innerText = "₹" + res["originalPrice"];
+p_tag4.setAttribute("class", "total_price");
 
 // Create a another p_tag
 const p_tag5 = document.createElement("p");
@@ -151,8 +153,8 @@ p_tag5.innerText = "Free";
 
 // Create a another p_tag
 const p_tag6 = document.createElement("p");
-p_tag6.setAttribute("class","Total_money")
-p_tag6.innerText = "₹" + "100";
+p_tag6.setAttribute("class", "Total_money total_price");
+p_tag6.innerText = "₹" + res["originalPrice"];
 
 document.querySelector(".Total_price").append(p_tag4, p_tag5, p_tag6);
 
@@ -164,8 +166,52 @@ console.log(info_div);
 document.querySelector(".drpdown2").append(info_div);
 
 
-// Move to the payment page
+
+
+// below the code for the increase quantity
+button_plus.addEventListener("click", e => {
+    quantity++;
+    document.getElementById("book_quantity").value = quantity;
+    let total = "";
+    total += "Orginal price" + "₹" + parseInt(res["originalPrice"]) * quantity;
+    h1_tag.innerText = total;
+
+
+    let price = "";
+    price += "₹" + parseInt(res["originalPrice"] * quantity);
+    let input = document.querySelectorAll(".total_price")
+    input[0].innerText = price;
+    console.log(input[0].innerText = price)
+    input[1].innerText = price;
+
+
+});
+
+// button_plus.addEventListener("click", e => {
+
+// })
+button_minus.addEventListener("click", e => {
+    if (quantity > 1) {
+        quantity--;
+        document.getElementById("book_quantity").value = quantity;
+        let total = "";
+        total += "Orginal price" + "₹" + parseInt(res["originalPrice"]) * quantity;
+        h1_tag.innerText = total;
+        // console.log(total);
+        let price = "";
+        price += "₹" + parseInt(res["originalPrice"] * quantity);
+        let input = document.querySelectorAll(".total_price")
+        input[0].innerText = price;
+        console.log(input[0].innerText = price)
+        input[1].innerText = price;
+
+    }
+});
+
 let payment = document.getElementById("payment");
-payment.setAttribute(
-    "href","../Payment gateway/payment.html?id="+res["bookid"]
-)
+
+payment.addEventListener("click", e => {
+    payment.setAttribute(
+        "href", "../Payment gateway/payment.html?id=" + res["bookid"] + "&qty=" + quantity
+    )
+})

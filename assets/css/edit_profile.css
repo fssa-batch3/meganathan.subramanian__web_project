@@ -49,25 +49,29 @@ body {
 .nav-logo img {
     margin-top: 3px;
 }
-.navigation hr{
+
+.navigation hr {
     margin-bottom: 4px solid blue;
     margin-top: 10px;
     width: 84%;
     height: 0;
-    margin-left:90px;
+    margin-left: 90px;
 }
-.home-page{
+
+.home-page {
     margin-left: 178px;
     margin-top: 20px;
     border: 1px solid orange;
-    width:260px;
+    width: 260px;
     font-weight: 800;
 }
-.home-page a{
+
+.home-page a {
     font-size: 20px;
     letter-spacing: 1px;
     text-decoration: none;
 }
+
 .navi2 {
     display: flex;
     align-items: center;
@@ -306,9 +310,10 @@ body {
     border-radius: 10px;
     width: 260px;
     height: 470px;
-    margin-top: -85px;
+    margin-top: 30px;
 }
-.profile-box hr{
+
+.profile-box hr {
     height: 0;
     width: 80%;
     margin-left: 30px;
@@ -321,7 +326,8 @@ body {
     margin-left: 85px;
     letter-spacing: 1px;
 }
-.profile-options h2:hover{
+
+.profile-options h2:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -338,7 +344,7 @@ body {
 
 .container {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .user-edit {
@@ -363,7 +369,7 @@ body {
 
 }
 
-.user-inp input{
+.user-inp input {
     margin-left: 20px;
 }
 
@@ -371,13 +377,13 @@ body {
     font-size: 21px;
     font-weight: 800;
     margin-left: 20px;
-    width:164px;
+    width: 164px;
     display: inline-block;
 }
 
 
 /* THIS IS FOR CHANGE THE POSITIOIN OF THE ADDRESS LABEL */
-.user-address > label{
+.user-address>label {
     position: absolute;
     top: 74%;
 }
@@ -396,14 +402,15 @@ body {
     color: rgb(71, 51, 51);
     border: 1px solid rgb(116, 53, 53);
     border-radius: 10px;
-    background-color:white;
+    background-color: white;
     transition: 0.2s;
 
 }
-.user-inp button:hover{
+
+.user-inp button:hover {
     text-decoration: underline;
     background-color: rgb(235, 180, 77);
-    
+
 }
 
 
@@ -419,7 +426,7 @@ body {
     margin-left: 205px;
     margin-top: 12px;
     margin-bottom: 20px;
-    
+
 
 }
 
@@ -432,18 +439,20 @@ body {
     transition: 0.2s;
 
 }
-.user-inp h1:hover{
-    color:rgb(254, 118, 118);
+
+.user-inp h1:hover {
+    color: rgb(254, 118, 118);
 }
 
 
 .user {
-    width: 889px;
-    height: 585px;
+    width: 760px;
+    height: 780px;
 }
-.user_edit_btn{
+
+.user_edit_btn {
     margin-top: 15px;
-    margin-left:150px;
+    margin-left: 150px;
 }
 
 
@@ -517,31 +526,52 @@ footer h3 {
 }
 
 /* -----END OF THE FOOTER CONTENT-----*/
-.user_orders{
+.user_orders {
     display: none;
 }
-.single_book{
+
+.single_book {
     display: flex;
-    margin-top:20px;
+    flex-direction: column;
+    margin-top: 20px;
 }
-.book_info{
-    border-style: groove;
+
+.book_info {
+    /* border-style: groove; */
     padding: 30px 50px;
 }
-.book_info h2{
-    margin:-3px 0px 20px;
+
+.book_info h2 {
+    margin: -3px 0px 20px;
     /* font-family:'Montserrat', sans-serif;  */
 }
-.book_img{
-    justify-content: center;
+
+.book_img {
+    display: flex;
+    /* justify-content: center; */
     align-items: center;
+    margin: 10px;
 }
-.status{
-    margin:5px 50px 0px 50px;
+
+.status {
+    margin: 5px 50px 0px 50px;
 }
-.status p{
+
+.status p {
     margin: 10px;
     font-size: large;
     font-weight: 500;
 }
 
+.horz_line {
+    color: gray;
+    background-color: gray;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    border-width:0px;
+}
+.head{
+    text-align: center;
+    margin-top: 20px;
+}

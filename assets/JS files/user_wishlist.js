@@ -62,12 +62,12 @@ for (let i = 0; i < user_wishlist.length; i++) {
 
         // create a h4 tag
         let h4_tag = document.createElement("h4");
-        h4_tag.innerHTML = "QTY :"
+        
 
         // create a input tag
-        let inpt = document.createElement("input");
-        inpt.setAttribute("type", "number");
-        inpt.setAttribute("value", "1");
+        // let inpt = document.createElement("input");
+        // inpt.setAttribute("type", "number");
+        // inpt.setAttribute("value", "1");
 
         // create a icon tag
         let icon = document.createElement("i");
@@ -75,7 +75,7 @@ for (let i = 0; i < user_wishlist.length; i++) {
         icon.setAttribute("class", "fa-solid fa-trash");
         icon.setAttribute("onclick",`deleteWishlist(${user_wishlist[i]["Book_id"]})`)
         // append the input and icons tag to h4
-        h4_tag.append(inpt, icon);
+        h4_tag.append( icon);
 
         // append the all element into the div
         product_cart_div.append(product_img_div, product_details_div);
@@ -112,6 +112,7 @@ function deleteWishlist(id) {
     user_wishlist.splice(index,1);
     localStorage.setItem("wishlist",JSON.stringify(user_wishlist));
     location.reload();
+    
 };
 
 

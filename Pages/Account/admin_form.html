@@ -11,7 +11,7 @@
 
 <body>
     <!-- <div class="admin-form"> -->
-        <h1 style="text-align: center;">Book Details:</h1>
+    <h1 style="text-align: center;">Book Details:</h1>
     <form id="formbox">
         <div class="admin-form">
             <div class="user_name">
@@ -31,10 +31,9 @@
                 <label for="book-price"> categories :</label><br>
                 <!-- <input type="text" placeholder="Enter Book categories" required id="original_price"> -->
                 <select name="categories" id="categories">
-                    <option value="">Arts and Sicence</option>
-                    <option value="">Biography</option>
-                    <option value="">Law</option>
-
+                    <option value="Arts and Sicence" >Arts and biography</option>
+                    <!-- <option value="Biography" id="Bio_books">Biography</option> -->
+                    <option value="Law">Law</option>
                 </select>
             </div>
             <div class="book_img">
@@ -46,7 +45,7 @@
                 <input type="number" id="rating" placeholder="Enter Your Rating">
             </div>
 
-            <!-- // Product Book_details   -->
+            <!--  Product Book_details   -->
 
             <div class="Book_details">
                 <label for="book_description">Book Description:</label>
@@ -161,6 +160,9 @@
 
         // let productAdd = JSON.parse(localStorage.getItem("Book_details"));
         // This function and condition for Create a product 
+
+        // Get the values from the select 
+
         function product_add() {
             let bookName = document.getElementById("book_name").value;
             let DiscountPrice = document.getElementById("DiscountPrice").value;
@@ -184,13 +186,16 @@
 
 
             let productAdd = JSON.parse(localStorage.getItem("Book_details")) ?? [];
-            let count=0;
-            for(let i=0; i<productAdd.length; i++){
+            let count = 0;
+            for (let i = 0; i < productAdd.length; i++) {
                 count++
             };
             console.log(count);
 
             let bookid = count;
+
+            let catog = document.getElementById("categories").value;
+
 
             let j = 0;
             for (let i = 0; i < productAdd.length; i++) {
@@ -210,6 +215,7 @@
                     "bookImage": bookImage,
                     "rating": rating,
                     "bookid": bookid,
+                    "category": catog,
                     "book_description": book_description,
                     "author_image": author_img,
                     "author_content": author_content,

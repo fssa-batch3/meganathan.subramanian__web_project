@@ -5,11 +5,8 @@ user can  add the cart
 let user_cart = JSON.parse(localStorage.getItem("user_cart"));
 let Book_details = JSON.parse(localStorage.getItem("Book_details"));
 let active_user = localStorage.getItem("activeUser");
-let itemQuantity = 1;
+// let user_list =
 let addition = 0;
-
-
-
 user_cart.forEach((item, index) => {
 
     if (active_user == item.user_email) {
@@ -61,6 +58,8 @@ user_cart.forEach((item, index) => {
         let qunatity_div = document.createElement("div");
         qunatity_div.setAttribute("class", "quantity");
 
+        let itemQuantity = 1;
+
         // Create a p tag
         let icon_plus = document.createElement("i");
         icon_plus.setAttribute("class", "fa-solid fa-plus");
@@ -69,7 +68,7 @@ user_cart.forEach((item, index) => {
         // Create a another ptag 
         let p_tag2 = document.createElement("p");
         p_tag2.setAttribute("id", "adding_quantity");
-        // p_tag2.innerText = itemQuantity;
+        p_tag2.innerText = itemQuantity;
 
         let icon_minus = document.createElement("i");
         icon_minus.setAttribute("class", "fa-solid fa-minus");
@@ -78,17 +77,20 @@ user_cart.forEach((item, index) => {
         // append the p tags 
         qunatity_div.append(icon_minus, p_tag2, icon_plus);
         td5.append(qunatity_div);
-        console.log(td5);
+        // console.log(td5);
 
         // create a another td
         let td6 = document.createElement("td");
+        td6.setAttribute("class", "subtotal_item")
         td6.innerText = item.originalPrice;
+        console.log(td6);
 
         // append all the td and div
         tr1.append(td1, td2, td3, td4, td5, td6);
-        console.log(tr1);
+        // console.log(tr1);
 
         document.querySelector("#table_body").append(tr1);
+
 
 
         a_tag.addEventListener("click", () => {
@@ -104,47 +106,108 @@ user_cart.forEach((item, index) => {
                 };
             };
         });
-
+        icon_plus.addEventListener('click', () => {
+            itemQuantity++;
+            p_tag2.innerText = itemQuantity;
+            td6.innerText = td4.innerText * p_tag2.innerText;
+            // td6.innerText = td6.innerText;
+            total_amount();
+        });
+        icon_minus.addEventListener("click", () => {
+            if (itemQuantity > 1) {
+                itemQuantity--;
+                p_tag2.innerText = itemQuantity;
+                td6.innerText = td6.innerText - td4.innerText;
+                total_amount();
+            };
+        });
     };
-    addition += Number(item.originalPrice);
-
-
-    // This code for show the addition of the price 
-    let cost = document.getElementById("price");
-    cost.innerHTML = "&#8377; " + addition;
-
-    // let quantity_increase = document.getElementById("adding_quantity");
-    // quantity_increase.innerText = itemQuantity;
-
-
-    let increment = document.querySelectorAll("#plus")
-    console.log(increment);
-    // document.querySelectorAll("#plus").forEach(click, ()=>{
-    //     itemQuantity++;
-    //     console.log(itemQuantity);
-    //     document.getElementById("adding_quantity").innerText = itemQuantity;
-    // })
-    // document.querySelectorAll("#minus").forEach(click, ()=>{
-    //     itemQuantity--;
-    //     console.log(itemQuantity);
-    //     document.getElementById("adding_quantity").innerText = itemQuantity;
-    // })
 });
 
 
+// Create the cart total div
+let h2_tag = document.createElement("h2");
+h2_tag.innerText = "Cart Total";
 
-/*
-This another way to delete the cart but it wont work.
-*/
+let hr_tag = document.createElement("hr");
 
-// // This code is delete the user cart
-// function userCart() {
-//     confirm('Are you sure want to delete?');
-//     for (let i = 0; i < user_cart.length; i++) {
-//         if (active_user == user_cart[i]["user_email"] && user_cart[i]["Book_id"] == Book_details[i]["bookid"]) {
-//             user_cart.splice(i, 1);
-//         };
-//         localStorage.setItem("user_cart", JSON.stringify(user_cart));
-//     };
-// };
+// Create a cart_total div
+let cart_total_div = document.createElement("div");
+cart_total_div.setAttribute("class", "cart-total");
 
+// create a div1 
+let div1 = document.createElement("div");
+
+// create a p tag
+let p_tag3 = document.createElement("p");
+p_tag3.innerText = "Subtotal";
+
+// Create a another p tag
+let p_tag4 = document.createElement("p");
+p_tag4.innerText = "GST";
+
+// Create a another p tag
+let p_tag5 = document.createElement("p");
+p_tag5.innerText = "Total";
+
+// append the all p tags
+div1.append(p_tag3, p_tag4, p_tag5);
+
+console.log(div1);
+
+// Create a another div 
+let div2 = document.createElement("div");
+
+// Create a p tag
+let p_tag6 = document.createElement("p");
+p_tag6.innerText = "460";
+
+// Create a another p_tag
+let p_tag7 = document.createElement("p");
+p_tag7.innerText = "50.00";
+
+// Create a another p_tag
+let p_tag8 = document.createElement("p");
+p_tag8.setAttribute("id", "price");
+
+
+// append the all p tags
+div2.append(p_tag6, p_tag7, p_tag8);
+cart_total_div.append(div1, div2);
+// console.log(cart_total_div);
+
+// Create a anchor tag
+let a_tag1 = document.createElement("a");
+a_tag1.setAttribute("href", "../Payment gateway/payment.html?id=" + JSON.parse(active_user));
+
+// Create a another button tag
+let button_tag = document.createElement("button");
+button_tag.setAttribute("class", "checkout");
+button_tag.innerText = " Checkout";
+
+// append the buttoon
+a_tag1.append(button_tag);
+
+document.querySelector(".cart-amt").append(h2_tag, hr_tag, cart_total_div, a_tag1);
+// console.log(cart_total_div);
+
+button_tag.addEventListener("click", e => {
+    let cart_order = {};
+    for (let i = 0; i < user_cart.length; i++) {
+        if (user_cart[i]["user_email"] == active_user) {
+
+        }
+    }
+})
+
+// Below the code for increae the amount
+function total_amount() {
+    let total_elem = document.querySelectorAll(".subtotal_item");
+    let total = 0;
+    for (let i = 0; i < total_elem.length; i++) {
+
+        total += Number(total_elem[i].innerHTML);
+    }
+    p_tag8.innerText = total;
+}
+total_amount();

@@ -175,6 +175,18 @@
                         <textarea name="adress" cols="30" rows="4" id="user_address" disabled>59/123 Vivenkanda street,vadapalani,chennai-00000"
                          </textarea>
                     </div>
+                    <div class="user_state">
+                        <label for="user_state">State</label>
+                        <input type="text" id="user_state" placeholder="Enter your State" disabled>
+                    </div>
+                    <div class="user_city">
+                        <label for="User_city">City</label>
+                        <input type="text" id="user_city" placeholder="Enter your city" disabled>
+                    </div>
+                    <div class="user_pincode">
+                        <label for="user_pincode">Pincode</label>
+                        <input type="number" id="user_pincode" placeholder="600081" disabled>
+                    </div>
                     <div class="user_edit_btn">
                         <button onclick="edit()">Save Changes</button>
                         <button id="edit_user">Edit</button>
@@ -186,38 +198,28 @@
                     <h1 class="head"> My Orders</h1>
                     <div class="book_info">
                         <h2> Order Status : Pending...</h2>
-                        <hr>
+                        <hr class="horz_line">
                         <div class="single_book">
-                            <div class="book_img">
+                            <!-- <div class="book_img">
                                 <img src="https://missnatura.in/wp-content/uploads/2023/02/IMG-20230222-WA0003.jpg"
                                     width="150px" height="130px" alt="Rosemery leaves" />
                             </div>
                             <div class="status">
-                                <p>Attitude Is Everything</p>
-                                <p>Quantity - 1</p>
-                                <p>Order Id - 243</p>
-                                <p>Ordered Date - 27/03/2023</p>
-
+                                <p id="product_name">Attitude Is Everything</p>
+                                <p id="product_qunatity">Quantity - 1</p>
+                                <p id="Order_id">Order Id - 243</p>
+                                <p id="order_date">Ordered Date - 27/03/2023</p>
                             </div>
-                        </div>
-                    </div>
-
-
-                    <div class="book_info">
-                        <h2> Order Status : Pending...</h2>
-                        <hr>
-                        <div class="single_book">
-                            <div class="book_img">
+                             <div class="book_img">
                                 <img src="https://missnatura.in/wp-content/uploads/2023/02/IMG-20230222-WA0003.jpg"
                                     width="150px" height="130px" alt="Rosemery leaves" />
                             </div>
                             <div class="status">
-                                <p>Attitude Is Everything</p>
-                                <p>Quantity - 1</p>
-                                <p>Order Id - 243</p>
-                                <p>Ordered Date - 27/03/2023</p>
-
-                            </div>
+                                <p id="product_name">Attitude Is Everything</p>
+                                <p id="product_qunatity">Quantity - 1</p>
+                                <p id="Order_id">Order Id - 243</p>
+                                <p id="order_date">Ordered Date - 27/03/2023</p>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -282,20 +284,27 @@
             document.getElementById("phone_number").setAttribute("disabled", "");
             document.getElementById("password").setAttribute("disabled", "");
             document.getElementById("user_address").setAttribute("disabled", "");
+            document.getElementById("user_state").setAttribute("disabled", "");
+            document.getElementById("user_city").setAttribute("disabled", "");
+            document.getElementById("user_pincode").setAttribute("disabled", "");
 
             for (let i = 0; i < users.length; i++) {
                 if (document.getElementById("email").value == users[i]["email"]) {
-                    let user_address = document.getElementById("user_address").value;
-                    users[i].address = user_address;
+                    let User_address = document.getElementById("user_address").value;
+                    let User_state = document.getElementById("user_state").value;
+                    let User_city = document.getElementById("user_city").value;
+                    let User_pincode = document.getElementById("user_pincode").value;
                     users[i].user_name = document.getElementById("name").value;
                     users[i].password = document.getElementById("password").value;
-
+                    users[i].user_state = User_state;
+                    users[i].user_city = User_city
+                    users[i].user_pincode = User_pincode;
+                    users[i].address = User_address;
                 };
                 localStorage.setItem("userslist", JSON.stringify(users));
             };
             // console.log(users);
             swal('Great', 'Youre account in Successfully Changed!', 'success');
-
         };
 
 
@@ -321,6 +330,10 @@
             document.getElementById("phone_number").removeAttribute("disabled");
             document.getElementById("password").removeAttribute("disabled");
             document.getElementById("user_address").removeAttribute("disabled");
+            document.getElementById("user_state").removeAttribute("disabled");
+            document.getElementById("user_city").removeAttribute("disabled");
+            document.getElementById("user_pincode").removeAttribute("disabled");
+
 
             // Adding the Address field into the local storge
 
@@ -335,7 +348,7 @@
         // logout
 
         let log_out = document.getElementById("log-out");
-        let active_user = localStorage.getItem("activeUser");
+        let active_user = JSON.parse(localStorage.getItem("activeUser"));
         log_out.addEventListener("click", (e) => {
             const log_Out = delete active_user;
             localStorage.setItem("activeUser", log_Out);
@@ -356,14 +369,67 @@
             user_orders.style.display = "block";
             user_profile.style.display = "none";
         });
-        manage_profile.addEventListener("click",()=>{
+        manage_profile.addEventListener("click", () => {
             user_profile.style.display = "block";
 
         });
-        manage_profile.addEventListener("click",function(){
+        manage_profile.addEventListener("click", function () {
             user_orders.style.display = "none";
 
         });
+
+
+        // get from the local storage
+        let userOrders = JSON.parse(localStorage.getItem("User_Order"));
+
+
+        // below the code for create element 
+
+        // Create a div 
+        for (let i = 0; i < userOrders.length; i++) {
+            if (active_user == userOrders[i]["active_user"]) {
+
+                let book_img_div = document.createElement("div");
+                book_img_div.setAttribute("class", "book_img");
+
+                // Create  a img tag
+                let img_tag = document.createElement("img");
+                img_tag.setAttribute("src", userOrders[i]["product_img"]);
+                img_tag.setAttribute("alt", "book_img");
+                img_tag.setAttribute("width", "150px");
+                img_tag.setAttribute("height", "200px");
+
+                // append the img into div
+                book_img_div.prepend(img_tag);
+                // console.log(book_img_div);
+
+                // create a another div
+                let status_div = document.createElement("div");
+                status_div.setAttribute("class", "status");
+
+                // Create a p_tag
+                let p_tag1 = document.createElement("p");
+                p_tag1.innerText ="Bookname:  " + userOrders[i]["product_title"];
+
+                // Create a another p tag
+                let p_tag2 = document.createElement("p");
+                p_tag2.innerText = "Quantity: " + userOrders[i]["Quantity"];
+
+                // Create a another p tag
+                let p_tag3 = document.createElement("p");
+                p_tag3.innerText ="OrderID: " + userOrders[i]["order_id"];
+
+                // Create a another p tag
+                let p_tag4 = document.createElement("p");
+                p_tag4.innerText = "OrderDate: " +userOrders[i]["Order_date"];
+
+                // append the all p tags
+                book_img_div.append(status_div)
+                status_div.append(p_tag1, p_tag2, p_tag3, p_tag4);
+                document.querySelector(".single_book").append(book_img_div);
+
+            }
+        }
     </script>
 </body>
 

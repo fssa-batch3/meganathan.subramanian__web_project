@@ -73,6 +73,7 @@ body {
     font-size: 45px;
     color: whitesmoke;
     font-weight: 300;
+    
 }
 .fonts span{
     position: absolute;
@@ -282,6 +283,7 @@ body {
 
 .my-wish{
     margin-top: 50px;
+    
 }
 .my-wish hr{
     height: 0;
@@ -292,14 +294,15 @@ body {
 }
 .my-wish h1{
     margin-top: 40px;
-    margin-left:160px;
-    letter-spacing: 1px; 
+    margin-bottom: 10px;
+    margin-left:600px;
     font-size: 45px;
+    font-weight: 600;
 }
 
 .mycart {
     display: flex;
-    margin-left: 160px;
+    margin-left: 280px;
 }
 
 .mycart h1 {
@@ -366,8 +369,9 @@ body {
 
 .fa-trash{
     color: black;
-    font-size: 26px;
-    margin-left:350px;
+    font-size: 30px;
+    margin-left:490px;
+    margin-top: 32px;
     cursor: pointer;
     padding: 10px;
     transition: all 0.3s;
@@ -412,7 +416,7 @@ body {
     margin-top: 16px;
     background-color: #ededed;
     border-radius: 10px;
-    width: 855px;
+    width: 950px;
     transition: 0.2s;
     height: 253px;
 }
