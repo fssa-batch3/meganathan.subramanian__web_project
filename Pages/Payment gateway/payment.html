@@ -304,6 +304,7 @@
         const search = new URLSearchParams(url);
         const product_id = search.get("id");
 
+
         console.log(product_id)
         const qty = Number(search.get("qty"));
 
@@ -317,8 +318,8 @@
         let product_title;
 
 
-        console.log(bookList);
-        console.log(user_details);
+        // console.log(bookList);
+        // console.log(user_details);
 
 
         for (let i = 0; i < user_details.length; i++) {
@@ -336,13 +337,13 @@
         };
 
         let res1;
-        bookList.forEach(element => {
-            if (element["bookid"] == product_id) {
-                return res1 = element
+        bookList.forEach((element) => {
 
+            if (element.bookid == product_id) {
+                // console.log("okdan");
+                return res1 = element
             }
         });
-
 
         // below the code for the single order prod
         if (product_id == Number(product_id)) {
@@ -362,7 +363,6 @@
                 "Order_date": newdate,
                 "Quantity": qty
             }
-
             order.push(userOrder);
             document.getElementById("proceed_order").onclick = function () {
                 localStorage.setItem("User_Order", JSON.stringify(order));
@@ -370,8 +370,8 @@
 
         }
         else {
-            cart.find(e => {
-                if (e.user_email == active_user) {
+            cart.find(el => {
+                if (el.user_email == product_id) {
                     let cartOrder = {
                         "username": userName.value,
                         "user_email": user_email.value,
@@ -381,20 +381,23 @@
                         "user_pincode": user_pincode.value,
                         "product_id": product_id,
                         "active_user": active_user,
-                        "product_img": res1["bookImage"],
-                        "product_title": res1["bookName"],
-                        "product_Price": res1["originalPrice"],
+                        "product_img": el["bookImage"],
+                        "product_title": el["bookName"],
+                        "product_Price": el["originalPrice"],
                         "order_id": order_id,
-                        "Order_date": newdate,
-                        "Quantity": qty
+                        "Order_date": newdate
+                        // "Quantity": qty
                     }
                     order.push(cartOrder);
                     document.getElementById("proceed_order").onclick = function () {
                         localStorage.setItem("User_Order", JSON.stringify(order));
-                    };
+                    }
+
                 }
-            })
-        }
+            });
+        };
+
+
         // come from the cart
 
 

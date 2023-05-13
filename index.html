@@ -93,10 +93,10 @@
                             </ol>
                         </div>
                     </li>
-                    <li><a href="#">Fiction Books</a></li>
-                    <li><a href="#">Law</a></li>
+                    <li><a href="#" class="Categories">Fiction Books</a></li>
+                    <li><a href="#" class="Categories">Law</a></li>
                     <li><a href="#">Medicine</a></li>
-                    <li><a href="Pages/Books/self_help.html">Self Help book</a></li>
+                    <li><a href="Pages/Books/self_help.html" class="Categories">Self Help book</a></li>
                     <li><a href="#">Life Style</a></li>
                     <li><a href="#">Science And Maths</a></li>
 
@@ -1084,6 +1084,30 @@
             window.location.href = "/Pages/Account/login.html";
             alert("Thank you visiting our website");
         });
+
+        let book_details = JSON.parse(localStorage.getItem("Book_details"));
+        let categname;
+        let cat = document.querySelectorAll(".Categories");
+        console.log(cat);
+        cat.forEach((data) => {
+            data.addEventListener("click", () => {
+                categname = data.innerText;
+                //   alert(categname);
+                data.setAttribute("href", `?category=${categname}`)
+
+
+            })
+        })
+
+        let url = window.location.search;
+        const search = new URLSearchParams(url);
+        const product_id = search.get("category");
+        console.log(product_id);
+
+        if(product_id == "Fiction"){
+            wind
+        }
+
 
     </script>
 

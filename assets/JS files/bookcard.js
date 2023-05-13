@@ -305,7 +305,7 @@ for (let i = 0; i < products_details.length; i++) {
                 user_carlist["originalPrice"] = products_details[i]["originalPrice"],
                 user_carlist["author_content"] = products_details[i]["author_content"],
                 user_carlist["Book_id"] = products_details[i]["bookid"]
-
+                
             user_cart.push(user_carlist);
             localStorage.setItem("user_cart", JSON.stringify(user_cart));
             alert("Product is Added");

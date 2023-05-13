@@ -191,14 +191,6 @@ a_tag1.append(button_tag);
 document.querySelector(".cart-amt").append(h2_tag, hr_tag, cart_total_div, a_tag1);
 // console.log(cart_total_div);
 
-button_tag.addEventListener("click", e => {
-    let cart_order = {};
-    for (let i = 0; i < user_cart.length; i++) {
-        if (user_cart[i]["user_email"] == active_user) {
-
-        }
-    }
-})
 
 // Below the code for increae the amount
 function total_amount() {
