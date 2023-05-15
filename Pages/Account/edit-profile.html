@@ -177,15 +177,15 @@
                     </div>
                     <div class="user_state">
                         <label for="user_state">State</label>
-                        <input type="text" id="user_state" placeholder="Enter your State" disabled>
+                        <input type="text" id="user_state" placeholder="Enter your State" pattern="[A-Za-z]{10}" disabled>
                     </div>
                     <div class="user_city">
                         <label for="User_city">City</label>
-                        <input type="text" id="user_city" placeholder="Enter your city" disabled>
+                        <input type="text" id="user_city" placeholder="Enter your city" pattern="[A-Za-z]{10}" disabled>
                     </div>
                     <div class="user_pincode">
                         <label for="user_pincode">Pincode</label>
-                        <input type="number" id="user_pincode" placeholder="600081" disabled>
+                        <input type="number" id="user_pincode" placeholder="600081" pattern="[0-9]{7}"maxlength="7" disabled>
                     </div>
                     <div class="user_edit_btn">
                         <button onclick="edit()">Save Changes</button>
