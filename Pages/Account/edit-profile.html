@@ -166,7 +166,7 @@
 
                     <div class="user-phone-number">
                         <label for="number">Phone Number :</label>
-                        <input type="number" placeholder="1234567892" id="phone_number" pattern="^(\d{7}|\d{10})$"
+                        <input type="number" placeholder="1234567892" id="phone_number" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
                             disabled>
                     </div>
 
@@ -409,7 +409,7 @@
 
                 // Create a p_tag
                 let p_tag1 = document.createElement("p");
-                p_tag1.innerText ="Bookname:  " + userOrders[i]["product_title"];
+                p_tag1.innerText = "Bookname:  " + userOrders[i]["product_title"];
 
                 // Create a another p tag
                 let p_tag2 = document.createElement("p");
@@ -417,15 +417,24 @@
 
                 // Create a another p tag
                 let p_tag3 = document.createElement("p");
-                p_tag3.innerText ="OrderID: " + userOrders[i]["order_id"];
+                p_tag3.innerText = "OrderID: " + userOrders[i]["order_id"];
 
                 // Create a another p tag
                 let p_tag4 = document.createElement("p");
-                p_tag4.innerText = "OrderDate: " +userOrders[i]["Order_date"];
+                p_tag4.innerText = "OrderDate: " + userOrders[i]["Order_date"];
 
+
+                // Create a another p tag 
+                let p_tag5 = document.createElement("p");
+                p_tag5.innerHTML = "Address: " + `${userOrders[i]["user_address"]}, ${userOrders[i]["user_state"]} ${userOrders[i]["user_city"] + "-"} ${userOrders[i]["user_pincode"]}`;
+                console.log(p_tag5);
+
+                // Create the hr line 
+                let hr_tag = document.createElement("hr");
+                hr_tag.setAttribute("class","horizantal_line");
                 // append the all p tags
                 book_img_div.append(status_div)
-                status_div.append(p_tag1, p_tag2, p_tag3, p_tag4);
+                status_div.append(p_tag1, p_tag2, p_tag3, p_tag4, p_tag5,hr_tag);
                 document.querySelector(".single_book").append(book_img_div);
 
             }

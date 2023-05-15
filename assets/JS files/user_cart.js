@@ -2,9 +2,9 @@
 Here below the code for the cart page 
 user can  add the cart 
 */
-let user_cart = JSON.parse(localStorage.getItem("user_cart"));
+let user_cart = JSON.parse(localStorage.getItem("user_cart")) ?? [];
 let Book_details = JSON.parse(localStorage.getItem("Book_details"));
-let active_user = localStorage.getItem("activeUser");
+let active_user = JSON.parse(localStorage.getItem("activeUser"));
 // let user_list =
 let addition = 0;
 user_cart.forEach((item, index) => {
@@ -106,18 +106,42 @@ user_cart.forEach((item, index) => {
                 };
             };
         });
-        icon_plus.addEventListener('click', () => {
+
+        icon_plus.addEventListener('click', (e) => {
             itemQuantity++;
             p_tag2.innerText = itemQuantity;
             td6.innerText = td4.innerText * p_tag2.innerText;
             // td6.innerText = td6.innerText;
+            for (let i = 0; i < user_cart.length; i++) {
+                let increase_value = document.querySelectorAll("#adding_quantity");
+                // console.log(e.target.parentElement.children[1].innerText)
+                for(let j = 0; j < Book_details.length; j++){
+                    if (Book_details[j]["bookid"] == user_cart[i]["Book_id"]) {
+                        console.log(user_cart[i]["Book_id"])
+                        user_cart[i]["qty"] = e.target.parentElement.children[i].innerText;
+                        localStorage.setItem("user_cart", JSON.stringify(user_cart));
+                        increase_value = user_cart[i]["qty"];
+                    }
+                }
+                
+            }
             total_amount();
         });
+
         icon_minus.addEventListener("click", () => {
             if (itemQuantity > 1) {
                 itemQuantity--;
                 p_tag2.innerText = itemQuantity;
                 td6.innerText = td6.innerText - td4.innerText;
+                for (let i = 0; i < user_cart.length; i++) {
+                    let increase_value = document.querySelectorAll("#adding_quantity");
+                    if (Book_details[i]["bookid"] == user_cart[i]["Book_id"]) {
+                        user_cart[i]["qty"] = e.target.parentElement.children[i].innerText;
+                        localStorage.setItem("user_cart", JSON.stringify(user_cart));
+                        increase_value = user_cart[i]["qty"];
+                    }
+
+                }
                 total_amount();
             };
         });
@@ -178,7 +202,7 @@ cart_total_div.append(div1, div2);
 
 // Create a anchor tag
 let a_tag1 = document.createElement("a");
-a_tag1.setAttribute("href", "../Payment gateway/payment.html?id=" + JSON.parse(active_user));
+a_tag1.setAttribute("href", "../Payment gateway/payment.html?id=" + active_user);
 
 // Create a another button tag
 let button_tag = document.createElement("button");
@@ -199,6 +223,7 @@ function total_amount() {
     for (let i = 0; i < total_elem.length; i++) {
 
         total += Number(total_elem[i].innerHTML);
+        console.log(total);
     }
     p_tag8.innerText = total;
 }

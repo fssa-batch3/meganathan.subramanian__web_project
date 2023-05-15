@@ -291,7 +291,7 @@ a {
 .products {
     margin-top: 90px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-left: 40px;
 
 }

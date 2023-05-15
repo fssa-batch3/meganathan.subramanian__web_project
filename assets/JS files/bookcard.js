@@ -108,7 +108,7 @@
 
 let products_details = JSON.parse(localStorage.getItem("Book_details"));
 // get the local storage for the active user
-let active_user = localStorage.getItem("activeUser");
+let active_user = JSON.parse(localStorage.getItem("activeUser"))
 
 let user_wish_list = JSON.parse(localStorage.getItem("wishlist")) ?? [];
 
@@ -304,7 +304,8 @@ for (let i = 0; i < products_details.length; i++) {
                 user_carlist["DiscountPrice"] = products_details[i]["DiscountPrice"],
                 user_carlist["originalPrice"] = products_details[i]["originalPrice"],
                 user_carlist["author_content"] = products_details[i]["author_content"],
-                user_carlist["Book_id"] = products_details[i]["bookid"]
+                user_carlist["Book_id"] = products_details[i]["bookid"],
+                user_carlist["qty"] = 1
                 
             user_cart.push(user_carlist);
             localStorage.setItem("user_cart", JSON.stringify(user_cart));

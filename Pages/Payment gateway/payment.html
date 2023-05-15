@@ -305,7 +305,7 @@
         const product_id = search.get("id");
 
 
-        console.log(product_id)
+        // console.log(product_id)
         const qty = Number(search.get("qty"));
 
         let userName = document.getElementById("User_name");
@@ -336,17 +336,18 @@
             }
         };
 
-        let res1;
-        bookList.forEach((element) => {
-
-            if (element.bookid == product_id) {
-                // console.log("okdan");
-                return res1 = element
-            }
-        });
+       
 
         // below the code for the single order prod
         if (product_id == Number(product_id)) {
+            let res1;
+            bookList.forEach((element) => {
+
+                if (element.bookid == product_id) {
+                    // console.log("okdan");
+                    return res1 = element
+                }
+            });
             let userOrder = {
                 "username": userName.value,
                 "user_email": user_email.value,
@@ -371,6 +372,7 @@
         }
         else {
             cart.find(el => {
+                console.log(el.user_email)
                 if (el.user_email == product_id) {
                     let cartOrder = {
                         "username": userName.value,
@@ -381,12 +383,12 @@
                         "user_pincode": user_pincode.value,
                         "product_id": product_id,
                         "active_user": active_user,
-                        "product_img": el["bookImage"],
-                        "product_title": el["bookName"],
+                        "product_img": el["Book_image"],
+                        "product_title": el["Book_title"],
                         "product_Price": el["originalPrice"],
                         "order_id": order_id,
-                        "Order_date": newdate
-                        // "Quantity": qty
+                        "Order_date": newdate,
+                        "Quantity": qty
                     }
                     order.push(cartOrder);
                     document.getElementById("proceed_order").onclick = function () {

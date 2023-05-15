@@ -1,8 +1,8 @@
 // Pop Up codes
-let popUp = document.getElementById("add_address")
-popUp.addEventListener("click", function () {
-    document.getElementById("pop_up").style.display = "block"
-})
+// let popUp = document.getElementById("add_address")
+// popUp.addEventListener("click", function () {
+//     document.getElementById("pop_up").style.display = "block"
+// })
 
 // get the details from the local storage
 

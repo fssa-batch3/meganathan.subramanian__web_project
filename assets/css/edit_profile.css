@@ -352,6 +352,7 @@ body {
     background-color: rgb(215, 202, 116);
     border-radius: 10px;
     margin-top: 31px;
+    overflow: auto;
 
 }
 
@@ -569,9 +570,22 @@ footer h3 {
     width: 100%;
     height: 3px;
     border-radius: 2px;
-    border-width:0px;
+    border-width: 0px;
 }
-.head{
+
+.head {
     text-align: center;
     margin-top: 20px;
+}
+
+.horizantal_line {
+    margin-left: -195px;
+    margin-top: 40px;
+    color: gray;
+    background-color: gray;
+    width: 164%;
+    height: 3px;
+    border-radius: 2px;
+    border-width: 0px;
+
 }
