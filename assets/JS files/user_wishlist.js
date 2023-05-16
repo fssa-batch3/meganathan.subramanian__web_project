@@ -2,10 +2,9 @@
 
 // create a product cart div
 
-
 let user_wishlist = JSON.parse(localStorage.getItem("wishlist"));
 let book_detatils = JSON.parse(localStorage.getItem("Book_details"));
-let active_user = localStorage.getItem("activeUser");
+let active_user = JSON.parse(localStorage.getItem("activeUser")) ;
 console.log(active_user);
 
 // console.log(active_user)
@@ -14,7 +13,7 @@ console.log(active_user);
 for (let i = 0; i < user_wishlist.length; i++) {
 
     if (user_wishlist[i]["user_email"] == active_user) {
-
+    // console.log(user_wishlist)
         let product_cart_div = document.createElement("div");
         product_cart_div.setAttribute("class", "product-cart");
 
@@ -62,7 +61,7 @@ for (let i = 0; i < user_wishlist.length; i++) {
 
         // create a h4 tag
         let h4_tag = document.createElement("h4");
-        
+
 
         // create a input tag
         // let inpt = document.createElement("input");
@@ -73,9 +72,9 @@ for (let i = 0; i < user_wishlist.length; i++) {
         let icon = document.createElement("i");
         icon.setAttribute("id", "delete_cart");
         icon.setAttribute("class", "fa-solid fa-trash");
-        icon.setAttribute("onclick",`deleteWishlist(${user_wishlist[i]["Book_id"]})`)
+        icon.setAttribute("onclick", `deleteWishlist(${user_wishlist[i]["Book_id"]})`)
         // append the input and icons tag to h4
-        h4_tag.append( icon);
+        h4_tag.append(icon);
 
         // append the all element into the div
         product_cart_div.append(product_img_div, product_details_div);
@@ -101,18 +100,18 @@ for (let i = 0; i < user_wishlist.length; i++) {
 
     }
     else {
-        console.log("else");
+        console.log("something problem");
     };
 
 };
 function deleteWishlist(id) {
     // let user_wishlist = JSON.parse(localStorage.getItem("wishlist"));
-    let finded_wishlist = user_wishlist.find((f) => f.Book_id == id && active_user == f.user_email) ;
+    let finded_wishlist = user_wishlist.find((f) => f.Book_id == id && active_user == f.user_email);
     let index = user_wishlist.indexOf(finded_wishlist);
-    user_wishlist.splice(index,1);
-    localStorage.setItem("wishlist",JSON.stringify(user_wishlist));
+    user_wishlist.splice(index, 1);
+    localStorage.setItem("wishlist", JSON.stringify(user_wishlist));
     location.reload();
-    
+
 };
 
 

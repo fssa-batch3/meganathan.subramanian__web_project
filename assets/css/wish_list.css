@@ -360,10 +360,12 @@ body {
 .product-cart p
 {
     margin-left: 20px;
+    margin-right: 20px;
     font-weight: 800;
     margin-top: -12px;
     margin-bottom: 6px;
     font-size: 19px;
+    text-align: justify;
 
 }
 
@@ -371,7 +373,7 @@ body {
     color: black;
     font-size: 30px;
     margin-left:490px;
-    margin-top: 32px;
+    margin-top: 20px;
     cursor: pointer;
     padding: 10px;
     transition: all 0.3s;
@@ -416,9 +418,9 @@ body {
     margin-top: 16px;
     background-color: #ededed;
     border-radius: 10px;
-    width: 950px;
+    width: 980px;
     transition: 0.2s;
-    height: 253px;
+    /* height: 370px; */
 }
 .product-detail{
     margin-top: 14px;
@@ -430,7 +432,7 @@ body {
 .product-img img {
     border-radius: 10px;
     width: 200px;
-    height:240px;
+    height:285px;
 }
 
 

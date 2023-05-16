@@ -126,6 +126,7 @@ for (let i = 0; i < products_details.length; i++) {
     icon_i.setAttribute("class", "fa-sharp fa-regular fa-heart icon_wishlist");
     icon_i.setAttribute("id", "wish_icon");
     wish_icons.prepend(icon_i)
+    console.log(icon_i);
     // console.log(wish_icons);
 
     const book_img_div = document.createElement("div");
@@ -240,11 +241,11 @@ for (let i = 0; i < products_details.length; i++) {
         user_wish_list.find(f => {
             // console.log(check);
             if (f["Book_id"] == products_details[i]["bookid"] && active_user == f["user_email"]) {
-                return check = 1;
+                check = 1;
 
             }
             else {
-                return check = 0;
+                check = 0;
             };
 
         })
@@ -257,11 +258,10 @@ for (let i = 0; i < products_details.length; i++) {
             //     };
             // };
             alert("This product is Already there in you're Cart");
-
         }
         else {
             let user_wishlist = {};
-                user_wishlist["user_email"] = active_user,
+            user_wishlist["user_email"] = active_user,
                 user_wishlist["Book_image"] = products_details[i]["bookImage"],
                 user_wishlist["Book_title"] = products_details[i]["bookName"],
                 user_wishlist["DiscountPrice"] = products_details[i]["DiscountPrice"],
@@ -294,11 +294,11 @@ for (let i = 0; i < products_details.length; i++) {
             //         localStorage.setItem("user_cart", JSON.stringify(user_cart));
             //     };
             // };
-            alert("This product is Already there in you're Cart");
+            alert("This product is Already there in you're Wishlist");
         }
         else {
             let user_carlist = {};
-                user_carlist["user_email"] = active_user,
+            user_carlist["user_email"] = active_user,
                 user_carlist["Book_image"] = products_details[i]["bookImage"],
                 user_carlist["Book_title"] = products_details[i]["bookName"],
                 user_carlist["DiscountPrice"] = products_details[i]["DiscountPrice"],
@@ -306,7 +306,7 @@ for (let i = 0; i < products_details.length; i++) {
                 user_carlist["author_content"] = products_details[i]["author_content"],
                 user_carlist["Book_id"] = products_details[i]["bookid"],
                 user_carlist["qty"] = 1
-                
+
             user_cart.push(user_carlist);
             localStorage.setItem("user_cart", JSON.stringify(user_cart));
             alert("Product is Added");
