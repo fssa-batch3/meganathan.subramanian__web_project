@@ -1,4 +1,4 @@
-if (localStorage.getItem("userslist")) {
+if (JSON.parse(localStorage.getItem("userslist"))) {
 
 }
 
@@ -37,7 +37,7 @@ else {
     ]));
 }
 
-if (localStorage.getItem("Book_details")) {
+if (JSON.parse(localStorage.getItem("Book_details"))) {
 
 }
 
@@ -74,7 +74,7 @@ else {
             bookImage
                 :
                 "https://m.media-amazon.com/images/I/611OWa8x+WL.jpg",
-                bookName
+            bookName
 
                 :
                 "How to Win Friends And Influence People",
@@ -663,7 +663,7 @@ else {
 
     ]));
 }
-if (localStorage.getItem("user_cart")) {
+if (JSON.parse(localStorage.getItem("user_cart"))) {
 
 }
 else {
@@ -723,7 +723,7 @@ else {
 
     ]));
 }
-if (localStorage.getItem("wishlist")) {
+if (JSON.parse(localStorage.getItem("wishlist"))) {
 
 }
 else {
@@ -778,7 +778,7 @@ else {
     )
     );
 };
-if (localStorage.getItem("User_Order")) {
+if (JSON.parse(localStorage.getItem("User_Order"))) {
 
 }
 else {
@@ -832,13 +832,13 @@ else {
 
 
 
-if (localStorage.getItem("activeUser")) {
+if (JSON.parse(localStorage.getItem("activeUser"))) {
 
 }
 else {
     localStorage.setItem("activeUser", JSON.stringify([{
         activeUser: "meganathan212003@gmail.com"
-    }]))
+    }]));
 }
 
 
