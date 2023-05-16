@@ -7,9 +7,16 @@ let Book_details = JSON.parse(localStorage.getItem("Book_details"));
 let active_user = JSON.parse(localStorage.getItem("activeUser"));
 // let user_list =
 let addition = 0;
+let itemQuantity = 1;
+
+let total1 = 0;
+
+
 user_cart.forEach((item, index) => {
 
     if (active_user == item.user_email) {
+
+        total1 += Number(item.originalPrice)
         // console.log(item);
         let tr1 = document.createElement("tr");
         // this code for  S.NO
@@ -49,7 +56,9 @@ user_cart.forEach((item, index) => {
 
         // create a td4 
         let td4 = document.createElement("td");
+        td4.setAttribute("class", "price")
         td4.innerText = item.originalPrice;
+        td4.setAttribute("data-price", item.originalPrice)
 
         // create a another td 
         let td5 = document.createElement("td");
@@ -58,20 +67,21 @@ user_cart.forEach((item, index) => {
         let qunatity_div = document.createElement("div");
         qunatity_div.setAttribute("class", "quantity");
 
-        let itemQuantity = 1;
 
         // Create a p tag
         let icon_plus = document.createElement("i");
-        icon_plus.setAttribute("class", "fa-solid fa-plus");
+        icon_plus.setAttribute("class", "fa-solid fa-plus plus");
         icon_plus.setAttribute("id", "plus");
+
 
         // Create a another ptag 
         let p_tag2 = document.createElement("p");
         p_tag2.setAttribute("id", "adding_quantity");
+        p_tag2.setAttribute("class", "qty")
         p_tag2.innerText = itemQuantity;
 
         let icon_minus = document.createElement("i");
-        icon_minus.setAttribute("class", "fa-solid fa-minus");
+        icon_minus.setAttribute("class", "fa-solid fa-minus minus");
         icon_minus.setAttribute("id", "minus");
 
         // append the p tags 
@@ -107,46 +117,52 @@ user_cart.forEach((item, index) => {
             };
         });
 
-        icon_plus.addEventListener('click', (e) => {
-            itemQuantity++;
-            p_tag2.innerText = itemQuantity;
-            td6.innerText = td4.innerText * p_tag2.innerText;
-            // td6.innerText = td6.innerText;
-            for (let i = 0; i < user_cart.length; i++) {
-                let increase_value = document.querySelectorAll("#adding_quantity");
-                // console.log(e.target.parentElement.children[1].innerText)
-                for(let j = 0; j < Book_details.length; j++){
-                    if (Book_details[j]["bookid"] == user_cart[i]["Book_id"]) {
-                        console.log(user_cart[i]["Book_id"])
-                        user_cart[i]["qty"] = e.target.parentElement.children[i].innerText;
-                        localStorage.setItem("user_cart", JSON.stringify(user_cart));
-                        increase_value = user_cart[i]["qty"];
-                    }
-                }
+        // icon_plus.addEventListener('click', (e) => {
+        //     itemQuantity++;
+        //     p_tag2.innerText = itemQuantity;
+        //     td6.innerText = td4.innerText * p_tag2.innerText;
+        //     // td6.innerText = td6.innerText;
+        //     for (let i = 0; i < user_cart.length; i++) {
+        //         let increase_value = document.querySelectorAll("#adding_quantity");
+        //         // console.log(e.target.parentElement.children[1].innerText)
+        //         for(let j = 0; j < Book_details.length; j++){
+        //             if (Book_details[j]["bookid"] == user_cart[i]["Book_id"]) {
+        //                 // console.log(user_cart[i]["Book_id"])
+        //                 user_cart[i]["qty"] = e.target.parentElement.children[i].innerText;
+        //                 localStorage.setItem("user_cart", JSON.stringify(user_cart));
+        //                 increase_value = user_cart[i]["qty"];
+        //             }
+        //         }
                 
-            }
-            total_amount();
-        });
+        //     }
+        //     total_amount();
+        // });
 
-        icon_minus.addEventListener("click", () => {
-            if (itemQuantity > 1) {
-                itemQuantity--;
-                p_tag2.innerText = itemQuantity;
-                td6.innerText = td6.innerText - td4.innerText;
-                for (let i = 0; i < user_cart.length; i++) {
-                    let increase_value = document.querySelectorAll("#adding_quantity");
-                    if (Book_details[i]["bookid"] == user_cart[i]["Book_id"]) {
-                        user_cart[i]["qty"] = e.target.parentElement.children[i].innerText;
-                        localStorage.setItem("user_cart", JSON.stringify(user_cart));
-                        increase_value = user_cart[i]["qty"];
-                    }
+        // icon_minus.addEventListener("click", () => {
+        //     if (itemQuantity > 1) {
+        //         itemQuantity--;
+        //         p_tag2.innerText = itemQuantity;
+        //         td6.innerText = td6.innerText - td4.innerText;
+        //         for (let i = 0; i < user_cart.length; i++) {
+        //             let increase_value = document.querySelectorAll("#adding_quantity");
+        //             if (Book_details[i]["bookid"] == user_cart[i]["Book_id"]) {
+        //                 user_cart[i]["qty"] = e.target.parentElement.children[i].innerText;
+        //                 localStorage.setItem("user_cart", JSON.stringify(user_cart));
+        //                 increase_value = user_cart[i]["qty"];
+        //             }
 
-                }
-                total_amount();
-            };
-        });
+        //         }
+        //         total_amount();
+        //     };
+        // });
     };
 });
+
+
+
+
+
+
 
 
 // Create the cart total div
@@ -193,6 +209,7 @@ p_tag7.innerText = "50.00";
 // Create a another p_tag
 let p_tag8 = document.createElement("p");
 p_tag8.setAttribute("id", "price");
+p_tag8,innerText = total1
 
 
 // append the all p tags
@@ -213,18 +230,49 @@ button_tag.innerText = " Checkout";
 a_tag1.append(button_tag);
 
 document.querySelector(".cart-amt").append(h2_tag, hr_tag, cart_total_div, a_tag1);
+
+document.getElementById("price").innerText = total1;
+
+
 // console.log(cart_total_div);
 
 
 // Below the code for increae the amount
-function total_amount() {
-    let total_elem = document.querySelectorAll(".subtotal_item");
-    let total = 0;
-    for (let i = 0; i < total_elem.length; i++) {
+// function total_amount() {
+//     let total_elem = document.querySelectorAll(".subtotal_item");
+//     let total = 0;
+//     for (let i = 0; i < total_elem.length; i++) {
 
-        total += Number(total_elem[i].innerHTML);
-        console.log(total);
-    }
-    p_tag8.innerText = total;
+//         total += Number(total_elem[i].innerText);
+//         console.log(total);
+//     }
+//     p_tag8.innerText = total;
+// }
+// total_amount();
+
+let plus = document.querySelectorAll(".plus")
+let minus = document.querySelectorAll(".minus")
+let qty = document.querySelectorAll(".qty")
+let total_elem = document.querySelectorAll(".subtotal_item");
+let price = document.querySelectorAll(".price")
+
+
+for(let i=0; i<plus.length; i++){
+    plus[i].addEventListener("click", function(){
+
+        qty[i].innerText++
+        const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
+        total_elem[i].innerText = total
+
+        
+        total1 += parseFloat(price[i].dataset.price)
+        console.log(total1);
+
+        p_tag8.innerText = Number(total1)
+
+        
+        
+    })
 }
-total_amount();
+
+

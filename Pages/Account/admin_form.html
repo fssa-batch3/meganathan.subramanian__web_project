@@ -31,7 +31,7 @@
                 <label for="book-price"> categories :</label><br>
                 <!-- <input type="text" placeholder="Enter Book categories" required id="original_price"> -->
                 <select name="categories" id="categories">
-                    <option value="Arts and Biography" >Arts and biography</option>
+                    <option value="Arts and Biography">Arts and biography</option>
                     <option value="Self Help book">Self help Books</option>
                     <!-- <option value="Biography" id="Bio_books">Biography</option> -->
                     <option value="Law">Law</option>
@@ -50,7 +50,7 @@
 
             <div class="Book_details">
                 <label for="book_description">Book Description:</label>
-                <textarea name="book_description" id="book_description" cols="60" rows="9"></textarea>
+                <textarea name="book_description" id="book_description" required cols="60" rows="9"></textarea>
             </div>
             <div class="author_img">
                 <label for="Author_img">About Image:</label>
@@ -58,62 +58,62 @@
             </div>
             <div class="about_author">
                 <label for="About_author">About_Author:</label>
-                <textarea name="about_author" id="author_content" cols="60" rows="9"></textarea>
+                <textarea name="about_author" id="author_content" cols="60" rows="9" required></textarea>
             </div>
             <div class="Publisher_date">
                 <label for="Publisher_date">Publisher Date:</label>
-                <input type="date" name="Publisher_date" id="publisher_date">
+                <input type="date" name="Publisher_date" id="publisher_date" required>
             </div>
             <div class="Binding">
                 <label for="binding"> Binding:</label>
-                <input type="text" name="binding" id="book_binding">
+                <input type="text" name="binding" id="book_binding" required>
             </div>
             <div class="book_height">
                 <label for="Height"> Book Height:</label>
-                <input type="text" name="book_height" id="Book_height">
+                <input type="text" name="book_height" id="Book_height" required>
             </div>
             <div class="No_of_pages">
                 <label for="No of pages">No of pages:</label>
-                <input type="number" name="no of pages" id="Book_pages">
+                <input type="number" name="no of pages" id="Book_pages" required>
             </div>
             <div class="series_of_title">
                 <label for="Series of title"> Series of Title:</label>
-                <input type="text" name="series of title" id="Book_series_title">
+                <input type="text" name="series of title" id="Book_series_title" required>
             </div>
             <div class="book_weight">
                 <label for="Weight">Book Weight:</label>
-                <input type="text" name="book_weight" id="Book_weight">
+                <input type="text" name="book_weight" id="Book_weight" required>
             </div>
 
             <div class="Publisher_imprint">
                 <label for="Publisher_jmprint">Publisher imprint:</label>
-                <input type="text" name="Publisher_inmprint" id="imprint">
+                <input type="text" name="Publisher_inmprint" id="imprint" required>
             </div>
             <div class="book_depth">
                 <label for="Depth">Book Depth:</label>
-                <input type="text" name="Boook_depth" id="Book_depth">
+                <input type="text" name="Boook_depth" id="Book_depth" required>
             </div>
             <div class="Book_language">
                 <label for="Language">Book Language:</label>
-                <input type="text" name="Book_language" id="Book_language">
+                <input type="text" name="Book_language" id="Book_language" required>
             </div>
             <div class="Book_return">
                 <label for="Return">Book Return:</label>
-                <input type="text" name="book return" id="return">
+                <input type="text" name="book return" id="return" required>
             </div>
             <div class="Book_spin_width">
                 <label for="Spin_width">Book Spin Width:</label>
-                <input type="text" name="spin width" id="spin_width">
+                <input type="text" name="spin width" id="spin_width" required>
             </div>
             <div class="Book_Width">
                 <label for="Width">Book Width:</label>
-                <input type="text" name="Book width" id="width">
+                <input type="text" name="Book width" id="width" required>
             </div>
             <div class="submit">
                 <button type="submit" id="submit-btn" onclick="product_add()">Upload</button>
             </div>
             <div class="submit">
-                <button type="submit" id="submit-btn" onclick="deleteprofile()">Delete</button>
+                <button type="submit" id="delete-btn" onclick="deleteprofile()">Delete</button>
             </div>
             <div class="submit">
                 <button type="submit" id="submit-btn" onclick="edit()">update</button>
@@ -164,7 +164,16 @@
 
         // Get the values from the select 
 
+        // let submit = document.getElementById("submit-btn").onclick = function () {
+
+        //     let form = document.querySelectorAll(".formbox");
+        //     if (form == "") {
+        //         alert("Please enter the value");
+        //     }
+        // }
+
         function product_add() {
+
             let bookName = document.getElementById("book_name").value;
             let DiscountPrice = document.getElementById("DiscountPrice").value;
             let originalPrice = document.getElementById("original_price").value;
@@ -236,6 +245,7 @@
                 });
                 localStorage.setItem("Book_details", JSON.stringify(productAdd));
             };
+            window.location.href = "../../index.html"
 
         };
 
@@ -269,6 +279,7 @@
         };
 
     </script>
+
 </body>
 
 
