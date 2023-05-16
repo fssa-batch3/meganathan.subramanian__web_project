@@ -261,7 +261,7 @@ for (let i = 0; i < products_details.length; i++) {
         }
         else {
             let user_wishlist = {};
-            user_wishlist["user_email"] = active_user,
+                user_wishlist["user_email"] = active_user,
                 user_wishlist["Book_image"] = products_details[i]["bookImage"],
                 user_wishlist["Book_title"] = products_details[i]["bookName"],
                 user_wishlist["DiscountPrice"] = products_details[i]["DiscountPrice"],
@@ -298,7 +298,7 @@ for (let i = 0; i < products_details.length; i++) {
         }
         else {
             let user_carlist = {};
-            user_carlist["user_email"] = active_user,
+                user_carlist["user_email"] = active_user,
                 user_carlist["Book_image"] = products_details[i]["bookImage"],
                 user_carlist["Book_title"] = products_details[i]["bookName"],
                 user_carlist["DiscountPrice"] = products_details[i]["DiscountPrice"],

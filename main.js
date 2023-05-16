@@ -74,7 +74,8 @@ else {
             bookImage
                 :
                 "https://m.media-amazon.com/images/I/611OWa8x+WL.jpg",
-            bookName
+                bookName
+
                 :
                 "How to Win Friends And Influence People",
             book_binding

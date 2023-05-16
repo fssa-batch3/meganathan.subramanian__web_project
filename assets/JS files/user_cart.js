@@ -100,7 +100,7 @@ user_cart.forEach((item, index) => {
         // console.log(tr1);
 
         document.querySelector("#table_body").append(tr1);
-
+        
 
 
         a_tag.addEventListener("click", () => {

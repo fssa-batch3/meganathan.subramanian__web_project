@@ -1,19 +1,35 @@
-
 let book_detail = JSON.parse(localStorage.getItem("Book_details"));
+console.log(book_detail);
+
+
+
+
+
+
+
 
 // console.log(book_detail);
 const searchbox = document.getElementById("Search_book");
 
-searchbox.addEventListener("keydown", e => {
-    const searchquery = searchbox.value.trim().toLowerCase();
+
+
+
+
+
+searchbox.addEventListener("keydown", (e) => {
+    const searchquery = searchbox.value.trim().toLowerCase().toUpperCase();
     // console.log(searchquery);
     if (e.key === "Enter") {
         e.preventDefault();
     }
     const filteredList = book_detail.filter((item) => {
         // console.log(filteredList);
+        console.log("OK1");
         return item.bookName.toLowerCase().includes(searchquery);
+        // console.log("OK2");
     });
+
+
     // console.log(filteredList);
     const parentHtmlDiv = document.querySelector(".books");
     parentHtmlDiv.innerHTML = "";
