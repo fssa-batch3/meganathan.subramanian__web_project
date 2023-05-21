@@ -2,12 +2,11 @@
 
 let book_details = JSON.parse(localStorage.getItem("Book_details"));
 
-
 // Create a wishlist count
 
 let res;
 
-// let category;
+let category;
 let categname;
 let cat = document.querySelectorAll(".Categories");
 // console.log(cat);
@@ -17,14 +16,10 @@ cat.forEach((data) => {
     //   alert(categname);
     data.setAttribute("href", `?category=${categname}`)
     // alert(don)
-
   })
-})
-// ok.addEventListener("click",()=>{{
-//     alert("soksos")
-// }})
+});
 
-
+// Url params 
 let url = window.location.search;
 const search = new URLSearchParams(url);
 const product_id = search.get("category");
@@ -126,7 +121,8 @@ for (let i = 0; i < book_details.length; i++) {
     // Create a anchor tag 
 
     const a_3 = document.createElement("a");
-    a_3.setAttribute("href", "Pages/products_details/Product_page.html?id=" + book_details[i]["category"]);
+    a_3.setAttribute("href", "/Pages/products_details/Product_page.html?id=" + book_details[i]["bookid"]);
+    console.log(a_3);
 
     // Create a button tag 
 
@@ -145,6 +141,7 @@ for (let i = 0; i < book_details.length; i++) {
     wish_icons.append(book_img_div);
     document.querySelector("div.books").append(wish_icons);
   };
+
 
 }
 

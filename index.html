@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/header.css"> -->
     <link rel="shortcut icon" href="assets/images/favicon img.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -25,102 +26,7 @@
 
 <body>
 
-    <!------------------------ Create the navigation bar ----------------------->
-
-    <div class="head" id="head">
-        <div class="nav-logo">
-            <div class="logo">
-                <a href="index.html"><img src="assets/images/books_store-removebg-preview.png" alt="webiste logo"
-                        width="190"></a>
-            </div>
-            <div class="navi2">
-                <ol class="lang">
-                    <li><a href="#">Lang <i class=" fa-solid fa-caret-down"></i></a>
-                        <ol class="Lang_option">
-                            <li> <a href="#">English</a></li>
-                            <li> <a href="#">Tamil</a></li>
-                        </ol>
-                    </li>
-                </ol>
-                <ul class="fonts">
-                    <li> <a href="Pages/Account/signup.html">
-                            <i class="fa-regular fa-heart"></i>
-                        </a></li> <a href="/Pages/orders/Wish_list.html"><span id="wish_count">0</span></a>
-                    <li> <a href="/Pages/orders/Cart_list.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
-                </ul>
-            </div>
-        </div>
-
-
-        <!------------------- Create a Search bar ---------------->
-
-        <div class="search_bar">
-            <input type="text" placeholder="Search By Author Name Or Book name" id="Search_book">
-        </div>
-
-
-        <!------------------------------- END OF THE NAVIGATION --------------------------------->
-
-
-        <div class="container">
-            <div class="nav">
-                <div class="navi1">
-                    <ul>
-                        <li><a href="Pages/Books/self_help.html"><img src="assets/images/search books.png"
-                                    alt="search books img"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-------------------------------- Navigation Content -------------------------------->
-
-    <div class="navigation">
-        <ul>
-            <li> <a href="index.html">Home</a></li>
-            <li class="explore-menu"> <a href="Pages/Books/self help book.html">Categories<i
-                        class="fa-solid fa-caret-down"></i></a>
-                <ol class="Explore-option">
-                    <li class="Arts-option"><a href="Pages/Books/self_help.html">Arts and Biography</a>
-                        <div class="arts-menu">
-                            <ol>
-                                <li><a href="#">Arts Forms</a></li>
-                                <li><a href="#">Dance And Performing</a></li>
-                                <li><a href="#">Flim and Tv</a></li>
-                            </ol>
-                        </div>
-                    </li>
-                    <li><a href="#" class="Categories">Fiction Books</a></li>
-                    <li><a href="#" class="Categories">Law</a></li>
-                    <li><a href="#">Medicine</a></li>
-                    <li><a href="Pages/Books/self_help.html" class="Categories">Self Help book</a></li>
-                    <li><a href="#">Life Style</a></li>
-                    <li><a href="#">Science And Maths</a></li>
-
-                </ol>
-            </li>
-            <li><a href="Pages/Books/Combo book.html">Combo</a></li>
-            <li><a href="">Best Seller</a></li>
-            <li><a href="Customer-feedback.html">Customer Feedback</a></li>
-            <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
-                <div class="profile">
-                    <ol>
-                        <li><a href="Pages/Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit
-                                Profile</a></li>
-                        <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
-                        <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
-                        <li id="log-out"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
-                    </ol>
-                </div>
-            <li><a href="./Pages/Account/login.html">Login</a></li>
-            <li><a href="./Pages/Admin_pages/Admin_login.html">Seller</a></li>
-            </li>
-        </ul>
-    </div>
-
+    <scrpt src="assets/JS files/header.js"></scrpt>
     <!------ Adding a AD image ------------>
 
     <div class="slider-frame">
@@ -141,7 +47,9 @@
     <!---------- End of the ad animation -------------->
 
 
-    <!---------- Trending books Section ---------------->
+
+
+    <!----------------------------------- Trending books Section ------------------------------------->
 
     <!-- wishlist icons -->
 
@@ -360,12 +268,12 @@
 
     <div class="best-seller reveal">
         <div class="section-head">
-            <h2>Best Seller</h2>
+            <h2 id="BestSeller">Best Seller</h2>
             <a href="Pages/Books/self_help.html">See All</a>
         </div>
         <hr>
-        <div class="books">
-            <div class="book-img">
+        <div class="books1">
+            <!-- <div class="book-img">
                 <div class="trend_book">
                     <a href="Pages/products_details/secert detail.html"><img
                             src="https://m.media-amazon.com/images/I/81fdQIY6ykL.jpg" alt="trend books"></a>
@@ -532,9 +440,10 @@
                     <h3>Price:&#8377; 120.00 <s>180.00</s></h3>
                     <a href=""><button>Buy Now</button></a>
                 </div>
-            </div>
+            </div> -->
 
         </div>
+
         <div class="Row-2">
             <i class="fa-solid fa-arrow-right"></i>
         </div>
@@ -1070,13 +979,15 @@
     </footer>
 
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
+    <script src="/assets/JS files/header.js"></script>
     <script src="/assets/JS files/bookcard.js"></script>
     <script src="/assets/JS files/index search filter.js"></script>
-    <!-- <script src="/assets/JS files/header.js"></script> -->
     <script src="main.js"></script>
+
 
     <script>
         // logout
+        let activeUser = JSON.parse(localStorage.getItem("activeUser"))
         let log_out = document.getElementById("log-out");
         log_out.addEventListener("click", (e) => {
             const log_Out = delete active_user;
@@ -1093,24 +1004,11 @@
             data.addEventListener("click", () => {
                 categname = data.innerText;
                 //   alert(categname);
-                data.setAttribute("href", `?category=${categname}`)
-
+                data.setAttribute("href", `./Pages/Books/book_category.html?category=${categname}`);
 
             })
         })
-
-        // let url = window.location.search;
-        // const search = new URLSearchParams(url);
-        // const product_id = search.get("category");
-        // console.log(product_id);
-
-        // if(product_id == "Fiction"){
-        //     wind
-        // }
-
-
     </script>
-
 </body>
 
 </html>

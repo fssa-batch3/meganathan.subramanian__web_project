@@ -289,7 +289,7 @@ span{
 }
 .payment{
     background-color: whitesmoke;
-    width: 43%;
+    width: 45%;
     height: 685px;
     margin-left: 80px;
     margin-top: 190px;
@@ -338,8 +338,8 @@ span{
 }
 .input_box input{
     margin-top: 12px;
-    height: 35px;
-    width: 100%;
+    height: 39px;
+    width: 110%;
     outline: none;
     border: 2px solid rgb(195, 195, 195);
     border-radius: 5px;
@@ -347,6 +347,13 @@ span{
 input::placeholder{
     font-size: 15px;
     padding:9px;
+}
+input{
+    padding-inline-start: 5px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-weight: 600;
+    font-size: 17px;
+    
 }
 .box_flex{
     display: flex;
@@ -356,7 +363,8 @@ input::placeholder{
 /* --------------place order--------- */
 .place_order{
     margin-top: 15px;
-    width: 100%;
+    width: 40%;
+    margin-left: 170px;
     padding: 12px;
     font-size: 19px;
     font-weight: 600;
@@ -375,6 +383,28 @@ input::placeholder{
     background-color:rgb(221, 169, 71);
     opacity: 1;
     
+}
+.user_edit{
+    margin-top: 15px;
+    width: 20%; 
+    padding: 12px;
+    margin-left: 20px;
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color:black;
+    border: none;
+    background-color:rgb(229, 168, 54);
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+.user_edit:hover{
+    text-decoration: underline;
+    background-color:rgb(221, 169, 71);
+    opacity: 1;
 }
 
 

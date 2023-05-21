@@ -57,6 +57,8 @@ user_cart.forEach((item, index) => {
         // create a td4 
         let td4 = document.createElement("td");
         td4.setAttribute("class", "price")
+        td4.setAttribute("data-book_id", item.Book_id)
+        // console.log(item.Book_id)
         td4.innerText = item.originalPrice;
         td4.setAttribute("data-price", item.originalPrice)
 
@@ -100,7 +102,7 @@ user_cart.forEach((item, index) => {
         // console.log(tr1);
 
         document.querySelector("#table_body").append(tr1);
-        
+
 
 
         a_tag.addEventListener("click", () => {
@@ -133,10 +135,14 @@ user_cart.forEach((item, index) => {
         //                 increase_value = user_cart[i]["qty"];
         //             }
         //         }
-                
+
         //     }
         //     total_amount();
         // });
+
+        icon_plus.addEventListener('click', (e) => {
+            // if(active_user == user_cart[i]["user_email"] &&  )
+        })
 
         // icon_minus.addEventListener("click", () => {
         //     if (itemQuantity > 1) {
@@ -209,7 +215,7 @@ p_tag7.innerText = "50.00";
 // Create a another p_tag
 let p_tag8 = document.createElement("p");
 p_tag8.setAttribute("id", "price");
-p_tag8,innerText = total1
+p_tag8, innerText = total1
 
 
 // append the all p tags
@@ -219,7 +225,9 @@ cart_total_div.append(div1, div2);
 
 // Create a anchor tag
 let a_tag1 = document.createElement("a");
-a_tag1.setAttribute("href", "../Payment gateway/payment.html?id=" + active_user);
+// a_tag1.setAttribute("href", "../Payment gateway/payment.html?id=" + active_user);
+
+
 
 // Create a another button tag
 let button_tag = document.createElement("button");
@@ -254,25 +262,77 @@ let plus = document.querySelectorAll(".plus")
 let minus = document.querySelectorAll(".minus")
 let qty = document.querySelectorAll(".qty")
 let total_elem = document.querySelectorAll(".subtotal_item");
-let price = document.querySelectorAll(".price")
+let price = document.querySelectorAll(".price");
 
 
-for(let i=0; i<plus.length; i++){
-    plus[i].addEventListener("click", function(){
+
+for (let i = 0; i < plus.length; i++) {
+    plus[i].addEventListener("click", function () {
 
         qty[i].innerText++
         const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
         total_elem[i].innerText = total
 
-        
+
         total1 += parseFloat(price[i].dataset.price)
         console.log(total1);
 
         p_tag8.innerText = Number(total1)
 
-        
-        
+
+
     })
 }
+
+for (let i = 0; i < minus.length; i++) {
+    minus[i].addEventListener("click", function () {
+
+        qty[i].innerText--
+        const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
+        total_elem[i].innerText = total
+
+
+        total1 -= parseFloat(price[i].dataset.price)
+        console.log(total1);
+
+        p_tag8.innerText = Number(total1)
+
+
+
+    })
+}
+
+
+a_tag1.addEventListener("click", () => {
+
+    user_cart.find(e => {
+
+        if (e.user_email === active_user) {
+
+            for (let i = 0; i < qty.length; i++) {
+                // qty[i].value
+                if (e.Book_id === parseFloat(price[i].dataset.book_id)) {
+                    
+                    // console.log("working")
+
+                    e.qty = Number(qty[i].innerText)
+
+                    localStorage.setItem("user_cart", JSON.stringify(user_cart))
+                    break;
+                    // console.log(e);
+                }
+            }
+            window.location.href = "../Payment gateway/payment.html?id=" + active_user;
+
+        }
+        // return e;
+    })
+
+})
+
+
+
+
+
 
 

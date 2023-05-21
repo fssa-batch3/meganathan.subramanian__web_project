@@ -15,7 +15,7 @@ else {
                 "290mm",
             Book_language
                 :
-                "Tamil",
+                "English",
             Book_pages
                 :
                 "190",
@@ -53,6 +53,7 @@ else {
             category
                 :
                 "Arts and Biography",
+            booktype: "Best seller",
             imprint
                 :
                 "Savitha Printers",
@@ -620,10 +621,32 @@ else {
             width
                 :
                 "119cm"
+        },
+        {
+            bookName: "Cant hurt me by david goggins",
+            DiscountPrice: "200",
+            originalPrice: "400",
+            bookImage: "https://m.media-amazon.com/images/I/81gTRv2HXrL.jpg",
+            rating: {},
+            bookid: 1684675016700,
+            category: "",
+            booktype: "Best Seller",
+            book_description: "wertyuio",
+            author_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfloGdLGmn1StgBXrMkhPesNTGUgj1iRqDF_pp7dxmrg&usqp=CAU&ec=48665701",
+            author_content: "asdfghjkl",
+            publisher_date: "2023-05-05",
+            book_binding: "108mm",
+            Book_height: "280mm",
+            Book_pages: "500",
+            Book_series_title: "NA",
+            Book_weight: "200grm",
+            imprint: "Savitha Printers",
+            Book_depth: "25",
+            Book_language: "English",
+            return: "Yes",
+            spin_width: "20mm",
+            width: "140cm"
         }
-
-
-
     ]));
 }
 

@@ -29,13 +29,22 @@
             </div>
             <div class="categories">
                 <label for="book-price"> categories :</label><br>
-                <!-- <input type="text" placeholder="Enter Book categories" required id="original_price"> -->
                 <select name="categories" id="categories">
+                    <option value="">Choose any one</option>
                     <option value="Arts and Biography">Arts and biography</option>
                     <option value="Self Help book">Self help Books</option>
                     <!-- <option value="Biography" id="Bio_books">Biography</option> -->
                     <option value="Law">Law</option>
                 </select>
+                <div class="book_type">
+                    <label for="book_type">Book Type:</label>
+                    <select name="book_type" id="bookType">
+                        <option value="">Choose any one</option>
+                        <option value="Best Seller">Best Seller</option>
+                        <option value="fiction book">Fiction book</option>
+                        <option value="New arrival book">New Arrival book</option>
+                    </select>
+                </div>
             </div>
             <div class="book_img">
                 <label for="book img">Book Image:</label><br>
@@ -121,7 +130,6 @@
             <!-- <button>submit</button> -->
         </div>
     </form>
-    <!-- </div> -->
     <script>
 
 
@@ -196,15 +204,19 @@
 
 
             let productAdd = JSON.parse(localStorage.getItem("Book_details")) ?? [];
-            let count = 0;
-            for (let i = 0; i < productAdd.length; i++) {
-                count++
-            };
-            console.log(count);
+            // let count = 0;
+            // for (let i = 0; i < productAdd.length; i++) {
+            //     count++
+            // };
+            // console.log(count);
 
-            let bookid = count;
+            // let bookid = count;
+
 
             let catog = document.getElementById("categories").value;
+
+            // get the value from the option tag
+            let BookType = document.getElementById("bookType").value;
 
 
             let j = 0;
@@ -224,8 +236,9 @@
                     "originalPrice": originalPrice,
                     "bookImage": bookImage,
                     "rating": rating,
-                    "bookid": bookid,
+                    "bookid": Date.now(),
                     "category": catog,
+                    "booktype": BookType,
                     "book_description": book_description,
                     "author_image": author_img,
                     "author_content": author_content,
