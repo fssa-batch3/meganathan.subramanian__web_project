@@ -100,7 +100,7 @@
             </div>
             <div class="book_depth">
                 <label for="Depth">Book Depth:</label>
-                <input type="text" name="Boook_depth" id="Book_depth" required>
+                <input type="text" name="Book_depth" id="Book_depth" required>
             </div>
             <div class="Book_language">
                 <label for="Language">Book Language:</label>
@@ -281,7 +281,7 @@
             let editproduct = JSON.parse(localStorage.getItem("Book_details"));
             alert("Are you sure want to update ?")
             for (let i = 0; i < editproduct.length; i++) {
-                if (document.getElementById("book_img").value == editproduct[i]["bookImage"]) {
+                if (document.getElementById("book_name").value == editproduct[i]["bookName"]) {
                     editproduct[i]["bookName"] = document.getElementById("book_name").value;
                     // editproduct[i]["DiscountPrice"] = document.getElementById("DiscountPrice").value;
                 }
