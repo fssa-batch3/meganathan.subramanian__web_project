@@ -548,7 +548,6 @@ else {
             "spin_width": "32mm",
             "width": "119cm"
         }
-
     ]));
 }
 

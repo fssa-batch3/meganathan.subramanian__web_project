@@ -339,10 +339,7 @@ for (let i = 0; i < tamil.length; i++) {
         };
 
     });
-    const wish = JSON.parse(localStorage.getItem("wishlist"))
-    wish_count = wish.length
-    document.getElementById("wish_count").innerText = wish_count;
-
+    
 };
 
 // Below the code for the bestseller section
@@ -545,9 +542,9 @@ for (let i = 0; i < bestseller.length; i++) {
             alert("Product is Added");
         };
     });
-    const wish = JSON.parse(localStorage.getItem("wishlist"))
-    wish_count = wish.length
-    document.getElementById("wish_count").innerText = wish_count;
+    // const wish = JSON.parse(localStorage.getItem("wishlist"))
+    // wish_count = wish.length
+    // document.getElementById("wish_count").innerText = wish_count;
 
 
 };
@@ -754,12 +751,17 @@ for (let i = 0; i < newArrivalbook.length; i++) {
             alert("Product is Added");
         };
     });
-    const wish = JSON.parse(localStorage.getItem("wishlist"))
-    wish_count = wish.length
-    document.getElementById("wish_count").innerText = wish_count;
+    // const wish = JSON.parse(localStorage.getItem("wishlist"))
+    // wish_count = wish.length
+    // document.getElementById("wish_count").innerText = wish_count;
 
 
 };
+
+const wish = JSON.parse(localStorage.getItem("wishlist"))
+    wish_count = wish.length
+    document.getElementById("wish_count").innerText = wish_count;
+
 // BELOWE THE CONTENT THE COUNT THE WIHSLIST 
 
 const btn = document.querySelectorAll(".wish_icons")
