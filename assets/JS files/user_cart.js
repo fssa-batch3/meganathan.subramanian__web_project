@@ -7,9 +7,8 @@ let Book_details = JSON.parse(localStorage.getItem("Book_details"));
 let active_user = JSON.parse(localStorage.getItem("activeUser"));
 // let user_list =
 let addition = 0;
-let itemQuantity = 1;
-
 let total1 = 0;
+let itemQuantity = 1;
 
 
 user_cart.forEach((item, index) => {
@@ -268,36 +267,37 @@ let price = document.querySelectorAll(".price");
 
 for (let i = 0; i < plus.length; i++) {
     plus[i].addEventListener("click", function () {
+        if (itemQuantity > 10) {
+            qty[i].innerText++
+            const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
+            total_elem[i].innerText = total
 
-        qty[i].innerText++
-        const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
-        total_elem[i].innerText = total
+            total1 += parseFloat(price[i].dataset.price)
+            console.log(total1);
 
+            p_tag8.innerText = Number(total1)
 
-        total1 += parseFloat(price[i].dataset.price)
-        console.log(total1);
-
-        p_tag8.innerText = Number(total1)
-
+        }
 
 
     })
 }
+console.log(itemQuantity);
 
 for (let i = 0; i < minus.length; i++) {
     minus[i].addEventListener("click", function () {
+        if (itemQuantity > 1) {
 
-        qty[i].innerText--
-        const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
-        total_elem[i].innerText = total
+            qty[i].innerText--
+            const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
+            total_elem[i].innerText = total
 
+            total1 -= parseFloat(price[i].dataset.price)
+            console.log(total1);
 
-        total1 -= parseFloat(price[i].dataset.price)
-        console.log(total1);
+            p_tag8.innerText = Number(total1)
 
-        p_tag8.innerText = Number(total1)
-
-
+        }
 
     })
 }
@@ -312,7 +312,7 @@ a_tag1.addEventListener("click", () => {
             for (let i = 0; i < qty.length; i++) {
                 // qty[i].value
                 if (e.Book_id === parseFloat(price[i].dataset.book_id)) {
-                    
+
                     // console.log("working")
 
                     e.qty = Number(qty[i].innerText)

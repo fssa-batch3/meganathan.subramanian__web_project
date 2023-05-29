@@ -27,97 +27,9 @@
 <body>
     <!------------------------ Create the navigation bar ----------------------->
 
-    <div class="head">
-        <div class="nav-logo">
-            <div class="logo">
-                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png"
-                        alt="webiste logo" width="190"></a>
-            </div>
-            <div class="navi2">
-                <ol class="lang">
-                    <li><a href="#">Lang <i class=" fa-solid fa-caret-down"></i></a>
-                        <ol class="Lang_option">
-                            <li> <a href="#">English</a></li>
-                            <li> <a href="#">Tamil</a></li>
-                        </ol>
-                    </li>
-                </ol>
-                <ul class="fonts">
-                    <li> <a href="../orders/Wish_list.html">
-                            <i class="fa-regular fa-heart"></i>
-                        </a></li> <span>0</span>
-                    <li> <a href="../../Pages/Account/signup.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
-                </ul>
-            </div>
-        </div>
+    <!--  append the header by dynamic by js -->
+    <script src="../../assets/JS files/header.js"></script>
 
-
-        <!------------------- Create a Search bar ---------------->
-
-        <div class="search_bar">
-            <input type="text" placeholder="Search By Author Name Or Book name">
-        </div>
-
-
-        <!------------------------------- END OF THE NAVIGATION --------------------------------->
-
-
-        <div class="container">
-            <div class="nav">
-                <div class="navi1">
-                    <ul>
-                        <li><a href="../Books/self_help.html"><img src="../../assets/images/search books.png"
-                                    alt="search books img"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!------------------- navigation content--------->
-
-    <div class="navigation">
-        <ul>
-            <li> <a href="../../index.html">Home</a></li>
-            <li class="explore-menu" id="click"> <a href="#">Categories<i class="fa-solid fa-caret-down"></i></a>
-                <ol class="Explore-option">
-                    <li class="Arts-option"><a href="#">Arts and Biography</a>
-                        <div class="arts-menu">
-                            <ol>
-                                <li><a href="#">Arts Forms</a></li>
-                                <li><a href="#">Dance And Performing</a></li>
-                                <li><a href="#">Flim and Tv</a></li>
-                            </ol>
-                        </div>
-                    </li>
-                    <li><a href="#">Fiction Books</a></li>
-                    <li><a href="#">Law</a></li>
-                    <li><a href="#">Medicine</a></li>
-                    <li><a href="../Books/self_help.html">Self Help book</a></li>
-                    <li><a href="#">Life Style</a></li>
-                    <li><a href="#">Science And Maths</a></li>
-
-                </ol>
-            </li>
-            <li><a href="../Books/Combo book.html">Combo</a></li>
-            <li><a href="../Books/self_help.html">Best Seller</a></li>
-            <li><a href="../../Customer-feedback.html">Customer Feedback</a></li>
-            <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
-                <div class="profile">
-                    <ol>
-                        <li><a href="../Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit
-                                Profile</a></li>
-                        <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
-                        <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
-                        <li id="log-out"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
-                    </ol>
-                </div>
-            </li>
-        </ul>
-
-    </div>
     <div class="home-page">
         <a href="../../index.html">home></a>
         <a href="../Books/self_help.html">products></a>
@@ -144,51 +56,55 @@
         </div>
 
         <!------------ START THE EDIT CONTENT  ------------->
+
+        <form id="user_form">
         <div class="user-edit">
             <div class="user">
                 <div class="user-inp">
                     <h1>Edit Your Profile</h1>
                     <div class="user-name">
                         <label for="name">Name :</label>
-                        <input type="text" name="name" id="name" placeholder="Username" pattern="^[a-zA-Z]{3,20}$"
-                            disabled>
+                        <input type="text" name="name" id="name" placeholder="Username" 
+                            required disabled>
                     </div>
 
                     <div class="user-password">
                         <label for="last">Password :</label>
-                        <input type="password" pattern="^[a-zA-Z]{3,20}$" id="password" placeholder="*********"
-                            disabled>
+                        <input type="password" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" id="password" placeholder="*********" disabled
+                            required>
                     </div>
                     <div class="user-email">
                         <label for="email">Email :</label>
-                        <input type="email" name="user-email" placeholder="example@gmail.com" id="email" disabled>
+                        <input type="email" name="user-email" placeholder="example@gmail.com" id="email" disabled
+                            required>
                     </div>
 
                     <div class="user-phone-number">
                         <label for="number">Phone Number :</label>
-                        <input type="number" placeholder="1234567892" id="phone_number" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
-                            disabled>
+                        <input type="tel" placeholder="1234567892" id="phone_number" maxlength="10" required disabled>
                     </div>
 
                     <div class="user-address">
                         <label for="adreess">Address :</label>
                         <textarea name="adress" cols="30" rows="4" id="user_address" disabled>59/123 Vivenkanda street,vadapalani,chennai-00000"
-                         </textarea>
+                         </textarea required>
                     </div>
                     <div class="user_state">
                         <label for="user_state">State</label>
-                        <input type="text" id="user_state" placeholder="Enter your State" pattern="[A-Za-z]{10}" disabled>
+                        <input type="text" id="user_state" placeholder="Enter your State" pattern="[A-Za-z]{1,10}"
+                            disabled required>
                     </div>
                     <div class="user_city">
                         <label for="User_city">City</label>
-                        <input type="text" id="user_city" placeholder="Enter your city" pattern="[A-Za-z]{10}" disabled>
+                        <input type="text" id="user_city" placeholder="Enter your city" pattern="[A-Za-z]{1,10}" disabled required>
                     </div>
                     <div class="user_pincode">
                         <label for="user_pincode">Pincode</label>
-                        <input type="number" id="user_pincode" placeholder="600081" pattern="[0-9]{7}"maxlength="7" disabled>
+                        <input type="number" id="user_pincode" placeholder="600081" pattern="[0-9]{7}" maxlength="7" required
+                            disabled>
                     </div>
                     <div class="user_edit_btn">
-                        <button onclick="edit()">Save Changes</button>
+                        <button  id="Save_users" type="submit">Save Changes</button>
                         <button id="edit_user">Edit</button>
                         <button onclick="deleteprofile()">delete</button>
 
@@ -225,6 +141,7 @@
                 </div>
             </div>
         </div>
+    </form>
     </div>
 
     <!-------------------FOOTER CONTETNT ------------------>
@@ -278,8 +195,7 @@
         // console.log(users);
 
         // Edit the user profile
-        function edit() {
-            // let users = JSON.parse(localStorage.getItem("userslist"));
+        document.getElementById("user_form").addEventListener("submit", (e) => {
             document.getElementById("name").setAttribute("disabled", "");
             document.getElementById("phone_number").setAttribute("disabled", "");
             document.getElementById("password").setAttribute("disabled", "");
@@ -290,12 +206,14 @@
 
             for (let i = 0; i < users.length; i++) {
                 if (document.getElementById("email").value == users[i]["email"]) {
+
                     let User_address = document.getElementById("user_address").value;
                     let User_state = document.getElementById("user_state").value;
                     let User_city = document.getElementById("user_city").value;
                     let User_pincode = document.getElementById("user_pincode").value;
                     users[i].user_name = document.getElementById("name").value;
                     users[i].password = document.getElementById("password").value;
+                    users[i].Phone_number = document.getElementById("phone_number").value;
                     users[i].user_state = User_state;
                     users[i].user_city = User_city
                     users[i].user_pincode = User_pincode;
@@ -305,7 +223,11 @@
             };
             // console.log(users);
             swal('Great', 'Youre account in Successfully Changed!', 'success');
-        };
+        })
+        // function edit() {
+        //     // let users = JSON.parse(localStorage.getItem("userslist"));
+
+        // };
 
 
         // Create a delete profile 
@@ -347,14 +269,14 @@
 
         // logout
 
-        let log_out = document.getElementById("log-out");
+        // let log_out = document.getElementById("log-out");
         let active_user = JSON.parse(localStorage.getItem("activeUser"));
-        log_out.addEventListener("click", (e) => {
-            const log_Out = delete active_user;
-            localStorage.setItem("activeUser", log_Out);
-            window.location.href = "/Pages/Account/login.html";
-            alert("Thank you visiting our website");
-        });
+        // log_out.addEventListener("click", (e) => {
+        //     const log_Out = delete active_user;
+        //     localStorage.setItem("activeUser", log_Out);
+        //     window.location.href = "/Pages/Account/login.html";
+        //     alert("Thank you visiting our website");
+        // });
 
 
         // write the return prouducts
@@ -431,10 +353,10 @@
 
                 // Create the hr line 
                 let hr_tag = document.createElement("hr");
-                hr_tag.setAttribute("class","horizantal_line");
+                hr_tag.setAttribute("class", "horizantal_line");
                 // append the all p tags
                 book_img_div.append(status_div)
-                status_div.append(p_tag1, p_tag2, p_tag3, p_tag4, p_tag5,hr_tag);
+                status_div.append(p_tag1, p_tag2, p_tag3, p_tag4, p_tag5, hr_tag);
                 document.querySelector(".single_book").append(book_img_div);
 
             }

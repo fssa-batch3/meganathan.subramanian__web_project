@@ -395,7 +395,9 @@ body {
 /*----- Trending  s---------------- */
 
 .books,
-.books1,.books2 {
+.books1,
+.books2,
+.books3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -441,11 +443,14 @@ body {
     bottom: -30%;
 }
 
-.books img ,
-.books1 img,.books2 img {
+.books img,
+.books1 img,
+.books2 img,
+.books3 img {
     width: 190px;
     height: 290px;
     margin-top: -10px;
+    cursor: pointer;
 }
 
 

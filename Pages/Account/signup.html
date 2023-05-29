@@ -45,8 +45,8 @@
                     <p>Enhance Your knowledge Here.</p>
                     <label for="User id"></label>
                     <input type="text" placeholder="Ener Your Name" id="name" required="true" pattern="^[a-zA-Z]{3,20}$"><br>
-                    <input type="text" placeholder="Enter your number" id="phone_number" required="true"
-                        pattern="^(\d{7}|\d{10})$"><br>
+                    <input type="tel" placeholder="Enter your number" id="phone_number" required="true"
+                        maxlength="10"><br>
                     <input type="email" placeholder="Enter Your Email" id="email" required="true"><br>
                     <input type="password" placeholder="Enter Your Password" id="password" required="true"
                         pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"> <br>
@@ -99,7 +99,7 @@
             // Get the value from users    
 
             user["user_name"] = name;
-            user["Phone_number"] = phone_number;
+            user["Phone_number"] = Number(phone_number);
             user["email"] = email;
             user["password"] = password;
             user["confirm_password"] = confirmpassword;

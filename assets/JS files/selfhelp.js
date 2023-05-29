@@ -147,6 +147,3 @@ for (let i = 0; i < book_details.length; i++) {
 
 
 
-
-
-
