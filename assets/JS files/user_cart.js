@@ -267,17 +267,17 @@ let price = document.querySelectorAll(".price");
 
 for (let i = 0; i < plus.length; i++) {
     plus[i].addEventListener("click", function () {
-        if (itemQuantity > 10) {
-            qty[i].innerText++
-            const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
-            total_elem[i].innerText = total
 
-            total1 += parseFloat(price[i].dataset.price)
-            console.log(total1);
+        qty[i].innerText++
+        const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
+        total_elem[i].innerText = total
 
-            p_tag8.innerText = Number(total1)
+        total1 += parseFloat(price[i].dataset.price)
+        console.log(total1);
 
-        }
+        p_tag8.innerText = Number(total1)
+
+
 
 
     })

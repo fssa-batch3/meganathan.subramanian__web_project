@@ -57,36 +57,36 @@
 
         <!------------ START THE EDIT CONTENT  ------------->
 
-        <form id="user_form">
         <div class="user-edit">
             <div class="user">
                 <div class="user-inp">
                     <h1>Edit Your Profile</h1>
-                    <div class="user-name">
-                        <label for="name">Name :</label>
-                        <input type="text" name="name" id="name" placeholder="Username" 
-                            required disabled>
-                    </div>
+                    <form id="user_form">
+                        <div class="user-name">
+                            <label for="name">Name :</label>
+                            <input type="text" name="name" id="name" placeholder="Username" required disabled>
+                        </div>
 
-                    <div class="user-password">
-                        <label for="last">Password :</label>
-                        <input type="password" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" id="password" placeholder="*********" disabled
-                            required>
-                    </div>
-                    <div class="user-email">
-                        <label for="email">Email :</label>
-                        <input type="email" name="user-email" placeholder="example@gmail.com" id="email" disabled
-                            required>
-                    </div>
+                        <div class="user-password">
+                            <label for="last">Password :</label>
+                            <input type="password" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" id="password"
+                                placeholder="*********" disabled required>
+                        </div>
+                        <div class="user-email">
+                            <label for="email">Email :</label>
+                            <input type="email" name="user-email" placeholder="example@gmail.com" id="email" disabled
+                                required>
+                        </div>
 
-                    <div class="user-phone-number">
-                        <label for="number">Phone Number :</label>
-                        <input type="tel" placeholder="1234567892" id="phone_number" maxlength="10" required disabled>
-                    </div>
+                        <div class="user-phone-number">
+                            <label for="number">Phone Number :</label>
+                            <input type="tel" placeholder="1234567892" id="phone_number" maxlength="10" required
+                                disabled>
+                        </div>
 
-                    <div class="user-address">
-                        <label for="adreess">Address :</label>
-                        <textarea name="adress" cols="30" rows="4" id="user_address" disabled>59/123 Vivenkanda street,vadapalani,chennai-00000"
+                        <div class="user-address">
+                            <label for="adreess">Address :</label>
+                            <textarea name="adress" cols="30" rows="4" id="user_address" disabled>59/123 Vivenkanda street,vadapalani,chennai-00000"
                          </textarea required>
                     </div>
                     <div class="user_state">
