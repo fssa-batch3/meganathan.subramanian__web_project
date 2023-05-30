@@ -258,7 +258,7 @@ document.getElementById("price").innerText = total1;
 // total_amount();
 
 let plus = document.querySelectorAll(".plus")
-let minus = document.querySelectorAll(".minus")
+let minus = document.querySelectorAll("#minus")
 let qty = document.querySelectorAll(".qty")
 let total_elem = document.querySelectorAll(".subtotal_item");
 let price = document.querySelectorAll(".price");
@@ -286,8 +286,7 @@ console.log(itemQuantity);
 
 for (let i = 0; i < minus.length; i++) {
     minus[i].addEventListener("click", function () {
-        if (itemQuantity > 1) {
-
+        if (parseFloat(qty[i].innerHTML) > 1) {
             qty[i].innerText--
             const total = parseFloat(price[i].dataset.price) * parseFloat(qty[i].innerText)
             total_elem[i].innerText = total
@@ -296,12 +295,11 @@ for (let i = 0; i < minus.length; i++) {
             console.log(total1);
 
             p_tag8.innerText = Number(total1)
-
         }
 
     })
 }
-
+console.log(minus);
 
 a_tag1.addEventListener("click", () => {
 
