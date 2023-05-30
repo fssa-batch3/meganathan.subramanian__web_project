@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/Seller_form.css">
+    <title>Admin form</title>
+</head>
+
+<body>
+    <!-- <div class="admin-form"> -->
+    <h1 style="text-align: center;">Book Details:</h1>
+    <form id="formbox">
+        <div class="admin-form">
+            <div class="user_name">
+                <label for="book-name">Book name :</label><br>
+                <input type="text" placeholder="Enter Book name" required id="book_name">
+            </div>
+            <div class="book_price">
+                <label for="book-price">Offer price :</label><br>
+                <input type="text" placeholder="Enter Book price" required id="DiscountPrice">
+            </div>
+
+            <div class="original_price">
+                <label for="book-price">original price :</label><br>
+                <input type="text" placeholder="Enter Book price" required id="original_price">
+            </div>
+            <div class="categories">
+                <label for="book-price"> categories :</label><br>
+                <select name="categories" id="categories">
+                    <option value="">Choose any one</option>
+                    <option value="Arts and Biography">Arts and biography</option>
+                    <option value="Self Help book">Self help Books</option>
+                    <!-- <option value="Biography" id="Bio_books">Biography</option> -->
+                    <option value="Law">Law</option>
+                </select>
+                <div class="book_type">
+                    <label for="book_type">Book Type:</label>
+                    <select name="book_type" id="bookType">
+                        <option value="">Choose any one</option>
+                        <option value="Best Seller">Best Seller</option>
+                        <option value="fiction book">Fiction book</option>
+                        <option value="New arrival book">New Arrival book</option>
+                    </select>
+                </div>
+            </div>
+            <div class="book_img">
+                <label for="book img">Book Image:</label><br>
+                <input type="url" placeholder="Enter your book image" id="book_img" required>
+            </div>
+            <div class="rating">
+                <label for="Rating">Rating</label>
+                <input type="number" id="rating" placeholder="Enter Your Rating">
+            </div>
+
+            <!--  Product Book_details   -->
+
+            <div class="Book_details">
+                <label for="book_description">Book Description:</label>
+                <textarea name="book_description" id="book_description" required cols="60" rows="9"></textarea>
+            </div>
+            <div class="author_img">
+                <label for="Author_img">About Image:</label>
+                <input type="url" name="author_img" id="author_image">
+            </div>
+            <div class="about_author">
+                <label for="About_author">About_Author:</label>
+                <textarea name="about_author" id="author_content" cols="60" rows="9" required></textarea>
+            </div>
+            <div class="Publisher_date">
+                <label for="Publisher_date">Publisher Date:</label>
+                <input type="date" name="Publisher_date" id="publisher_date" required>
+            </div>
+            <div class="Binding">
+                <label for="binding"> Binding:</label>
+                <input type="text" name="binding" id="book_binding" required>
+            </div>
+            <div class="book_height">
+                <label for="Height"> Book Height:</label>
+                <input type="text" name="book_height" id="Book_height" required>
+            </div>
+            <div class="No_of_pages">
+                <label for="No of pages">No of pages:</label>
+                <input type="number" name="no of pages" id="Book_pages" required>
+            </div>
+            <div class="series_of_title">
+                <label for="Series of title"> Series of Title:</label>
+                <input type="text" name="series of title" id="Book_series_title" required>
+            </div>
+            <div class="book_weight">
+                <label for="Weight">Book Weight:</label>
+                <input type="text" name="book_weight" id="Book_weight" required>
+            </div>
+
+            <div class="Publisher_imprint">
+                <label for="Publisher_jmprint">Publisher imprint:</label>
+                <input type="text" name="Publisher_inmprint" id="imprint" required>
+            </div>
+            <div class="book_depth">
+                <label for="Depth">Book Depth:</label>
+                <input type="text" name="Book_depth" id="Book_depth" required>
+            </div>
+            <div class="Book_language">
+                <label for="Language">Book Language:</label>
+                <input type="text" name="Book_language" id="Book_language" required>
+            </div>
+            <div class="Book_return">
+                <label for="Return">Book Return:</label>
+                <input type="text" name="book return" id="return" required>
+            </div>
+            <div class="Book_spin_width">
+                <label for="Spin_width">Book Spin Width:</label>
+                <input type="text" name="spin width" id="spin_width" required>
+            </div>
+            <div class="Book_Width">
+                <label for="Width">Book Width:</label>
+                <input type="text" name="Book width" id="width" required>
+            </div>
+            <div class="submit">
+                <button type="submit" id="submit-btn" onclick="product_add()">Upload</button>
+            </div>
+            <div class="submit">
+                <button type="submit" id="delete-btn" onclick="deleteprofile()">Delete</button>
+            </div>
+            <div class="submit">
+                <button type="submit" id="submit-btn" onclick="edit()">update</button>
+            </div>
+            <!-- <button>submit</button> -->
+        </div>
+    </form>
+    <script>
+
+
+        // function product_add() {
+        //     let bookName = document.getElementById("book_name").value;
+        //     let bookPrice = document.getElementById("book_price").value;
+        //     let originalprice = document.getElementById("original_price").value;
+        //     let bookImage = document.getElementById("book_img").value;
+
+        //     let productAdd = new Array(); // Create a new array 
+        //     productAdd = JSON.parse(localStorage.getItem("book_details")) ? JSON.parse(localStorage.getItem("book_details")) : []; // This line is check the book already had or add the new array or book
+
+
+        //     if (productAdd.some((y) => { return y.bookName == bookName })) { // This line is condition for check the book already have
+        //         alert("This book is already there");
+        //     }
+        //     else {
+        //         productAdd.push({
+        //             "bookName": bookName,
+        //             "bookPrice": bookPrice,
+        //             "orginalPrice": originalprice,
+        //             "bookImage": bookImage
+
+        //         });
+
+        //     }
+        //     localStorage.setItem("book_details", JSON.stringify(productAdd));
+        // }
+
+        // This code is stop from the reload 
+        // let formbtn = document.getElementById("formbox")
+        // formbtn.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     product_add();
+
+        // });
+
+        // let productAdd = JSON.parse(localStorage.getItem("Book_details"));
+        // This function and condition for Create a product 
+
+        // Get the values from the select 
+
+        // let submit = document.getElementById("submit-btn").onclick = function () {
+
+        //     let form = document.querySelectorAll(".formbox");
+        //     if (form == "") {
+        //         alert("Please enter the value");
+        //     }
+        // }
+
+        function product_add() {
+
+            let bookName = document.getElementById("book_name").value;
+            let DiscountPrice = document.getElementById("DiscountPrice").value;
+            let originalPrice = document.getElementById("original_price").value;
+            let bookImage = document.getElementById("book_img").value;
+            let book_description = document.getElementById("book_description").value;
+            let author_img = document.getElementById("author_image").value;
+            let author_content = document.getElementById("author_content").value;
+            let publisher_date = document.getElementById("publisher_date").value;
+            let book_binding = document.getElementById("book_binding").value;
+            let Book_height = document.getElementById("Book_height").value;
+            let Book_pages = document.getElementById("Book_pages").value;
+            let Book_title = document.getElementById("Book_series_title").value;
+            let Book_weight = document.getElementById("Book_weight").value;
+            let Book_imprint = document.getElementById("imprint").value;
+            let Book_depth = document.getElementById("Book_depth").value;
+            let Book_language = document.getElementById("Book_language").value;
+            let Book_return = document.getElementById("return").value;
+            let Book_spin_width = document.getElementById("spin_width").value;
+            let Book_width = document.getElementById("width").value;
+
+
+            let productAdd = JSON.parse(localStorage.getItem("Book_details")) ?? [];
+            // let count = 0;
+            // for (let i = 0; i < productAdd.length; i++) {
+            //     count++
+            // };
+            // console.log(count);
+
+            // let bookid = count;
+
+
+            let catog = document.getElementById("categories").value;
+
+            // get the value from the option tag
+            let BookType = document.getElementById("bookType").value;
+
+
+            let j = 0;
+            for (let i = 0; i < productAdd.length; i++) {
+                if (productAdd[i]["bookName"] === bookName) {
+                    j = 1;
+                    break;
+                }
+            };
+            if (j == 1) {
+                alert("This Product is already There!!!")
+            }
+            else {
+                productAdd.push({
+                    "bookName": bookName,
+                    "DiscountPrice": DiscountPrice,
+                    "originalPrice": originalPrice,
+                    "bookImage": bookImage,
+                    "rating": rating,
+                    "bookid": Date.now(),
+                    "category": catog,
+                    "booktype": BookType,
+                    "book_description": book_description,
+                    "author_image": author_img,
+                    "author_content": author_content,
+                    "publisher_date": publisher_date,
+                    "book_binding": book_binding,
+                    "Book_height": Book_height,
+                    "Book_pages": Book_pages,
+                    "Book_series_title": Book_title,
+                    "Book_weight": Book_weight,
+                    "imprint": Book_imprint,
+                    "Book_depth": Book_depth,
+                    "Book_language": Book_language,
+                    "return": Book_return,
+                    "spin_width": Book_spin_width,
+                    "width": Book_width,
+
+                });
+                localStorage.setItem("Book_details", JSON.stringify(productAdd));
+            };
+            window.location.href = "../../index.html"
+
+        };
+
+        // Create a delete profile 
+        function deleteprofile() {
+            let product_details = JSON.parse(localStorage.getItem("Book_details"));
+            console.log(product_details);
+            alert("Are you sure want to delete this product?");
+            for (let i = 0; i < product_details.length; i++) {
+                if (document.getElementById("book_name").value == product_details[i]["bookName"]) {
+                    product_details.splice(i, 1);
+                    localStorage.setItem("Book_details", JSON.stringify(product_details));
+                };
+            };
+        };
+
+
+        // Create a update product 
+        function edit() {
+            let editproduct = JSON.parse(localStorage.getItem("Book_details"));
+            alert("Are you sure want to update ?")
+            for (let i = 0; i < editproduct.length; i++) {
+                if (document.getElementById("book_name").value == editproduct[i]["bookName"]) {
+                    editproduct[i]["bookName"] = document.getElementById("book_name").value;
+                    // editproduct[i]["DiscountPrice"] = document.getElementById("DiscountPrice").value;
+                }
+                localStorage.setItem("Book_details", JSON.stringify(editproduct));
+
+            };
+            console.log(editproduct);
+        };
+
+    </script>
+
+</body>
+
+
+</html>

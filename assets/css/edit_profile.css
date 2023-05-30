@@ -49,25 +49,29 @@ body {
 .nav-logo img {
     margin-top: 3px;
 }
-.navigation hr{
+
+.navigation hr {
     margin-bottom: 4px solid blue;
     margin-top: 10px;
     width: 84%;
     height: 0;
-    margin-left:90px;
+    margin-left: 90px;
 }
-.home-page{
+
+.home-page {
     margin-left: 178px;
     margin-top: 20px;
     border: 1px solid orange;
-    width:260px;
+    width: 260px;
     font-weight: 800;
 }
-.home-page a{
+
+.home-page a {
     font-size: 20px;
     letter-spacing: 1px;
     text-decoration: none;
 }
+
 .navi2 {
     display: flex;
     align-items: center;
@@ -306,9 +310,10 @@ body {
     border-radius: 10px;
     width: 260px;
     height: 470px;
-    margin-top: -85px;
+    margin-top: 30px;
 }
-.profile-box hr{
+
+.profile-box hr {
     height: 0;
     width: 80%;
     margin-left: 30px;
@@ -321,7 +326,8 @@ body {
     margin-left: 85px;
     letter-spacing: 1px;
 }
-.profile-options h2:hover{
+
+.profile-options h2:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -338,101 +344,116 @@ body {
 
 .container {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .user-edit {
     margin-left: 10px;
-    background-color: lightgrey;
+    background-color: rgb(215, 202, 116);
     border-radius: 10px;
     margin-top: 31px;
+    overflow: auto;
 
 }
 
 .user-inp input {
     margin: 17px auto;
-    height: 33px;
+    height: 38px;
     border: none;
+    font-weight: 700;
+    font-size: 17px;
+    padding-left: 10px;
     border: 1px solid black;
     border-radius: 5px;
     outline: none;
-    width: 315px;
+    width: 50%;
 
 }
 
-.user-inp input{
+.user-inp input {
     margin-left: 20px;
 }
 
 .user-inp label {
     font-size: 21px;
     font-weight: 800;
-    letter-spacing: 1px;
-    margin-left: 30px;
+    margin-left: 20px;
+    width: 164px;
+    display: inline-block;
 }
 
+
+/* THIS IS FOR CHANGE THE POSITIOIN OF THE ADDRESS LABEL */
+.user-address>label {
+    position: absolute;
+    top: 74%;
+}
+
+
 .user-inp a {
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .user-inp button {
-    margin-left: -8px;
-    height: 32px;
+    height: 35px;
     font-size: 16px;
-    font-weight: 500;
-    width: 315px;
+    font-weight: 600;
+    width: 180px;
     border: none;
-    color: black;
-    border: 1px solid black;
-    border-radius: 6px;
-    background-color:white;
+    color: rgb(71, 51, 51);
+    border: 1px solid rgb(116, 53, 53);
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.2s;
 
 }
-.user-inp button:hover{
+
+.user-inp button:hover {
     text-decoration: underline;
     background-color: rgb(235, 180, 77);
-    
-}
 
+}
 
 
 .user-inp textarea {
     font-size: 17px;
-    font-size: 600;
+    font-weight: 700;
     resize: none;
-    padding-left: 17px;
+    width: 446px;
+    padding-left: 20px;
     line-height: 25px;
     border: 1px solid black;
     border-radius: 5px;
+    margin-left: 205px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+
 }
 
-.user-inp input::placeholder {
-    padding-left: 20px;
-    font-size: 17px;
-    font-weight: 500;
-}
+
 
 .user-inp h1 {
     text-align: center;
-    margin-top: 25px;
     letter-spacing: 1px;
-    font-size: 34px;
-    text-decoration: underline;
+    font-size: 39px;
+    transition: 0.2s;
+
 }
 
-#last-name {
-    margin-left: 20px;
+.user-inp h1:hover {
+    color: rgb(254, 118, 118);
 }
 
-.user-inp textarea {
-    margin-left: 20px;
-    margin-top: 12px;
-    margin-bottom: 20px;
-}
 
 .user {
-    width: 825px;
-    height: 560px;
+    width: 760px;
+    height: 780px;
+}
+
+.user_edit_btn {
+    margin-top: 15px;
+    margin-left: 150px;
 }
 
 
@@ -506,3 +527,65 @@ footer h3 {
 }
 
 /* -----END OF THE FOOTER CONTENT-----*/
+.user_orders {
+    display: none;
+}
+
+.single_book {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.book_info {
+    /* border-style: groove; */
+    padding: 30px 50px;
+}
+
+.book_info h2 {
+    margin: -3px 0px 20px;
+    /* font-family:'Montserrat', sans-serif;  */
+}
+
+.book_img {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 10px;
+}
+
+.status {
+    margin: 5px 50px 0px 50px;
+}
+
+.status p {
+    margin: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+
+.horz_line {
+    color: gray;
+    background-color: gray;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    border-width: 0px;
+}
+
+.head {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.horizantal_line {
+    margin-left: -195px;
+    margin-top: 40px;
+    color: gray;
+    background-color: gray;
+    width: 164%;
+    height: 3px;
+    border-radius: 2px;
+    border-width: 0px;
+
+}

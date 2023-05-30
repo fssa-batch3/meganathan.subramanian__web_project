@@ -20,103 +20,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS-STORE</title>
+    <script src="/assets/JS files/sweetalert.min.js"></script>
+
 </head>
 
 <body>
-
     <!------------------------ Create the navigation bar ----------------------->
 
-    <div class="head">
-        <div class="nav-logo">
-            <div class="logo">
-                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png"
-                        alt="webiste logo" width="190"></a>
-            </div>
-            <div class="navi2">
-                <ol class="lang">
-                    <li><a href="#">Lang <i class=" fa-solid fa-caret-down"></i></a>
-                        <ol class="Lang_option">
-                            <li> <a href="#">English</a></li>
-                            <li> <a href="#">Tamil</a></li>
-                        </ol>
-                    </li>
-                </ol>
-                <ul class="fonts">
-                    <li> <a href="../../Pages/Account/login.html">
-                            <i class="fa-regular fa-heart"></i>
-                        </a></li> <span>0</span>
-                    <li> <a href="../../Pages/Account/signup.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
-                </ul>
-            </div>
-        </div>
+    <!--  append the header by dynamic by js -->
+    <script src="../../assets/JS files/header.js"></script>
 
-
-        <!------------------- Create a Search bar ---------------->
-
-        <div class="search_bar">
-            <input type="text" placeholder="Search By Author Name Or Book name">
-        </div>
-
-
-        <!------------------------------- END OF THE NAVIGATION --------------------------------->
-
-
-        <div class="container">
-            <div class="nav">
-                <div class="navi1">
-                    <ul>
-                        <li><a href="../Books/self_help.html"><img src="../../assets/images/search books.png"
-                                    alt="search books img"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!------------------- navigation content--------->
-
-    <div class="navigation">
-        <ul>
-            <li> <a href="../../index.html">Home</a></li>
-            <li class="explore-menu" id="click"> <a href="#">Categories<i class="fa-solid fa-caret-down"></i></a>
-                <ol class="Explore-option">
-                    <li class="Arts-option"><a href="#">Arts and Biography</a>
-                        <div class="arts-menu">
-                            <ol>
-                                <li><a href="#">Arts Forms</a></li>
-                                <li><a href="#">Dance And Performing</a></li>
-                                <li><a href="#">Flim and Tv</a></li>
-                            </ol>
-                        </div>
-                    </li>
-                    <li><a href="#">Fiction Books</a></li>
-                    <li><a href="#">Law</a></li>
-                    <li><a href="#">Medicine</a></li>
-                    <li><a href="../Books/self_help.html">Self Help book</a></li>
-                    <li><a href="#">Life Style</a></li>
-                    <li><a href="#">Science And Maths</a></li>
-
-                </ol>
-            </li>
-            <li><a href="../Books/Combo book.html">Combo</a></li>
-            <li><a href="../Books/self_help.html">Best Seller</a></li>
-            <li><a href="../../Customer-feedback.html">Customer Feedback</a></li>
-            <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
-                <div class="profile">
-                    <ol>
-                        <li><a href="../Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit
-                                Profile</a></li>
-                        <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
-                        <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
-                        <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
-                    </ol>
-                </div>
-            </li>
-        </ul>
-
-    </div>
     <div class="home-page">
         <a href="../../index.html">home></a>
         <a href="../Books/self_help.html">products></a>
@@ -128,14 +41,14 @@
         <div class="edit-profile">
             <div class="profile-box">
                 <div class="profile-img">
-                    <img src="../../assets/images/profie img.jpg" alt="profile img">
+                    <img src="../../assets/images/profie img.jpg" alt="profile img" id="profile_img">
                     <h3>Hello, <span id="user_name">user</span> </h3>
                 </div>
                 <hr>
                 <div class="profile-options">
-                    <h2>Return & Orders</h2>
+                    <h2 id="user_profile">Manage Profile</h2>
+                    <h2 id="user_return">Return & Orders</h2>
                     <h2>Manage Adresses</h2>
-                    <h2>Your Payment</h2>
                     <h2>Terms & condition</h2>
                     <h2>Log Out</h2>
                 </div>
@@ -143,30 +56,92 @@
         </div>
 
         <!------------ START THE EDIT CONTENT  ------------->
+
         <div class="user-edit">
             <div class="user">
                 <div class="user-inp">
                     <h1>Edit Your Profile</h1>
-                    <label for="name">First name :</label>
-                    <a href="" onclick="edit()">Edit</a> <br>
-                    <input type="text" name="name" id="name" placeholder="Username">
-                    <label for="last">Last Name :</label>
-                    <input type="text" placeholder="S"><br>
-                    <label for="email">Email :</label>
-                    <a href="">Edit</a><br>
-                    <input type="email" name="user-email" placeholder="example@gmail.com" id="email"><br>
-                    <label for="number">Phone Number :</label>
-                    <a href="">Edit</a><br>
-                    <input type="number" placeholder="1234567892"><br>
-                    <label for="adreess">Address:</label>
-                    <a href="">Edit</a><br>
-                    <textarea name="adress" cols="30" rows="4">59/123 Vivenkanda street,vadapalani,chennai-00000"
-        </textarea><br>
-                    <a href=""><button>Save Changes</button></a>
-                    <button onclick="deleteprofile()">delete</button>
+                    <form id="user_form">
+                        <div class="user-name">
+                            <label for="name">Name :</label>
+                            <input type="text" name="name" id="name" placeholder="Username" pattern="^[a-zA-Z]{4,15}$" required disabled>
+                        </div>
+
+                        <div class="user-password">
+                            <label for="last">Password :</label>
+                            <input type="password" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" id="password"
+                                placeholder="*********" disabled required>
+                        </div>
+                        <div class="user-email">
+                            <label for="email">Email :</label>
+                            <input type="email" name="user-email" placeholder="example@gmail.com" id="email" disabled
+                                required>
+                        </div>
+
+                        <div class="user-phone-number">
+                            <label for="number">Phone Number :</label>
+                            <input type="tel" placeholder="1234567892" id="phone_number" maxlength="10" required
+                                disabled>
+                        </div>
+
+                        <div class="user-address">
+                            <label for="adreess">Address :</label>
+                            <textarea name="adress" cols="30" rows="4" id="user_address" disabled>59/123 Vivenkanda street,vadapalani,chennai-00000"
+                         </textarea required>
+                    </div>
+                    <div class="user_state">
+                        <label for="user_state">State</label>
+                        <input type="text" id="user_state" placeholder="Enter your State" pattern="[A-Za-z]{1,10}"
+                            disabled required>
+                    </div>
+                    <div class="user_city">
+                        <label for="User_city">City</label>
+                        <input type="text" id="user_city" placeholder="Enter your city" pattern="[A-Za-z]{1,10}" disabled required>
+                    </div>
+                    <div class="user_pincode">
+                        <label for="user_pincode">Pincode</label>
+                        <input type="number" id="user_pincode" placeholder="600081" pattern="[0-9]{7}" maxlength="7" required
+                            disabled>
+                    </div>
+                    <div class="user_edit_btn">
+                        <button  id="Save_users" type="submit">Save Changes</button>
+                        <button id="edit_user">Edit</button>
+                        <button onclick="deleteprofile()">delete</button>
+
+                    </div>
+                </div>
+                <div class="user_orders">
+                    <h1 class="head"> My Orders</h1>
+                    <div class="book_info">
+                        <h2> Order Status : Pending...</h2>
+                        <hr class="horz_line">
+                        <div class="single_book">
+                            <!-- <div class="book_img">
+                                <img src="https://missnatura.in/wp-content/uploads/2023/02/IMG-20230222-WA0003.jpg"
+                                    width="150px" height="130px" alt="Rosemery leaves" />
+                            </div>
+                            <div class="status">
+                                <p id="product_name">Attitude Is Everything</p>
+                                <p id="product_qunatity">Quantity - 1</p>
+                                <p id="Order_id">Order Id - 243</p>
+                                <p id="order_date">Ordered Date - 27/03/2023</p>
+                            </div>
+                             <div class="book_img">
+                                <img src="https://missnatura.in/wp-content/uploads/2023/02/IMG-20230222-WA0003.jpg"
+                                    width="150px" height="130px" alt="Rosemery leaves" />
+                            </div>
+                            <div class="status">
+                                <p id="product_name">Attitude Is Everything</p>
+                                <p id="product_qunatity">Quantity - 1</p>
+                                <p id="Order_id">Order Id - 243</p>
+                                <p id="order_date">Ordered Date - 27/03/2023</p>
+                            </div> -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </form>
     </div>
 
     <!-------------------FOOTER CONTETNT ------------------>
@@ -209,37 +184,183 @@
     </footer>
 
     <!------------------------END OF THE FOOTER CONTENT ---------------------->
-
     <script>
         let users = JSON.parse(localStorage.getItem("userslist"));
         for (let i = 0; i < users.length; i++) {
             document.getElementById("name").value = users[i]["user_name"];
             document.getElementById('email').value = users[i]['email'];
-            document.getElementById("user_name").innerHTML = users[i]["user_name"];
-        }
-        function edit() {
-            let users = JSON.parse(localStorage.getItem("userslist"));
-            for (i = 0; i < users.length; i++) {
-                if (document.getElementById("email").value == users[i]["email"]) {
-                    users[i].user_name = document.getElementById("name").value;
-                }
-                localStorage.setItem("userslist", JSON.stringify(users));
-            }
-            console.log(users);
+            document.getElementById("phone_number").value = users[i]["Phone_number"];
+            document.getElementById("password").value = users[i]["password"];
         };
+        // console.log(users);
+
+        // Edit the user profile
+        document.getElementById("user_form").addEventListener("submit", (e) => {
+            document.getElementById("name").setAttribute("disabled", "");
+            document.getElementById("phone_number").setAttribute("disabled", "");
+            document.getElementById("password").setAttribute("disabled", "");
+            document.getElementById("user_address").setAttribute("disabled", "");
+            document.getElementById("user_state").setAttribute("disabled", "");
+            document.getElementById("user_city").setAttribute("disabled", "");
+            document.getElementById("user_pincode").setAttribute("disabled", "");
+
+            for (let i = 0; i < users.length; i++) {
+                if (document.getElementById("email").value == users[i]["email"]) {
+
+                    let User_address = document.getElementById("user_address").value;
+                    let User_state = document.getElementById("user_state").value;
+                    let User_city = document.getElementById("user_city").value;
+                    let User_pincode = document.getElementById("user_pincode").value;
+                    users[i].user_name = document.getElementById("name").value;
+                    users[i].password = document.getElementById("password").value;
+                    users[i].Phone_number = document.getElementById("phone_number").value;
+                    users[i].user_state = User_state;
+                    users[i].user_city = User_city
+                    users[i].user_pincode = User_pincode;
+                    users[i].address = User_address;
+                };
+                localStorage.setItem("userslist", JSON.stringify(users));
+            };
+            // console.log(users);
+            swal('Great', 'Youre account in Successfully Changed!', 'success');
+        })
+        // function edit() {
+        //     // let users = JSON.parse(localStorage.getItem("userslist"));
+
+        // };
+
 
         // Create a delete profile 
 
         function deleteprofile() {
-            alert("are you sure want to delete your profile?");
+            confirm("are you sure want to delete your profile?")
+            Notify.success("Your're account is successfully deleted");
             for (let i = 0; i < users.length; i++) {
                 if (document.getElementById("email").value == users[i].email) {
                     users.splice(i, 1);
                     localStorage.setItem("userslist", JSON.stringify(users));
-                }
+                };
+            };
+        };
+
+        // Remove the disabled button with js
+
+        let edit_user = document.getElementById("edit_user");
+
+        edit_user.addEventListener("click", (e) => {
+            document.getElementById("name").removeAttribute("disabled");
+            document.getElementById("phone_number").removeAttribute("disabled");
+            document.getElementById("password").removeAttribute("disabled");
+            document.getElementById("user_address").removeAttribute("disabled");
+            document.getElementById("user_state").removeAttribute("disabled");
+            document.getElementById("user_city").removeAttribute("disabled");
+            document.getElementById("user_pincode").removeAttribute("disabled");
+
+
+            // Adding the Address field into the local storge
+
+            // for (let i = 0; i < users.length; i++) {
+            //     if (active_user == users[i]["email"]) {
+
+            //     };
+            // };
+
+        });
+
+        // logout
+
+        // let log_out = document.getElementById("log-out");
+        let active_user = JSON.parse(localStorage.getItem("activeUser"));
+        // log_out.addEventListener("click", (e) => {
+        //     const log_Out = delete active_user;
+        //     localStorage.setItem("activeUser", log_Out);
+        //     window.location.href = "/Pages/Account/login.html";
+        //     alert("Thank you visiting our website");
+        // });
+
+
+        // write the return prouducts
+
+        let user_orders = document.querySelector(".user_orders");
+        let user_profile = document.querySelector(".user-inp");
+        let user_return = document.getElementById("user_return");
+        let manage_profile = document.getElementById("user_profile");
+
+        user_return.addEventListener("click", () => {
+
+            user_orders.style.display = "block";
+            user_profile.style.display = "none";
+        });
+        manage_profile.addEventListener("click", () => {
+            user_profile.style.display = "block";
+
+        });
+        manage_profile.addEventListener("click", function () {
+            user_orders.style.display = "none";
+
+        });
+
+
+        // get from the local storage
+        let userOrders = JSON.parse(localStorage.getItem("User_Order"));
+
+
+        // below the code for create element 
+
+        // Create a div 
+        for (let i = 0; i < userOrders.length; i++) {
+            if (active_user == userOrders[i]["active_user"]) {
+
+                let book_img_div = document.createElement("div");
+                book_img_div.setAttribute("class", "book_img");
+
+                // Create  a img tag
+                let img_tag = document.createElement("img");
+                img_tag.setAttribute("src", userOrders[i]["product_img"]);
+                img_tag.setAttribute("alt", "book_img");
+                img_tag.setAttribute("width", "150px");
+                img_tag.setAttribute("height", "200px");
+
+                // append the img into div
+                book_img_div.prepend(img_tag);
+                // console.log(book_img_div);
+
+                // create a another div
+                let status_div = document.createElement("div");
+                status_div.setAttribute("class", "status");
+
+                // Create a p_tag
+                let p_tag1 = document.createElement("p");
+                p_tag1.innerText = "Bookname:  " + userOrders[i]["product_title"];
+
+                // Create a another p tag
+                let p_tag2 = document.createElement("p");
+                p_tag2.innerText = "Quantity: " + userOrders[i]["Quantity"];
+
+                // Create a another p tag
+                let p_tag3 = document.createElement("p");
+                p_tag3.innerText = "OrderID: " + userOrders[i]["order_id"];
+
+                // Create a another p tag
+                let p_tag4 = document.createElement("p");
+                p_tag4.innerText = "OrderDate: " + userOrders[i]["Order_date"];
+
+
+                // Create a another p tag 
+                let p_tag5 = document.createElement("p");
+                p_tag5.innerHTML = "Address: " + `${userOrders[i]["user_address"]}, ${userOrders[i]["user_state"]} ${userOrders[i]["user_city"] + "-"} ${userOrders[i]["user_pincode"]}`;
+                console.log(p_tag5);
+
+                // Create the hr line 
+                let hr_tag = document.createElement("hr");
+                hr_tag.setAttribute("class", "horizantal_line");
+                // append the all p tags
+                book_img_div.append(status_div)
+                status_div.append(p_tag1, p_tag2, p_tag3, p_tag4, p_tag5, hr_tag);
+                document.querySelector(".single_book").append(book_img_div);
 
             }
-        };
+        }
     </script>
 </body>
 

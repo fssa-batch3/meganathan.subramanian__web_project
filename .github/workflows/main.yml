@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  topic_tagging:
+    runs-on: ubuntu-latest
+    name: Topic Tagging
+    steps: 
+        - name: checkout
+          uses: actions/checkout@v3
+        - name: Topic Tagger
+          uses: suryaumapathy2812/topic-tagger-action@v1
+          with: 
+            start-point: "./"
+            version: "v2"

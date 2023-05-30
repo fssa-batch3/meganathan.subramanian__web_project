@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../../assets/css/cart_list.css">
+    <!-- <link rel="stylesheet" href="../../assets/css/header.css"> -->
     <link rel="shortcut icon" href="../../assets/images/favicon img.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- ---------Font awesome------- -->
@@ -19,164 +20,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS-STORE</title>
 </head>
-
 <body>
-    <!------------------------Create the navigation bar ----------------------->
 
-    <!------------------------ Create the navigation bar ----------------------->
-
-    <div class="head">
-        <div class="nav-logo">
-            <div class="logo">
-                <a href="../../index.html"><img src="../../assets/images/books_store-removebg-preview.png" alt="webiste logo"
-                        width="190"></a>
-            </div>
-            <div class="navi2">
-                <ol class="lang">
-                    <li><a href="">Lang <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-                        <ol class="Lang_option">
-                            <li> <a href="">English</a></li>
-                            <li> <a href="">Tamil</a></li>
-                        </ol>
-                    </li>
-                </ol>
-                <ul class="fonts">
-                    <li> <a href="../../Pages/Account/signup.html">
-                            <i class="fa-regular fa-heart"></i>
-                        </a></li>
-                    <li> <a href=""> <i class="fa-solid fa-cart-shopping"></i> </a></li>
-                </ul>
-            </div>
-        </div>
-
-
-        <!------------------- Create a Search bar ---------------->
-
-        <div class="search_bar">
-            <input type="text" placeholder="Search By Author Name Or Book name">
-        </div>
-
-
-        <!------------------------------- END OF THE NAVIGATION --------------------------------->
-
-
-        <div class="container">
-            <div class="nav">
-                <div class="navi1">
-                    <ul>
-                        <li><a href="#"><img src="../../assets/images/search books.png" alt="search books img"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!------------------- navigation content--------->
-
-    <div class="navigation">
-        <ul>
-            <li> <a href="../../index.html">Home</a></li>
-            <li class="explore-menu" id="click"> <a href="#">Categories<i class="fa-solid fa-caret-down"></i></a>
-                <ol class="Explore-option">
-                    <li class="Arts-option"><a href="">Arts and Biography</a>
-                        <div class="arts-menu">
-                            <ol>
-                                <li><a href="">Arts Forms</a></li>
-                                <li><a href="">Dance And Performing</a></li>
-                                <li><a href="">Flim and Tv</a></li>
-                            </ol>
-                        </div>
-                    </li>
-                    <li><a href="#">Fiction Books</a></li>
-                    <li><a href="#">Law</a></li>
-                    <li><a href="#">Medicine</a></li>
-                    <li><a href="../Books/self_help.html">Self Help book</a></li>
-                    <li><a href="#">Life Style</a></li>
-                    <li><a href="#">Science And Maths</a></li>
-
-                </ol>
-            </li>
-            <li><a href="../Books/Combo book.html">Combo</a></li>
-            <li><a href="../Books/self_help.html">Best Seller</a></li>
-            <li><a href="../../Customer-feedback.html">Customer Feedback</a></li>
-            <li class="profile-menu"><a href="">My Account <i class="fa-solid fa-user"></i></a>
-                <div class="profile">
-                    <ol>
-                        <li><a href="../../Pages/Account/edit-profile.html"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</a></li>
-                        <li><a href="#"><i class="fa-solid fa-message"></i>Inbox</a> </li>
-                        <li><a href="#"><i class="fa-solid fa-bars"></i>Setting</a></li>
-                        <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
-                    </ol>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-----------------END OF THE NAVIGATION------------------ -->
 
     <!--Cart items deatails------- -->
 
     <div class="orders">
         <h1>My Carts</h1>
         <table aria-label="Create a Heading">
-            <tr>
-                <th>S.NO</th>
-                <th>Products</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Image</th>
+                    <th>Products</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+            <!-- 
             <tr>
                 <td>1.</td>
+                <td><img src="../../assets/images/attitude is everthing.webp" alt="Attitude is everthing" width="40%"></td>
                 <td>
                     <div class="book_info">
-                        <img src="../../assets/images/attitude is everthing.webp" alt="Attitude is everthing">
                         <div class="div">
                             <p>Attitude is everything by-Jeff <br> Keller.</p>
-                            <small>Price:&#8377; 120.00</small>
-                            <br>
-                            <a href="#">Remove</a>
+                            <a href="">Remove</a>
                         </div>
                     </div>
                 </td>
+                <td>&#8377; 120.00</td>
                 <td><input type="number" value="1"></td>
                 <td>&#8377;120.00</td>
             </tr>
             <tr>
                 <td>2.</td>
+                <td> <img src="../../assets/images/atomic habits.webp" alt="Atomic Habits"  width="40%"></td>
                 <td>
                     <div class="book_info">
-                        <img src="../../assets/images/atomic habits.webp" alt="Atomic Habits" width="700px">
+
                         <div class="div">
                             <p>Atomic Habits by James Clear.</p>
-                            <small>Price: &#8377; 150.00</small>
-                            <br>
-                            <a href="#">Remove</a>
+                            <a href="">Remove</a>
                         </div>
                     </div>
                 </td>
+                <td>&#8377; 120.00</td>
                 <td><input type="number" value="1"></td>
                 <td>&#8377;150.00</td>
             </tr>
             <tr>
                 <td>3.</td>
+                <td><img src="../../assets/images/rich dad poor dad.png"  width="40%" alt=" Rich dad poor dad books"></td>
                 <td>
                     <div class="book_info">
-                        <img src="../../assets/images/rich dad poor dad.png" alt=" Rich dad poor dad books">
                         <div class="div">
                             <p>Rich Dad poor Dad By-Robert.</p>
-                            <small>Price:&#8377;190.00</small>
-                            <br>
-                            <a href="#">Remove</a>
+                            <a href="">Remove</a>
                         </div>
                     </div>
                 </td>
+                <td>&#8377; 120.00</td>
                 <td><input type="number" value="1"></td>
                 <td>&#8377;190.00</td>
-            </tr>
+            </tr> -->
         </table>
         <!-------------------total price----------------->
-        <div class="total_price">
+        <!-- <div class="total_price">
             <table aria-label="Enter a total">
                 <tr>
                     <th>Subtotal</th>
@@ -188,13 +102,30 @@
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>&#8377;510.00</td>
+                    <td id="price">&#8377;510.00</td>
                 </tr>
             </table>
         </div>
         <div class="Checklist_btn">
             <a href="../../Pages/Payment gateway/payment.html"><button class="btn">Checkout</button></a>
-        </div>
+        </div> -->
+        <section class="cart-amt">
+            <!-- <h2>Cart Total</h2>
+            <hr>
+            <div class="cart-total">
+                <div>
+                    <p>Subtotal</p>
+                    <p>GST</p>
+                    <p>Total</p>
+                </div>
+                <div>
+                    <p>&#8377;460.00</p>
+                    <p>&#8377;50.00</p>
+                    <p id="price">&#8377;510.00</p>
+                </div>
+            </div>
+            <a href="../Payment gateway/payment.html"><button class="checkout">Checkout</button></a> -->
+        </section>
     </div>
     <!-------------------FOOTER CONTETNT ------------------>
     <footer>
@@ -235,7 +166,8 @@
         <p style="text-align:center ;">&#169;Copyright 2022-Meganathan</p>
     </footer>
     <!------------------------END OF THE FOOTER CONTENT----------------- -->
-
+    <script src="/assets/JS files/user_cart.js"></script>
+    <script src="/assets/JS files/header.js"></script>
 </body>
 
 </html>
